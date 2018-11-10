@@ -1,5 +1,4 @@
 default:
-	rm -Rf migrations
 	rm -f 500weeks.db
 	sqlite3 500weeks.db "VACUUM;"
 	python migrate.py db migrate
