@@ -1,0 +1,29 @@
+<Nav segment={child.segment}/>
+
+<Login />
+
+<div class="container">
+	<div class="main">
+		<svelte:component this={child.component} {...child.props}/>
+	</div>
+</div>
+
+<style>
+	.container {
+		display: flex;
+		justify-content: center;
+	}
+
+	.main {
+		width: 750px;
+	}
+</style>
+
+<script>
+	export default {
+		components: {
+			Nav: '../components/Nav.html',
+			Login: '../components/Login.html',
+		}
+	};
+</script>

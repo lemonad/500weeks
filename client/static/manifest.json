@@ -1,0 +1,25 @@
+{
+	"background_color": "#ffffff",
+	"theme_color": "#1e87f0",
+	"name": "500weeks",
+	"short_name": "500",
+	"display": "minimal-ui",
+	"start_url": "/",
+	"icons": [
+		{
+			"src": "500-192.png",
+			"sizes": "128x128",
+			"type": "image/png"
+		},
+		{
+			"src": "500-256.png",
+			"sizes": "256x256",
+			"type": "image/png"
+		},
+		{
+			"src": "500-512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
+	]
+}

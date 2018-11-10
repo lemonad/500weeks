@@ -1,0 +1,17 @@
+{
+  "bundler": "rollup",
+  "shimport": "0.0.11",
+  "assets": {
+    "main": "client.fe2fc68f.js"
+  },
+  "css": {
+    "main": "main.1780197360.css",
+    "chunks": {
+      "index.html": [
+        "index.85599372.css"
+      ],
+      "bar.html": [],
+      "foo.html": []
+    }
+  }
+}
