@@ -1,0 +1,21 @@
+# Backend
+
+## Requirements
+* Python 3.7
+* SQLite3
+
+## Install
+```
+$ cd server
+$ pip install -r requirements.txt
+$ sqlite3 500weeks.db "VACUUM;"
+$ python migrate.py db init
+$ python migrate.py db migrate
+$ python migrate.py db upgrade
+$ cat data.sql | sqlite3 500weeks.db
+```
+
+## Run
+```
+python run.py
+```
