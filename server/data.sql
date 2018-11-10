@@ -3,8 +3,8 @@ DELETE FROM goal;
 DELETE FROM challenge;
 DELETE FROM week_challenge;
 
-INSERT INTO user (id, username, first_name, last_name)
-       VALUES (1, 'lemonad', 'Jonas', 'Nockert');
+INSERT INTO user (id, username, first_name, last_name, email)
+       VALUES (1, 'lemonad', 'Jonas', 'Nockert', 'jonasnockert@gmail.com');
 
 INSERT INTO goal (id, title, subtitle, description, color, image_url)
        VALUES (1, 'Ingen fattigdom', 'Avskaffa all form av fattigdom överallt.', '', 'e5243b', '');
@@ -20,5 +20,5 @@ INSERT INTO goal (id, title, subtitle, description, color, image_url)
 INSERT INTO challenge (id, goal_id, title, subtitle, description, image_url)
        VALUES (1, 1, 'Gå en kilometer om dagen', 'Förbättra din hälsa på lång sikt', '', '');
 
-INSERT INTO week_challenge (id, user_id, challenge_id)
-       VALUES (1, 1, 1);
+INSERT INTO week_challenge (id, week_no, user_id, challenge_id)
+       VALUES (1, 1, 1, 1);

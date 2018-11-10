@@ -19,3 +19,33 @@ $ cat data.sql | sqlite3 500weeks.db
 ```
 python run.py
 ```
+
+## Endpoints
+### `/Challenge`
+Returns all challenges.
+
+### `/Challenge/<challenge_id>`
+Returns a challenge.
+
+### `/Goal`
+Returns all global goals, with colors, etc.
+
+### `/Goal/<goal_id>`
+Returns a goal with goal id
+
+### `/User`
+Return all users (get).
+
+### `/User`
+Create user (post):
+```
+{
+    "username": "jonas",
+    "first_name": "Jooonas",
+    "last_name": "Nockert",
+    "email": "jonasnockert2@gmail.com"
+}
+```
+
+### `/User/<username>`
+Returns a user (get, put).

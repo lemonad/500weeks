@@ -1,8 +1,8 @@
 """empty message
 
-Revision ID: e677a497e67c
+Revision ID: 37f26ab33c13
 Revises: 
-Create Date: 2018-11-10 00:24:35.842384
+Create Date: 2018-11-10 05:00:45.528895
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = 'e677a497e67c'
+revision = '37f26ab33c13'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -22,22 +22,19 @@ def upgrade():
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('title', sa.String(length=64), nullable=False),
     sa.Column('subtitle', sa.String(length=256), nullable=False),
-    sa.Column('description', sa.Text(), nullable=True),
+    sa.Column('description', sa.Text(), nullable=False),
     sa.Column('color', sa.String(length=10), nullable=False),
     sa.Column('image_url', sa.String(length=256), nullable=True),
-    sa.PrimaryKeyConstraint('id'),
-    sa.UniqueConstraint('color'),
-    sa.UniqueConstraint('subtitle'),
-    sa.UniqueConstraint('title')
+    sa.PrimaryKeyConstraint('id')
     )
     op.create_table('user',
     sa.Column('id', sa.Integer(), nullable=False),
     sa.Column('username', sa.String(length=32), nullable=False),
     sa.Column('first_name', sa.String(length=64), nullable=False),
     sa.Column('last_name', sa.String(length=64), nullable=False),
+    sa.Column('email', sa.String(length=128), nullable=False),
     sa.PrimaryKeyConstraint('id'),
-    sa.UniqueConstraint('first_name'),
-    sa.UniqueConstraint('last_name'),
+    sa.UniqueConstraint('email'),
     sa.UniqueConstraint('username')
     )
     op.create_table('challenge',
@@ -48,12 +45,11 @@ def upgrade():
     sa.Column('image_url', sa.String(length=256), nullable=True),
     sa.Column('goal_id', sa.Integer(), nullable=False),
     sa.ForeignKeyConstraint(['goal_id'], ['goal.id'], ondelete='CASCADE'),
-    sa.PrimaryKeyConstraint('id'),
-    sa.UniqueConstraint('subtitle'),
-    sa.UniqueConstraint('title')
+    sa.PrimaryKeyConstraint('id')
     )
     op.create_table('week_challenge',
     sa.Column('id', sa.Integer(), nullable=False),
+    sa.Column('week_no', sa.Integer(), nullable=False),
     sa.Column('user_id', sa.Integer(), nullable=False),
     sa.Column('challenge_id', sa.Integer(), nullable=False),
     sa.ForeignKeyConstraint(['challenge_id'], ['challenge.id'], ondelete='CASCADE'),
