@@ -12,6 +12,7 @@ import __registrera from "../src/routes/registrera.html";
 import __anvandare from "../src/routes/anvandare.html";
 import __framsteg from "../src/routes/framsteg.html";
 import __search from "../src/routes/search.html";
+import __vanner from "../src/routes/vanner.html";
 import __intro from "../src/routes/intro.html";
 import __bar from "../src/routes/bar.html";
 import root from "../src/routes/_layout.html";
@@ -62,6 +63,14 @@ export const manifest = {
 			pattern: /^\/search\/?$/,
 			parts: [
 				{ name: "search", file: "search.html", component: __search }
+			]
+		},
+
+		{
+			// vanner.html
+			pattern: /^\/vanner\/?$/,
+			parts: [
+				{ name: "vanner", file: "vanner.html", component: __vanner }
 			]
 		},
 

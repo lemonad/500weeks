@@ -1,1 +1,66 @@
 <h1>Search</h1>
+
+<input type="text" placeholder="Search..." />
+
+<div style="display: flex; padding: 10px;">
+  <div style="width: 100px; font-style: bold;"><strong>Användare</strong></div>
+  <div style="width: 100px; font-style: bold;"><strong>Grupper</strong></div>
+  <div style="width: 100px; font-style: bold;"><strong>Utmaning</strong></div>
+</div>
+
+<div class="card">
+    <div style="width: 100px; font-style: bold;">Bengt</div>
+    <div style="width: 100px; font-style: bold;">Sköldpaddor</div>
+    <div style="width: 100px; font-style: bold;">Cykla</div>
+</div>
+
+<div class="card">
+    <div style="width: 100px; font-style: bold;">Gunhild</div>
+    <div style="width: 100px; font-style: bold;"></div>
+    <div style="width: 100px; font-style: bold;">Vegetarian</div>
+</div>
+
+<div class="card">
+    <div style="width: 100px; font-style: bold;">Markus</div>
+    <div style="width: 100px; font-style: bold;">Sköldpaddor</div>
+    <div style="width: 100px; font-style: bold;">Cykla</div>
+</div>
+
+<style>
+  input {
+    height: 40px;
+    display: block;
+
+    max-width: 100%;
+    width: 100%;
+    border: 0 none;
+    padding: 0 10px;
+    background: #fff;
+    color: #666;
+    border: 1px solid #e5e5e5;
+    transition: .2s ease-in-out;
+    transition-property: color,background-color,border;
+    width: 310px;
+  }
+
+  input:focus {
+    outline: 0;
+    border-color: #0f7ae5;
+  }
+
+  .card {
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+  padding-left: 10px;
+  padding-right: 10px;
+    border: 1px solid #eaeaea;
+    box-shadow: 0 5px 15px rgba(12, 7, 7, 0.08);
+    background-color: #ffffff;
+  }
+
+  .card:hover {
+    box-shadow: 0 5px 15px rgba(12, 7, 7, 0.16);
+  }
+</style>

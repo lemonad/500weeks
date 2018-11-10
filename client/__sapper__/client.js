@@ -35,6 +35,10 @@ const components = [
 		css: "__SAPPER_CSS_PLACEHOLDER:search.html__"
 	},
 	{
+		js: () => import("../src/routes/vanner.html"),
+		css: "__SAPPER_CSS_PLACEHOLDER:vanner.html__"
+	},
+	{
 		js: () => import("../src/routes/intro.html"),
 		css: "__SAPPER_CSS_PLACEHOLDER:intro.html__"
 	},
@@ -85,10 +89,18 @@ const pages = [
 	},
 
 	{
+		// vanner.html
+		pattern: /^\/vanner\/?$/,
+		parts: [
+			{ i: 5 }
+		]
+	},
+
+	{
 		// intro.html
 		pattern: /^\/intro\/?$/,
 		parts: [
-			{ i: 5 }
+			{ i: 6 }
 		]
 	},
 
@@ -96,7 +108,7 @@ const pages = [
 		// bar.html
 		pattern: /^\/bar\/?$/,
 		parts: [
-			{ i: 6 }
+			{ i: 7 }
 		]
 	}
 ];

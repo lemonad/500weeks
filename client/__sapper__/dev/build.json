@@ -2,13 +2,13 @@
   "bundler": "rollup",
   "shimport": "0.0.11",
   "assets": {
-    "main": "client.8e302d53.js"
+    "main": "client.0477c5f6.js"
   },
   "css": {
-    "main": "main.3589704678.css",
+    "main": "main.90172081.css",
     "chunks": {
       "index.html": [
-        "index.c26e8ba7.css"
+        "index.6cf524e4.css"
       ],
       "registrera.html": [
         "registrera.436e0771.css"
@@ -17,9 +17,11 @@
         "anvandare.16b4408f.css"
       ],
       "framsteg.html": [
-        "framsteg.920566d6.css"
+        "framsteg.8affe16a.css"
       ],
-      "search.html": [],
+      "search.html": [
+        "search.3b2630e9.css"
+      ],
       "intro.html": [
         "intro.b75694e7.css"
       ],
