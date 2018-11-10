@@ -10,6 +10,7 @@ import { join, resolve as resolve$1 } from 'path';
 import __index from "../src/routes/index.html";
 import __registrera from "../src/routes/registrera.html";
 import __anvandare from "../src/routes/anvandare.html";
+import __search from "../src/routes/search.html";
 import __intro from "../src/routes/intro.html";
 import __bar from "../src/routes/bar.html";
 import __foo from "../src/routes/foo.html";
@@ -45,6 +46,14 @@ export const manifest = {
 			pattern: /^\/anvandare\/?$/,
 			parts: [
 				{ name: "anvandare", file: "anvandare.html", component: __anvandare }
+			]
+		},
+
+		{
+			// search.html
+			pattern: /^\/search\/?$/,
+			parts: [
+				{ name: "search", file: "search.html", component: __search }
 			]
 		},
 

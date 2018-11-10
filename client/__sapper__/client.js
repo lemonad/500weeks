@@ -27,6 +27,10 @@ const components = [
 		css: "__SAPPER_CSS_PLACEHOLDER:anvandare.html__"
 	},
 	{
+		js: () => import("../src/routes/search.html"),
+		css: "__SAPPER_CSS_PLACEHOLDER:search.html__"
+	},
+	{
 		js: () => import("../src/routes/intro.html"),
 		css: "__SAPPER_CSS_PLACEHOLDER:intro.html__"
 	},
@@ -65,10 +69,18 @@ const pages = [
 	},
 
 	{
+		// search.html
+		pattern: /^\/search\/?$/,
+		parts: [
+			{ i: 3 }
+		]
+	},
+
+	{
 		// intro.html
 		pattern: /^\/intro\/?$/,
 		parts: [
-			{ i: 3 }
+			{ i: 4 }
 		]
 	},
 
@@ -76,7 +88,7 @@ const pages = [
 		// bar.html
 		pattern: /^\/bar\/?$/,
 		parts: [
-			{ i: 4 }
+			{ i: 5 }
 		]
 	},
 
@@ -84,7 +96,7 @@ const pages = [
 		// foo.html
 		pattern: /^\/foo\/?$/,
 		parts: [
-			{ i: 5 }
+			{ i: 6 }
 		]
 	}
 ];
