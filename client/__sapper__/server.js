@@ -10,10 +10,10 @@ import { join, resolve as resolve$1 } from 'path';
 import __index from "../src/routes/index.html";
 import __registrera from "../src/routes/registrera.html";
 import __anvandare from "../src/routes/anvandare.html";
+import __framsteg from "../src/routes/framsteg.html";
 import __search from "../src/routes/search.html";
 import __intro from "../src/routes/intro.html";
 import __bar from "../src/routes/bar.html";
-import __foo from "../src/routes/foo.html";
 import root from "../src/routes/_layout.html";
 import error from "../src/routes/_error.html";
 
@@ -50,6 +50,14 @@ export const manifest = {
 		},
 
 		{
+			// framsteg.html
+			pattern: /^\/framsteg\/?$/,
+			parts: [
+				{ name: "framsteg", file: "framsteg.html", component: __framsteg }
+			]
+		},
+
+		{
 			// search.html
 			pattern: /^\/search\/?$/,
 			parts: [
@@ -70,14 +78,6 @@ export const manifest = {
 			pattern: /^\/bar\/?$/,
 			parts: [
 				{ name: "bar", file: "bar.html", component: __bar }
-			]
-		},
-
-		{
-			// foo.html
-			pattern: /^\/foo\/?$/,
-			parts: [
-				{ name: "foo", file: "foo.html", component: __foo }
 			]
 		}
 	],

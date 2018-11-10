@@ -9,20 +9,30 @@ export const generateDummyChallenges = () => {
     "#bf8d2c",
     "#407f46",
     "#136a9f",
-    "#ffffff",
-    "#ffffff",
-    "#ffffff",
-    "#ffffff",
-    "#ffffff",
-    "#ffffff",
-    "#ffffff",
-    "#ffffff",
-    "#ffffff"
+    "#eaeaea",
+    "#eaeaea",
+    "#eaeaea",
+    "#eaeaea",
+    "#eaeaea",
+    "#eaeaea",
+    "#eaeaea",
+    "#eaeaea",
+    "#eaeaea"
   ];
   const result = [];
-  for (let i = 0; i < 500; i++) {
+
+  for (let i = 0; i < 10; i++) {
+    result.push("#999999");
+  }
+
+  for (let i = 0; i < 150; i++) {
     const color = colors[Math.floor(Math.random() * colors.length)];
     result.push(color);
   }
+
+  for (let i = 0; i < 465; i++) {
+    result.push("#eaeaea");
+  }
+
   return result;
 };

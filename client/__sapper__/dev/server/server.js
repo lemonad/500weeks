@@ -255,21 +255,31 @@ const generateDummyChallenges = () => {
     "#bf8d2c",
     "#407f46",
     "#136a9f",
-    "#ffffff",
-    "#ffffff",
-    "#ffffff",
-    "#ffffff",
-    "#ffffff",
-    "#ffffff",
-    "#ffffff",
-    "#ffffff",
-    "#ffffff"
+    "#eaeaea",
+    "#eaeaea",
+    "#eaeaea",
+    "#eaeaea",
+    "#eaeaea",
+    "#eaeaea",
+    "#eaeaea",
+    "#eaeaea",
+    "#eaeaea"
   ];
   const result = [];
-  for (let i = 0; i < 500; i++) {
+
+  for (let i = 0; i < 10; i++) {
+    result.push("#999999");
+  }
+
+  for (let i = 0; i < 150; i++) {
     const color = colors[Math.floor(Math.random() * colors.length)];
     result.push(color);
   }
+
+  for (let i = 0; i < 465; i++) {
+    result.push("#eaeaea");
+  }
+
   return result;
 };
 
@@ -564,6 +574,90 @@ Anvandare.css = {
 	map: "{\"version\":3,\"file\":\"anvandare.html\",\"sources\":[\"anvandare.html\"],\"sourcesContent\":[\"{#if right === true}\\n<div in:fly=\\\"{x: 100, duration: 200, delay:300}\\\" out:fly=\\\"{x: -100, duration: 200}\\\">\\n  <div style=\\\"text-align: center;\\\">\\n    <button on:click=\\\"set({ right: false })\\\">&lt; Min utmaning</button>\\n  </div>\\n  <div style=\\\"text-align: center; margin-top: 20px;\\\">\\n    <UserIcon size=\\\"64\\\" stroke=\\\"#666\\\" />\\n  </div>\\n  <h2>{$user.name}</h2>\\n  <p style=\\\"text-align: center;\\\">{$user.biography}</p>\\n\\n  <h1>Mina utmaningar</h1>\\n  <div class=\\\"challenges-wrapper\\\">\\n  {#each challenges as challengeColor}\\n    <div style=\\\"width: 13px; height: 13px; background-color: {challengeColor};\\\"></div>\\n  {/each}\\n</div>\\n</div>\\n{/if}\\n\\n{#if right === false}\\n<div in:fly=\\\"{x: -100, duration: 200, delay:300}\\\" out:fly=\\\"{x: 100, duration: 200}\\\">\\n  <div style=\\\"text-align: center;\\\">\\n    <button on:click=\\\"set({ right: true })\\\">Min utmaning &gt;</button>\\n  </div>\\n\\n  <h1>Min utmaning</h1>\\n\\n  <h2>Ät mer vegetariskt</h2>\\n\\n  <div style=\\\"display: flex; justify-content: center;\\\">\\n  <div style=\\\"width: 250px\\\">\\n  <ul>\\n    <li>Tips från andra användare</li>\\n    <li>Recept</li>\\n    <li>Rabatt från sponsor</li>\\n  </ul>\\n</div>\\n</div>\\n\\n  <h2>Hur känns det?</h2>\\n\\n  <div style=\\\"display: flex; justify-content: center;\\\">\\n    <div style=\\\"width: 300px; display: flex; justify-content: center;\\\">\\n      <div style=\\\"display: flex; align-items: center; margin-right: 10px;\\\" on:click=\\\"set({ difficulty: 'lätt'})\\\">\\n        <div class=\\\"option {difficulty === 'lätt' ? 'checked' : ''}\\\" />&nbsp;Lätt\\n      </div>\\n      <div style=\\\"display: flex;  align-items: center; margin-right: 10px;\\\" on:click=\\\"set({ difficulty: 'svårt'})\\\">\\n        <div class=\\\"option {difficulty === 'svårt' ? 'checked' : ''}\\\" />&nbsp;Svårt\\n      </div>\\n    </div>\\n  </div>\\n\\n  <h2>Dela utmaning</h2>\\n  <div style=\\\"display: flex; justify-content: center;\\\">\\n    <div style=\\\"padding-left: 10px; padding-right: 10px\\\"><FacebookIcon size=\\\"32\\\" stroke=\\\"#39B54A\\\" /></div>\\n    <div style=\\\"padding-left: 10px; padding-right: 10px\\\"><TwitterIcon size=\\\"32\\\" stroke=\\\"#39B54A\\\" /></div>\\n    <div style=\\\"padding-left: 10px; padding-right: 10px\\\"><InstagramIcon size=\\\"32\\\" stroke=\\\"#39B54A\\\" /></div>\\n  </div>\\n</div>\\n{/if}\\n\\n<style>\\n  h1, h2 {\\n    text-align: center;\\n  }\\n\\n  button {\\n    color: #fff;\\n    text-decoration: none;\\n    cursor: pointer;\\n    margin: 0;\\n    overflow: visible;\\n    font: inherit;\\n    display: inline-block;\\n    box-sizing: border-box;\\n    padding: 0 30px;\\n    vertical-align: middle;\\n    font-size: 14px;\\n    line-height: 38px;\\n    text-align: center;\\n    text-transform: uppercase;\\n    transition: 0.1s ease-in-out;\\n    transition-property: color, background-color, border-color;\\n    background-color: transparent;\\n    color: #222;\\n    border: 1px solid #e5e5e5;\\n  }\\n\\n  button:focus {\\n    outline: 0;\\n  }\\n\\n  button:hover {\\n    border-color: #b2b2b2;\\n  }\\n\\n  .challenges-wrapper {\\n    display: flex;\\n    flex-wrap: wrap;\\n    margin-bottom: 100px;\\n  }\\n\\n  .option {\\n    width: 10px;\\n    height: 10px;\\n    border: 2px solid #333;\\n    border-radius: 50%;\\n  }\\n\\n.option.checked {\\n  background-color: #39B54A;\\n}\\n\\n</style>\\n\\n<script>\\n  import { generateDummyChallenges } from \\\"../helpers/generateDummyChallenges.js\\\";\\n  import { fly } from \\\"svelte-transitions\\\";\\n\\n  export default {\\n    transitions: { fly },\\n\\n    components: {\\n      UserIcon: \\\"../components/icons/UserIcon.html\\\",\\n      FacebookIcon: \\\"../components/icons/FacebookIcon.html\\\",\\n      TwitterIcon: \\\"../components/icons/TwitterIcon.html\\\",\\n      InstagramIcon: \\\"../components/icons/InstagramIcon.html\\\",\\n    },\\n\\n     data() {\\n       return {\\n         difficulty: \\\"lätt\\\",\\n         right: true,\\n         challenges: generateDummyChallenges(),\\n       }\\n     }\\n  }\\n</script>\"],\"names\":[],\"mappings\":\"AA+DE,iBAAE,CAAE,EAAE,eAAC,CAAC,AACN,UAAU,CAAE,MAAM,AACpB,CAAC,AAED,MAAM,eAAC,CAAC,AACN,KAAK,CAAE,IAAI,CACX,eAAe,CAAE,IAAI,CACrB,MAAM,CAAE,OAAO,CACf,MAAM,CAAE,CAAC,CACT,QAAQ,CAAE,OAAO,CACjB,IAAI,CAAE,OAAO,CACb,OAAO,CAAE,YAAY,CACrB,UAAU,CAAE,UAAU,CACtB,OAAO,CAAE,CAAC,CAAC,IAAI,CACf,cAAc,CAAE,MAAM,CACtB,SAAS,CAAE,IAAI,CACf,WAAW,CAAE,IAAI,CACjB,UAAU,CAAE,MAAM,CAClB,cAAc,CAAE,SAAS,CACzB,UAAU,CAAE,IAAI,CAAC,WAAW,CAC5B,mBAAmB,CAAE,KAAK,CAAC,CAAC,gBAAgB,CAAC,CAAC,YAAY,CAC1D,gBAAgB,CAAE,WAAW,CAC7B,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,GAAG,CAAC,KAAK,CAAC,OAAO,AAC3B,CAAC,AAED,qBAAM,MAAM,AAAC,CAAC,AACZ,OAAO,CAAE,CAAC,AACZ,CAAC,AAED,qBAAM,MAAM,AAAC,CAAC,AACZ,YAAY,CAAE,OAAO,AACvB,CAAC,AAED,mBAAmB,eAAC,CAAC,AACnB,OAAO,CAAE,IAAI,CACb,SAAS,CAAE,IAAI,CACf,aAAa,CAAE,KAAK,AACtB,CAAC,AAED,OAAO,eAAC,CAAC,AACP,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,IAAI,CACZ,MAAM,CAAE,GAAG,CAAC,KAAK,CAAC,IAAI,CACtB,aAAa,CAAE,GAAG,AACpB,CAAC,AAEH,OAAO,QAAQ,eAAC,CAAC,AACf,gBAAgB,CAAE,OAAO,AAC3B,CAAC\"}"
 };
 
+var Framsteg = {};
+
+Framsteg.filename = "/Users/jam/projects/nykhack2018/500weeks/client/src/routes/framsteg.html";
+
+Framsteg.data = function() {
+	return {};
+};
+
+Framsteg.render = function(state, options = {}) {
+	var components = new Set();
+
+	function addComponent(component) {
+		components.add(component);
+	}
+
+	var result = { head: '', addComponent };
+	var html = Framsteg._render(result, state, options);
+
+	var cssCode = Array.from(components).map(c => c.css && c.css.code).filter(Boolean).join('\n');
+
+	return {
+		html,
+		head: result.head,
+		css: { code: cssCode, map: null },
+		toString() {
+			return html;
+		}
+	};
+};
+
+Framsteg._render = function(__result, ctx, options) {
+	__result.addComponent(Framsteg);
+
+	ctx = Object.assign({}, ctx);
+
+	return `<h1 style="text-align: center;">Framsteg</h1>
+
+<div class="bar-chart svelte-1umf3bz">
+  <div style="padding-left: 10px; padding-right: 10px;">
+    <div style="width: 20px; height: 120px; background-color: #e5233d;"></div>
+  </div>
+  <div style="padding-left: 10px; padding-right: 10px;">
+    <div style="width: 20px; height: 80px; background-color: #dda73a;"></div>
+  </div>
+  <div style="padding-left: 10px; padding-right: 10px;">
+    <div style="width: 20px; height: 20px; background-color: #4ca146;"></div>
+  </div>
+  <div style="padding-left: 10px; padding-right: 10px;">
+    <div style="width: 20px; height: 100px; background-color: #27bfe6;"></div>
+  </div>
+  <div style="padding-left: 10px; padding-right: 10px;">
+    <div style="width: 20px; height: 130px; background-color: #fbc412;"></div>
+  </div>
+  <div style="padding-left: 10px; padding-right: 10px;">
+    <div style="width: 20px; height: 90px; background-color: #f26a2e;"></div>
+  </div>
+  <div style="padding-left: 10px; padding-right: 10px;">
+    <div style="width: 20px; height: 40px; background-color: #bf8d2c;"></div>
+  </div>
+  <div style="padding-left: 10px; padding-right: 10px;">
+    <div style="width: 20px; height: 50px; background-color: #27bfe6;"></div>
+  </div>
+</div>
+
+<br>
+<br>
+
+<img class="line-chart svelte-1umf3bz" alt="linechart" src="img/line2.png">
+
+<br>
+<br>
+
+<div><strong>5740</strong> Ät vegetariskt.</div>
+<div><strong>2090</strong> Köp inte produkter som är testade på djur.</div>
+<div><strong>3301</strong> Plantera ett träd.</div>
+
+<div style="margin-bottom: 200px;"></div>`;
+};
+
+Framsteg.css = {
+	code: ".bar-chart.svelte-1umf3bz{display:flex;align-items:flex-end;height:200px;border-left:1px solid #333;border-bottom:1px solid #333;padding-left:10px;padding-right:10px}.line-chart.svelte-1umf3bz{border-left:1px solid #333;border-bottom:1px solid #333}",
+	map: "{\"version\":3,\"file\":\"framsteg.html\",\"sources\":[\"framsteg.html\"],\"sourcesContent\":[\"<h1 style=\\\"text-align: center;\\\">Framsteg</h1>\\n\\n<div class=\\\"bar-chart\\\">\\n  <div style=\\\"padding-left: 10px; padding-right: 10px;\\\">\\n    <div style=\\\"width: 20px; height: 120px; background-color: #e5233d;\\\"></div>\\n  </div>\\n  <div style=\\\"padding-left: 10px; padding-right: 10px;\\\">\\n    <div style=\\\"width: 20px; height: 80px; background-color: #dda73a;\\\"></div>\\n  </div>\\n  <div style=\\\"padding-left: 10px; padding-right: 10px;\\\">\\n    <div style=\\\"width: 20px; height: 20px; background-color: #4ca146;\\\"></div>\\n  </div>\\n  <div style=\\\"padding-left: 10px; padding-right: 10px;\\\">\\n    <div style=\\\"width: 20px; height: 100px; background-color: #27bfe6;\\\"></div>\\n  </div>\\n  <div style=\\\"padding-left: 10px; padding-right: 10px;\\\">\\n    <div style=\\\"width: 20px; height: 130px; background-color: #fbc412;\\\"></div>\\n  </div>\\n  <div style=\\\"padding-left: 10px; padding-right: 10px;\\\">\\n    <div style=\\\"width: 20px; height: 90px; background-color: #f26a2e;\\\"></div>\\n  </div>\\n  <div style=\\\"padding-left: 10px; padding-right: 10px;\\\">\\n    <div style=\\\"width: 20px; height: 40px; background-color: #bf8d2c;\\\"></div>\\n  </div>\\n  <div style=\\\"padding-left: 10px; padding-right: 10px;\\\">\\n    <div style=\\\"width: 20px; height: 50px; background-color: #27bfe6;\\\"></div>\\n  </div>\\n</div>\\n\\n<br />\\n<br />\\n\\n<img class=\\\"line-chart\\\" alt=\\\"linechart\\\" src=\\\"img/line2.png\\\">\\n\\n<br />\\n<br />\\n\\n<div><strong>5740</strong> Ät vegetariskt.</div>\\n<div><strong>2090</strong> Köp inte produkter som är testade på djur.</div>\\n<div><strong>3301</strong> Plantera ett träd.</div>\\n\\n<div style=\\\"margin-bottom: 200px;\\\"></div>\\n\\n<style>\\n  .bar-chart {\\n    display: flex;\\n    align-items: flex-end;\\n    height: 200px;\\n    border-left: 1px solid #333;\\n    border-bottom: 1px solid #333;\\n    padding-left: 10px;\\n    padding-right: 10px;\\n  }\\n\\n  .line-chart {\\n    border-left: 1px solid #333;\\n    border-bottom: 1px solid #333;\\n  }\\n</style>\\n\"],\"names\":[],\"mappings\":\"AA4CE,UAAU,eAAC,CAAC,AACV,OAAO,CAAE,IAAI,CACb,WAAW,CAAE,QAAQ,CACrB,MAAM,CAAE,KAAK,CACb,WAAW,CAAE,GAAG,CAAC,KAAK,CAAC,IAAI,CAC3B,aAAa,CAAE,GAAG,CAAC,KAAK,CAAC,IAAI,CAC7B,YAAY,CAAE,IAAI,CAClB,aAAa,CAAE,IAAI,AACrB,CAAC,AAED,WAAW,eAAC,CAAC,AACX,WAAW,CAAE,GAAG,CAAC,KAAK,CAAC,IAAI,CAC3B,aAAa,CAAE,GAAG,CAAC,KAAK,CAAC,IAAI,AAC/B,CAAC\"}"
+};
+
 var Search = {};
 
 Search.filename = "/Users/jam/projects/nykhack2018/500weeks/client/src/routes/search.html";
@@ -839,53 +933,6 @@ Bar.css = {
 	map: null
 };
 
-var Foo = {};
-
-Foo.filename = "/Users/jam/projects/nykhack2018/500weeks/client/src/routes/foo.html";
-
-Foo.data = function() {
-	return {};
-};
-
-Foo.render = function(state, options = {}) {
-	var components = new Set();
-
-	function addComponent(component) {
-		components.add(component);
-	}
-
-	var result = { head: '', addComponent };
-	var html = Foo._render(result, state, options);
-
-	var cssCode = Array.from(components).map(c => c.css && c.css.code).filter(Boolean).join('\n');
-
-	return {
-		html,
-		head: result.head,
-		css: { code: cssCode, map: null },
-		toString() {
-			return html;
-		}
-	};
-};
-
-Foo._render = function(__result, ctx, options) {
-	__result.addComponent(Foo);
-
-	if (!options.store) {
-		throw new Error("<Foo> references store properties, but no store was provided");
-	}
-
-	ctx = Object.assign(options.store._init(["user"]), ctx);
-
-	return `<h1>Foo ${escape(ctx.$user.name)}</h1>`;
-};
-
-Foo.css = {
-	code: '',
-	map: null
-};
-
 var HeartIcon = {};
 
 HeartIcon.filename = "/Users/jam/projects/nykhack2018/500weeks/client/src/components/icons/HeartIcon.html";
@@ -1124,7 +1171,7 @@ Nav._render = function(__result, ctx, options) {
 			<a href="bar" class="svelte-c36990">${validateSsrComponent(WorldIcon, 'WorldIcon')._render(__result, { size: "32", stroke: ctx.segment === 'bar' ? '#39B54A' : '#EAEAEA' }, { store: options.store })}</a>
 		</div>
 		<div class="link-wrapper svelte-c36990">
-			<a href="foo" class="svelte-c36990">${validateSsrComponent(ListIcon, 'ListIcon')._render(__result, { size: "32", stroke: ctx.segment === 'foo' ? '#39B54A' : '#EAEAEA' }, { store: options.store })}</a>
+			<a href="framsteg" class="svelte-c36990">${validateSsrComponent(ListIcon, 'ListIcon')._render(__result, { size: "32", stroke: ctx.segment === 'framsteg' ? '#39B54A' : '#EAEAEA' }, { store: options.store })}</a>
 		</div>
 		<div class="link-wrapper svelte-c36990">
 			<a href="anvandare" class="svelte-c36990">${validateSsrComponent(UserIcon, 'UserIcon')._render(__result, { size: "32", stroke: ctx.segment === 'anvandare' ? '#39B54A' : '#EAEAEA' }, { store: options.store })}</a>
@@ -1138,7 +1185,7 @@ Nav._render = function(__result, ctx, options) {
 
 Nav.css = {
 	code: ".nav.svelte-c36990{display:flex;justify-content:center;align-items:center;position:fixed;bottom:0px;width:calc( 100% - 40px );padding:20px;background:linear-gradient(to bottom, #333333, #111111);box-shadow:0 5px 15px rgba(0, 0, 0, 0.1)}.links.svelte-c36990{display:flex;justify-content:center;align-items:center;width:750px}.link-wrapper.svelte-c36990{padding-left:10px;padding-right:10px}a.svelte-c36990{display:flex;align-items:center;height:100%;color:#ffffff;text-decoration:none;font-size:13px;text-transform:uppercase;padding-left:5px;padding-right:5px}",
-	map: "{\"version\":3,\"file\":\"Nav.html\",\"sources\":[\"Nav.html\"],\"sourcesContent\":[\"{#if !$newUser}\\n<div class=\\\"nav\\\">\\n  <div class=\\\"links\\\">\\n\\t\\t<div class=\\\"link-wrapper\\\">\\n\\t\\t\\t<a href=\\\".\\\"><HeartIcon size=\\\"32\\\" stroke=\\\"{segment === undefined ? '#39B54A' : '#EAEAEA'}\\\" /></a>\\n\\t\\t</div>\\n\\t\\t<div class=\\\"link-wrapper\\\">\\n\\t\\t\\t<a href=\\\"bar\\\"><WorldIcon size=\\\"32\\\" stroke=\\\"{segment === 'bar' ? '#39B54A' : '#EAEAEA'}\\\" /></a>\\n\\t\\t</div>\\n\\t\\t<div class=\\\"link-wrapper\\\">\\n\\t\\t\\t<a href=\\\"foo\\\"><ListIcon size=\\\"32\\\" stroke=\\\"{segment === 'foo' ? '#39B54A' : '#EAEAEA'}\\\" /></a>\\n\\t\\t</div>\\n\\t\\t<div class=\\\"link-wrapper\\\">\\n\\t\\t\\t<a href=\\\"anvandare\\\"><UserIcon size=\\\"32\\\" stroke=\\\"{segment === 'anvandare' ? '#39B54A' : '#EAEAEA'}\\\" /></a>\\n\\t\\t</div>\\n\\t\\t<div class=\\\"link-wrapper\\\">\\n\\t\\t\\t\\t<a href=\\\"search\\\"><SearchIcon size=\\\"32\\\" stroke=\\\"{segment === 'search' ? '#39B54A' : '#EAEAEA'}\\\" /></a>\\n\\t\\t\\t</div>\\n  </div>\\n</div>\\n{/if}\\n\\n<style>\\n  .nav {\\n    display: flex;\\n    justify-content: center;\\n    align-items: center;\\n    position: fixed;\\n    bottom: 0px;\\n    width: calc( 100% - 40px );\\n    padding: 20px;\\n    /*background: linear-gradient(to bottom, #28a5f5, #1e87f0);*/\\n\\t\\tbackground: linear-gradient(to bottom, #333333, #111111);\\n    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);\\n  }\\n\\n  .links {\\n    display: flex;\\n\\t\\tjustify-content: center;\\n    align-items: center;\\n    width: 750px;\\n  }\\n\\n\\t.link-wrapper {\\n\\t\\tpadding-left: 10px;\\n\\t\\tpadding-right: 10px;\\n\\t}\\n\\n  a {\\n    display: flex;\\n    align-items: center;\\n    height: 100%;\\n    color: #ffffff;\\n    text-decoration: none;\\n    font-size: 13px;\\n    text-transform: uppercase;\\n    padding-left: 5px;\\n    padding-right: 5px;\\n  }\\n</style>\\n\\n<script>\\n\\texport default {\\n\\t\\tcomponents: {\\n\\t\\t\\tHeartIcon: \\\"./icons/HeartIcon.html\\\",\\n\\t\\t\\tWorldIcon: \\\"./icons/WorldIcon.html\\\",\\n\\t\\t\\tListIcon: \\\"./icons/ListIcon.html\\\",\\n\\t\\t\\tUserIcon: \\\"./icons/UserIcon.html\\\",\\n\\t\\t\\tSearchIcon: \\\"./icons/SearchIcon.html\\\",\\n\\t\\t}\\n\\t}\\n</script>\\n\"],\"names\":[],\"mappings\":\"AAuBE,IAAI,cAAC,CAAC,AACJ,OAAO,CAAE,IAAI,CACb,eAAe,CAAE,MAAM,CACvB,WAAW,CAAE,MAAM,CACnB,QAAQ,CAAE,KAAK,CACf,MAAM,CAAE,GAAG,CACX,KAAK,CAAE,MAAM,IAAI,CAAC,CAAC,CAAC,IAAI,EAAE,CAC1B,OAAO,CAAE,IAAI,CAEf,UAAU,CAAE,gBAAgB,EAAE,CAAC,MAAM,CAAC,CAAC,OAAO,CAAC,CAAC,OAAO,CAAC,CACtD,UAAU,CAAE,CAAC,CAAC,GAAG,CAAC,IAAI,CAAC,KAAK,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,AAC3C,CAAC,AAED,MAAM,cAAC,CAAC,AACN,OAAO,CAAE,IAAI,CACf,eAAe,CAAE,MAAM,CACrB,WAAW,CAAE,MAAM,CACnB,KAAK,CAAE,KAAK,AACd,CAAC,AAEF,aAAa,cAAC,CAAC,AACd,YAAY,CAAE,IAAI,CAClB,aAAa,CAAE,IAAI,AACpB,CAAC,AAEA,CAAC,cAAC,CAAC,AACD,OAAO,CAAE,IAAI,CACb,WAAW,CAAE,MAAM,CACnB,MAAM,CAAE,IAAI,CACZ,KAAK,CAAE,OAAO,CACd,eAAe,CAAE,IAAI,CACrB,SAAS,CAAE,IAAI,CACf,cAAc,CAAE,SAAS,CACzB,YAAY,CAAE,GAAG,CACjB,aAAa,CAAE,GAAG,AACpB,CAAC\"}"
+	map: "{\"version\":3,\"file\":\"Nav.html\",\"sources\":[\"Nav.html\"],\"sourcesContent\":[\"{#if !$newUser}\\n<div class=\\\"nav\\\">\\n  <div class=\\\"links\\\">\\n\\t\\t<div class=\\\"link-wrapper\\\">\\n\\t\\t\\t<a href=\\\".\\\"><HeartIcon size=\\\"32\\\" stroke=\\\"{segment === undefined ? '#39B54A' : '#EAEAEA'}\\\" /></a>\\n\\t\\t</div>\\n\\t\\t<div class=\\\"link-wrapper\\\">\\n\\t\\t\\t<a href=\\\"bar\\\"><WorldIcon size=\\\"32\\\" stroke=\\\"{segment === 'bar' ? '#39B54A' : '#EAEAEA'}\\\" /></a>\\n\\t\\t</div>\\n\\t\\t<div class=\\\"link-wrapper\\\">\\n\\t\\t\\t<a href=\\\"framsteg\\\"><ListIcon size=\\\"32\\\" stroke=\\\"{segment === 'framsteg' ? '#39B54A' : '#EAEAEA'}\\\" /></a>\\n\\t\\t</div>\\n\\t\\t<div class=\\\"link-wrapper\\\">\\n\\t\\t\\t<a href=\\\"anvandare\\\"><UserIcon size=\\\"32\\\" stroke=\\\"{segment === 'anvandare' ? '#39B54A' : '#EAEAEA'}\\\" /></a>\\n\\t\\t</div>\\n\\t\\t<div class=\\\"link-wrapper\\\">\\n\\t\\t\\t\\t<a href=\\\"search\\\"><SearchIcon size=\\\"32\\\" stroke=\\\"{segment === 'search' ? '#39B54A' : '#EAEAEA'}\\\" /></a>\\n\\t\\t\\t</div>\\n  </div>\\n</div>\\n{/if}\\n\\n<style>\\n  .nav {\\n    display: flex;\\n    justify-content: center;\\n    align-items: center;\\n    position: fixed;\\n    bottom: 0px;\\n    width: calc( 100% - 40px );\\n    padding: 20px;\\n    /*background: linear-gradient(to bottom, #28a5f5, #1e87f0);*/\\n\\t\\tbackground: linear-gradient(to bottom, #333333, #111111);\\n    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);\\n  }\\n\\n  .links {\\n    display: flex;\\n\\t\\tjustify-content: center;\\n    align-items: center;\\n    width: 750px;\\n  }\\n\\n\\t.link-wrapper {\\n\\t\\tpadding-left: 10px;\\n\\t\\tpadding-right: 10px;\\n\\t}\\n\\n  a {\\n    display: flex;\\n    align-items: center;\\n    height: 100%;\\n    color: #ffffff;\\n    text-decoration: none;\\n    font-size: 13px;\\n    text-transform: uppercase;\\n    padding-left: 5px;\\n    padding-right: 5px;\\n  }\\n</style>\\n\\n<script>\\n\\texport default {\\n\\t\\tcomponents: {\\n\\t\\t\\tHeartIcon: \\\"./icons/HeartIcon.html\\\",\\n\\t\\t\\tWorldIcon: \\\"./icons/WorldIcon.html\\\",\\n\\t\\t\\tListIcon: \\\"./icons/ListIcon.html\\\",\\n\\t\\t\\tUserIcon: \\\"./icons/UserIcon.html\\\",\\n\\t\\t\\tSearchIcon: \\\"./icons/SearchIcon.html\\\",\\n\\t\\t}\\n\\t}\\n</script>\\n\"],\"names\":[],\"mappings\":\"AAuBE,IAAI,cAAC,CAAC,AACJ,OAAO,CAAE,IAAI,CACb,eAAe,CAAE,MAAM,CACvB,WAAW,CAAE,MAAM,CACnB,QAAQ,CAAE,KAAK,CACf,MAAM,CAAE,GAAG,CACX,KAAK,CAAE,MAAM,IAAI,CAAC,CAAC,CAAC,IAAI,EAAE,CAC1B,OAAO,CAAE,IAAI,CAEf,UAAU,CAAE,gBAAgB,EAAE,CAAC,MAAM,CAAC,CAAC,OAAO,CAAC,CAAC,OAAO,CAAC,CACtD,UAAU,CAAE,CAAC,CAAC,GAAG,CAAC,IAAI,CAAC,KAAK,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,AAC3C,CAAC,AAED,MAAM,cAAC,CAAC,AACN,OAAO,CAAE,IAAI,CACf,eAAe,CAAE,MAAM,CACrB,WAAW,CAAE,MAAM,CACnB,KAAK,CAAE,KAAK,AACd,CAAC,AAEF,aAAa,cAAC,CAAC,AACd,YAAY,CAAE,IAAI,CAClB,aAAa,CAAE,IAAI,AACpB,CAAC,AAEA,CAAC,cAAC,CAAC,AACD,OAAO,CAAE,IAAI,CACb,WAAW,CAAE,MAAM,CACnB,MAAM,CAAE,IAAI,CACZ,KAAK,CAAE,OAAO,CACd,eAAe,CAAE,IAAI,CACrB,SAAS,CAAE,IAAI,CACf,cAAc,CAAE,SAAS,CACzB,YAAY,CAAE,GAAG,CACjB,aAAa,CAAE,GAAG,AACpB,CAAC\"}"
 };
 
 var PrimaryButton = {};
@@ -1376,6 +1423,14 @@ const manifest = {
 		},
 
 		{
+			// framsteg.html
+			pattern: /^\/framsteg\/?$/,
+			parts: [
+				{ name: "framsteg", file: "framsteg.html", component: Framsteg }
+			]
+		},
+
+		{
 			// search.html
 			pattern: /^\/search\/?$/,
 			parts: [
@@ -1396,14 +1451,6 @@ const manifest = {
 			pattern: /^\/bar\/?$/,
 			parts: [
 				{ name: "bar", file: "bar.html", component: Bar }
-			]
-		},
-
-		{
-			// foo.html
-			pattern: /^\/foo\/?$/,
-			parts: [
-				{ name: "foo", file: "foo.html", component: Foo }
 			]
 		}
 	],

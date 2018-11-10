@@ -27,6 +27,10 @@ const components = [
 		css: "__SAPPER_CSS_PLACEHOLDER:anvandare.html__"
 	},
 	{
+		js: () => import("../src/routes/framsteg.html"),
+		css: "__SAPPER_CSS_PLACEHOLDER:framsteg.html__"
+	},
+	{
 		js: () => import("../src/routes/search.html"),
 		css: "__SAPPER_CSS_PLACEHOLDER:search.html__"
 	},
@@ -37,10 +41,6 @@ const components = [
 	{
 		js: () => import("../src/routes/bar.html"),
 		css: "__SAPPER_CSS_PLACEHOLDER:bar.html__"
-	},
-	{
-		js: () => import("../src/routes/foo.html"),
-		css: "__SAPPER_CSS_PLACEHOLDER:foo.html__"
 	}
 ];
 const pages = [
@@ -69,10 +69,18 @@ const pages = [
 	},
 
 	{
+		// framsteg.html
+		pattern: /^\/framsteg\/?$/,
+		parts: [
+			{ i: 3 }
+		]
+	},
+
+	{
 		// search.html
 		pattern: /^\/search\/?$/,
 		parts: [
-			{ i: 3 }
+			{ i: 4 }
 		]
 	},
 
@@ -80,21 +88,13 @@ const pages = [
 		// intro.html
 		pattern: /^\/intro\/?$/,
 		parts: [
-			{ i: 4 }
+			{ i: 5 }
 		]
 	},
 
 	{
 		// bar.html
 		pattern: /^\/bar\/?$/,
-		parts: [
-			{ i: 5 }
-		]
-	},
-
-	{
-		// foo.html
-		pattern: /^\/foo\/?$/,
 		parts: [
 			{ i: 6 }
 		]
