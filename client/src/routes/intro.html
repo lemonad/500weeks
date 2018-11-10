@@ -1,62 +1,8 @@
 <div class="intro-container">
-    {#if $introStep === 6 || $introStep === 6 || $introStep === 6}
-      <img alt='Planet' src='img/planet.png'>
-    {/if}
-
-    {#if $introStep === 6}
-    <div class="step">
-      <h2>Välkommen!</h2>
-      <p>Du är på god väg att rädda världen!</p>
-      <Button default text="Nästa" on:click="$set({ introStep: 2 })" />
-    </div>
-    {/if}
-
-    {#if $introStep === 6}
-    <div class="step">
-      <p>Tillsammans kan vi hjälpa till för att uppnå FN:s globala mål.</p>
-      <p>Varje individ räknas! Under 500 veckor hjälps vi åt.</p>
-      <Button default text="Nästa" on:click="$set({ introStep: 3 })" />
-    </div>
-    {/if}
-
-    {#if $introStep === 6}
-    <div class="step">
-      <p>Anta nya utmaningar varje vecka.</p>
-      <p>Utmana vänner och familj. Följ dina och allas framsteg.</p>
-      <Button default text="Nästa" on:click="$set({ introStep: 4 })" />
-    </div>
-    {/if}
-
-    {#if $introStep === 6 || $introStep === 6 || $introStep === 6}
-    <div class="dots">
-      <div class="dot {$introStep === 1 ? 'current' : ''}" />
-      <div class="dot {$introStep === 2 ? 'current' : ''}" />
-      <div class="dot {$introStep === 3 ? 'current' : ''}" />
-    </div>
-    {/if}
-
-    {#if $introStep === 6}
-    <div class="categories">
-      {#each categories as category}
-        <div class="category" style="background-color: {category.color};" on:click="$set({ introStep: 5 })" >
-          {category.label}
-        </div>
-      {/each}
-    </div>
-    {/if}
-
-    {#if $introStep === 6}
-      <div style="text-align: center;">
-        <h1>Utmaning</h1>
-        <div style="height: 100px;">Beskrivning av utmaning, mål o.s.v.</div>
-        <LinkButton type="default" text="Registrera och anta utmaning" href="registrera" />
-      </div>
-    {/if}
-
     {#if $introStep === 1}
     <div>
       <div on:click="$set({ introStep: 2 })">
-        <img class="image" style="width:100%; height: auto;" src="img/1onboarding1.png"/>
+        <img alt="1" class="image" style="width:100%; height: auto;" src="img/1onboarding1.png"/>
       </div>
       </div>
     {/if}
@@ -64,7 +10,7 @@
     {#if $introStep === 2}
     <div>
       <div on:click="$set({ introStep: 3 })">
-        <img class="image" style="width:100%; height: auto;" src="img/2onboarding2.png"/>
+        <img alt="2" class="image" style="width:100%; height: auto;" src="img/2onboarding2.png"/>
       </div>
     </div>
     {/if}
@@ -72,7 +18,7 @@
     {#if $introStep === 3}
     <div>
       <div on:click="$set({ introStep: 4 })">
-        <img class="image" style="width:100%; height: auto;" src="img/3onboarding3.png"/>
+        <img alt="3" class="image" style="width:100%; height: auto;" src="img/3onboarding3.png"/>
       </div>
     </div>
     {/if}
@@ -80,7 +26,7 @@
     {#if $introStep === 4}
       <div>
         <a href="registrera">
-        <img class="image" style="width:100%; height: auto;" src="img/coop.png"/>
+        <img alt="coop" class="image" style="width:100%; height: auto;" src="img/coop.png"/>
       </a>
       </div>
     {/if}
@@ -121,69 +67,14 @@
     box-shadow: 0 14px 25px rgba(0,0,0,0.16);
   }
 
-  .step {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 200px;
-    height: 220px;
-    padding-left: 20px;
-  }
-
   img {
     width: 128px;
     height: 128px;
-  }
-
-  .dots {
-    display:flex;
-    justify-content: center;
-    flex-basis: 100%;
-  }
-
-  .dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    border: 1px solid #666;
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-
-  .dot.current {
-    background-color: #666;
-  }
-
-  .categories {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .category {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    width: 100px;
-    height: 100px;
-    margin: 5px;
-    background-color: #666;
-    font-size: 16px;
-    cursor: pointer;
-    text-align: center;
   }
 </style>
 
 <script>
   export default {
-    components: {
-      Button: "../components/Button.html",
-      LinkButton: "../components/LinkButton.html",
-    },
-
     data() {
       return {
         categories: [

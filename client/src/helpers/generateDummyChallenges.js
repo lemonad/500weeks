@@ -30,7 +30,7 @@ export const generateDummyChallenges = () => {
     result.push(color);
   }
 
-  for (let i = 0; i < 465; i++) {
+  for (let i = 0; i < 340; i++) {
     result.push("#eaeaea");
   }
 

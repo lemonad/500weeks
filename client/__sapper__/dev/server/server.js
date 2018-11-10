@@ -402,7 +402,7 @@ const generateDummyChallenges = () => {
     result.push(color);
   }
 
-  for (let i = 0; i < 465; i++) {
+  for (let i = 0; i < 340; i++) {
     result.push("#eaeaea");
   }
 
@@ -823,7 +823,9 @@ Search._render = function(__result, ctx, options) {
 
 	return `<h1>Search</h1>
 
-<input type="text" placeholder="Search..." class="svelte-mbgyoc">
+<div style="display: flex; justify-content: center;">
+  <input type="text" placeholder="Search..." class="svelte-5z7gx9">
+</div>
 
 <div style="display: flex; padding: 10px;">
   <div style="width: 100px; font-style: bold;"><strong>Användare</strong></div>
@@ -831,114 +833,28 @@ Search._render = function(__result, ctx, options) {
   <div style="width: 100px; font-style: bold;"><strong>Utmaning</strong></div>
 </div>
 
-<div class="card svelte-mbgyoc">
-    <div style="width: 100px; font-style: bold;">Bengt</div>
-    <div style="width: 100px; font-style: bold;">Sköldpaddor</div>
-    <div style="width: 100px; font-style: bold;">Cykla</div>
+<div class="card svelte-5z7gx9">
+  <div style="width: 100px; font-style: bold;">Bengt</div>
+  <div style="width: 100px; font-style: bold;">Sköldpaddor</div>
+  <div style="width: 100px; font-style: bold;">Cykla</div>
 </div>
 
-<div class="card svelte-mbgyoc">
-    <div style="width: 100px; font-style: bold;">Gunhild</div>
-    <div style="width: 100px; font-style: bold;"></div>
-    <div style="width: 100px; font-style: bold;">Vegetarian</div>
+<div class="card svelte-5z7gx9">
+  <div style="width: 100px; font-style: bold;">Gunhild</div>
+  <div style="width: 100px; font-style: bold;"></div>
+  <div style="width: 100px; font-style: bold;">Vegetarian</div>
 </div>
 
-<div class="card svelte-mbgyoc">
-    <div style="width: 100px; font-style: bold;">Markus</div>
-    <div style="width: 100px; font-style: bold;">Sköldpaddor</div>
-    <div style="width: 100px; font-style: bold;">Cykla</div>
+<div class="card svelte-5z7gx9">
+  <div style="width: 100px; font-style: bold;">Markus</div>
+  <div style="width: 100px; font-style: bold;">Sköldpaddor</div>
+  <div style="width: 100px; font-style: bold;">Cykla</div>
 </div>`;
 };
 
 Search.css = {
-	code: "input.svelte-mbgyoc{height:40px;display:block;max-width:100%;width:100%;border:0 none;padding:0 10px;background:#fff;color:#666;border:1px solid #e5e5e5;transition:.2s ease-in-out;transition-property:color,background-color,border;width:310px}input.svelte-mbgyoc:focus{outline:0;border-color:#0f7ae5}.card.svelte-mbgyoc{margin-bottom:10px;padding-top:10px;padding-bottom:10px;display:flex;padding-left:10px;padding-right:10px;border:1px solid #eaeaea;box-shadow:0 5px 15px rgba(12, 7, 7, 0.08);background-color:#ffffff}.card.svelte-mbgyoc:hover{box-shadow:0 5px 15px rgba(12, 7, 7, 0.16)}",
-	map: "{\"version\":3,\"file\":\"search.html\",\"sources\":[\"search.html\"],\"sourcesContent\":[\"<h1>Search</h1>\\n\\n<input type=\\\"text\\\" placeholder=\\\"Search...\\\" />\\n\\n<div style=\\\"display: flex; padding: 10px;\\\">\\n  <div style=\\\"width: 100px; font-style: bold;\\\"><strong>Användare</strong></div>\\n  <div style=\\\"width: 100px; font-style: bold;\\\"><strong>Grupper</strong></div>\\n  <div style=\\\"width: 100px; font-style: bold;\\\"><strong>Utmaning</strong></div>\\n</div>\\n\\n<div class=\\\"card\\\">\\n    <div style=\\\"width: 100px; font-style: bold;\\\">Bengt</div>\\n    <div style=\\\"width: 100px; font-style: bold;\\\">Sköldpaddor</div>\\n    <div style=\\\"width: 100px; font-style: bold;\\\">Cykla</div>\\n</div>\\n\\n<div class=\\\"card\\\">\\n    <div style=\\\"width: 100px; font-style: bold;\\\">Gunhild</div>\\n    <div style=\\\"width: 100px; font-style: bold;\\\"></div>\\n    <div style=\\\"width: 100px; font-style: bold;\\\">Vegetarian</div>\\n</div>\\n\\n<div class=\\\"card\\\">\\n    <div style=\\\"width: 100px; font-style: bold;\\\">Markus</div>\\n    <div style=\\\"width: 100px; font-style: bold;\\\">Sköldpaddor</div>\\n    <div style=\\\"width: 100px; font-style: bold;\\\">Cykla</div>\\n</div>\\n\\n<style>\\n  input {\\n    height: 40px;\\n    display: block;\\n\\n    max-width: 100%;\\n    width: 100%;\\n    border: 0 none;\\n    padding: 0 10px;\\n    background: #fff;\\n    color: #666;\\n    border: 1px solid #e5e5e5;\\n    transition: .2s ease-in-out;\\n    transition-property: color,background-color,border;\\n    width: 310px;\\n  }\\n\\n  input:focus {\\n    outline: 0;\\n    border-color: #0f7ae5;\\n  }\\n\\n  .card {\\n    margin-bottom: 10px;\\n    padding-top: 10px;\\n    padding-bottom: 10px;\\n    display: flex;\\n  padding-left: 10px;\\n  padding-right: 10px;\\n    border: 1px solid #eaeaea;\\n    box-shadow: 0 5px 15px rgba(12, 7, 7, 0.08);\\n    background-color: #ffffff;\\n  }\\n\\n  .card:hover {\\n    box-shadow: 0 5px 15px rgba(12, 7, 7, 0.16);\\n  }\\n</style>\"],\"names\":[],\"mappings\":\"AA6BE,KAAK,cAAC,CAAC,AACL,MAAM,CAAE,IAAI,CACZ,OAAO,CAAE,KAAK,CAEd,SAAS,CAAE,IAAI,CACf,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,CAAC,CAAC,IAAI,CACd,OAAO,CAAE,CAAC,CAAC,IAAI,CACf,UAAU,CAAE,IAAI,CAChB,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,GAAG,CAAC,KAAK,CAAC,OAAO,CACzB,UAAU,CAAE,GAAG,CAAC,WAAW,CAC3B,mBAAmB,CAAE,KAAK,CAAC,gBAAgB,CAAC,MAAM,CAClD,KAAK,CAAE,KAAK,AACd,CAAC,AAED,mBAAK,MAAM,AAAC,CAAC,AACX,OAAO,CAAE,CAAC,CACV,YAAY,CAAE,OAAO,AACvB,CAAC,AAED,KAAK,cAAC,CAAC,AACL,aAAa,CAAE,IAAI,CACnB,WAAW,CAAE,IAAI,CACjB,cAAc,CAAE,IAAI,CACpB,OAAO,CAAE,IAAI,CACf,YAAY,CAAE,IAAI,CAClB,aAAa,CAAE,IAAI,CACjB,MAAM,CAAE,GAAG,CAAC,KAAK,CAAC,OAAO,CACzB,UAAU,CAAE,CAAC,CAAC,GAAG,CAAC,IAAI,CAAC,KAAK,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,IAAI,CAAC,CAC3C,gBAAgB,CAAE,OAAO,AAC3B,CAAC,AAED,mBAAK,MAAM,AAAC,CAAC,AACX,UAAU,CAAE,CAAC,CAAC,GAAG,CAAC,IAAI,CAAC,KAAK,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,IAAI,CAAC,AAC7C,CAAC\"}"
-};
-
-var Button = {};
-
-Button.filename = "/Users/jam/projects/nykhack2018/500weeks/client/src/components/Button.html";
-
-Button.data = function() {
-	return {};
-};
-
-Button.render = function(state, options = {}) {
-	var components = new Set();
-
-	function addComponent(component) {
-		components.add(component);
-	}
-
-	var result = { head: '', addComponent };
-	var html = Button._render(result, state, options);
-
-	var cssCode = Array.from(components).map(c => c.css && c.css.code).filter(Boolean).join('\n');
-
-	return {
-		html,
-		head: result.head,
-		css: { code: cssCode, map: null },
-		toString() {
-			return html;
-		}
-	};
-};
-
-Button._render = function(__result, ctx, options) {
-	__result.addComponent(Button);
-
-	ctx = Object.assign({}, ctx);
-
-	return `<button class="${[`svelte-17re5yq`, ctx.block ? "block" : "", ctx.primary ? "primary" : "", ctx.default ? "default" : ""].join(' ').trim() }">${escape(ctx.text)}</button>`;
-};
-
-Button.css = {
-	code: "button.svelte-17re5yq{color:#fff;text-decoration:none;cursor:pointer;margin:0;overflow:visible;font:inherit;display:inline-block;box-sizing:border-box;padding:0 30px;vertical-align:middle;font-size:14px;line-height:38px;text-align:center;text-transform:uppercase;transition:0.1s ease-in-out;transition-property:color, background-color, border-color}button.svelte-17re5yq:focus{outline:0}.block.svelte-17re5yq{width:100%}.primary{background-color:#1e87f0;border:1px solid transparent}.primary.svelte-17re5yq:hover{background-color:#0f7ae5}.default.svelte-17re5yq{background-color:transparent;color:#222;border:1px solid #e5e5e5}.default.svelte-17re5yq:hover{border-color:#b2b2b2}",
-	map: "{\"version\":3,\"file\":\"Button.html\",\"sources\":[\"Button.html\"],\"sourcesContent\":[\"<button class:block class:primary class:default on:click>{text}</button>\\n\\n<style>\\n  button {\\n    color: #fff;\\n    text-decoration: none;\\n    cursor: pointer;\\n    margin: 0;\\n    overflow: visible;\\n    font: inherit;\\n    display: inline-block;\\n    box-sizing: border-box;\\n    padding: 0 30px;\\n    vertical-align: middle;\\n    font-size: 14px;\\n    line-height: 38px;\\n    text-align: center;\\n    text-transform: uppercase;\\n    transition: 0.1s ease-in-out;\\n    transition-property: color, background-color, border-color;\\n  }\\n\\n  button:focus {\\n    outline: 0;\\n  }\\n\\n  .block {\\n    width: 100%;\\n  }\\n\\n  :global(.primary) {\\n    background-color: #1e87f0;\\n    border: 1px solid transparent;\\n  }\\n\\n  .primary:hover {\\n    background-color: #0f7ae5;\\n  }\\n\\n  .default {\\n    background-color: transparent;\\n    color: #222;\\n    border: 1px solid #e5e5e5;\\n  }\\n\\n  .default:hover {\\n    border-color: #b2b2b2;\\n  }\\n</style>\\n\"],\"names\":[],\"mappings\":\"AAGE,MAAM,eAAC,CAAC,AACN,KAAK,CAAE,IAAI,CACX,eAAe,CAAE,IAAI,CACrB,MAAM,CAAE,OAAO,CACf,MAAM,CAAE,CAAC,CACT,QAAQ,CAAE,OAAO,CACjB,IAAI,CAAE,OAAO,CACb,OAAO,CAAE,YAAY,CACrB,UAAU,CAAE,UAAU,CACtB,OAAO,CAAE,CAAC,CAAC,IAAI,CACf,cAAc,CAAE,MAAM,CACtB,SAAS,CAAE,IAAI,CACf,WAAW,CAAE,IAAI,CACjB,UAAU,CAAE,MAAM,CAClB,cAAc,CAAE,SAAS,CACzB,UAAU,CAAE,IAAI,CAAC,WAAW,CAC5B,mBAAmB,CAAE,KAAK,CAAC,CAAC,gBAAgB,CAAC,CAAC,YAAY,AAC5D,CAAC,AAED,qBAAM,MAAM,AAAC,CAAC,AACZ,OAAO,CAAE,CAAC,AACZ,CAAC,AAED,MAAM,eAAC,CAAC,AACN,KAAK,CAAE,IAAI,AACb,CAAC,AAEO,QAAQ,AAAE,CAAC,AACjB,gBAAgB,CAAE,OAAO,CACzB,MAAM,CAAE,GAAG,CAAC,KAAK,CAAC,WAAW,AAC/B,CAAC,AAED,uBAAQ,MAAM,AAAC,CAAC,AACd,gBAAgB,CAAE,OAAO,AAC3B,CAAC,AAED,QAAQ,eAAC,CAAC,AACR,gBAAgB,CAAE,WAAW,CAC7B,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,GAAG,CAAC,KAAK,CAAC,OAAO,AAC3B,CAAC,AAED,uBAAQ,MAAM,AAAC,CAAC,AACd,YAAY,CAAE,OAAO,AACvB,CAAC\"}"
-};
-
-var LinkButton = {};
-
-LinkButton.filename = "/Users/jam/projects/nykhack2018/500weeks/client/src/components/LinkButton.html";
-
-LinkButton.data = function() {
-	return {};
-};
-
-LinkButton.render = function(state, options = {}) {
-	var components = new Set();
-
-	function addComponent(component) {
-		components.add(component);
-	}
-
-	var result = { head: '', addComponent };
-	var html = LinkButton._render(result, state, options);
-
-	var cssCode = Array.from(components).map(c => c.css && c.css.code).filter(Boolean).join('\n');
-
-	return {
-		html,
-		head: result.head,
-		css: { code: cssCode, map: null },
-		toString() {
-			return html;
-		}
-	};
-};
-
-LinkButton._render = function(__result, ctx, options) {
-	__result.addComponent(LinkButton);
-
-	ctx = Object.assign({}, ctx);
-
-	return `<a class="${[`button svelte-fk168z`, ctx.block ? "block" : ""].join(' ').trim() }"${(v => v == null ? "" : ` href="${escape(ctx.href)}"`)(ctx.href)}>${escape(ctx.text)}</a>`;
-};
-
-LinkButton.css = {
-	code: "a.button.svelte-fk168z{color:#fff;text-decoration:none;cursor:pointer;margin:0;overflow:visible;font:inherit;display:inline-block;box-sizing:border-box;padding:0 30px;vertical-align:middle;font-size:14px;line-height:38px;text-align:center;text-transform:uppercase;transition:0.1s ease-in-out;transition-property:color, background-color, border-color;background-color:transparent;color:#222;border:1px solid #e5e5e5}a.button.svelte-fk168z:focus{outline:0}a.button.svelte-fk168z:hover{border-color:#b2b2b2}.block.svelte-fk168z{width:100%}",
-	map: "{\"version\":3,\"file\":\"LinkButton.html\",\"sources\":[\"LinkButton.html\"],\"sourcesContent\":[\"<a class:block class=\\\"button\\\" href={href} on:click>{text}</a>\\n\\n<style>\\n  a.button {\\n    color: #fff;\\n    text-decoration: none;\\n    cursor: pointer;\\n    margin: 0;\\n    overflow: visible;\\n    font: inherit;\\n    display: inline-block;\\n    box-sizing: border-box;\\n    padding: 0 30px;\\n    vertical-align: middle;\\n    font-size: 14px;\\n    line-height: 38px;\\n    text-align: center;\\n    text-transform: uppercase;\\n    transition: 0.1s ease-in-out;\\n    transition-property: color, background-color, border-color;\\n    background-color: transparent;\\n    color: #222;\\n    border: 1px solid #e5e5e5;\\n  }\\n\\n  a.button:focus {\\n    outline: 0;\\n  }\\n\\n  a.button:hover {\\n    border-color: #b2b2b2;\\n  }\\n\\n  .block {\\n    width: 100%;\\n  }\\n</style>\\n\"],\"names\":[],\"mappings\":\"AAGE,CAAC,OAAO,cAAC,CAAC,AACR,KAAK,CAAE,IAAI,CACX,eAAe,CAAE,IAAI,CACrB,MAAM,CAAE,OAAO,CACf,MAAM,CAAE,CAAC,CACT,QAAQ,CAAE,OAAO,CACjB,IAAI,CAAE,OAAO,CACb,OAAO,CAAE,YAAY,CACrB,UAAU,CAAE,UAAU,CACtB,OAAO,CAAE,CAAC,CAAC,IAAI,CACf,cAAc,CAAE,MAAM,CACtB,SAAS,CAAE,IAAI,CACf,WAAW,CAAE,IAAI,CACjB,UAAU,CAAE,MAAM,CAClB,cAAc,CAAE,SAAS,CACzB,UAAU,CAAE,IAAI,CAAC,WAAW,CAC5B,mBAAmB,CAAE,KAAK,CAAC,CAAC,gBAAgB,CAAC,CAAC,YAAY,CAC1D,gBAAgB,CAAE,WAAW,CAC7B,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,GAAG,CAAC,KAAK,CAAC,OAAO,AAC3B,CAAC,AAED,CAAC,qBAAO,MAAM,AAAC,CAAC,AACd,OAAO,CAAE,CAAC,AACZ,CAAC,AAED,CAAC,qBAAO,MAAM,AAAC,CAAC,AACd,YAAY,CAAE,OAAO,AACvB,CAAC,AAED,MAAM,cAAC,CAAC,AACN,KAAK,CAAE,IAAI,AACb,CAAC\"}"
+	code: "input.svelte-5z7gx9{height:40px;display:block;max-width:100%;width:100%;border:0 none;padding:0 10px;background:#fff;color:#666;border:1px solid #e5e5e5;transition:0.2s ease-in-out;transition-property:color, background-color, border}input.svelte-5z7gx9:focus{outline:0;border-color:#0f7ae5}.card.svelte-5z7gx9{margin-bottom:10px;padding-top:10px;padding-bottom:10px;display:flex;padding-left:10px;padding-right:10px;border:1px solid #eaeaea;box-shadow:0 5px 15px rgba(12, 7, 7, 0.08);background-color:#ffffff}.card.svelte-5z7gx9:hover{box-shadow:0 5px 15px rgba(12, 7, 7, 0.16)}",
+	map: "{\"version\":3,\"file\":\"search.html\",\"sources\":[\"search.html\"],\"sourcesContent\":[\"<h1>Search</h1>\\n\\n<div style=\\\"display: flex; justify-content: center;\\\">\\n  <input type=\\\"text\\\" placeholder=\\\"Search...\\\" />\\n</div>\\n\\n<div style=\\\"display: flex; padding: 10px;\\\">\\n  <div style=\\\"width: 100px; font-style: bold;\\\"><strong>Användare</strong></div>\\n  <div style=\\\"width: 100px; font-style: bold;\\\"><strong>Grupper</strong></div>\\n  <div style=\\\"width: 100px; font-style: bold;\\\"><strong>Utmaning</strong></div>\\n</div>\\n\\n<div class=\\\"card\\\">\\n  <div style=\\\"width: 100px; font-style: bold;\\\">Bengt</div>\\n  <div style=\\\"width: 100px; font-style: bold;\\\">Sköldpaddor</div>\\n  <div style=\\\"width: 100px; font-style: bold;\\\">Cykla</div>\\n</div>\\n\\n<div class=\\\"card\\\">\\n  <div style=\\\"width: 100px; font-style: bold;\\\">Gunhild</div>\\n  <div style=\\\"width: 100px; font-style: bold;\\\"></div>\\n  <div style=\\\"width: 100px; font-style: bold;\\\">Vegetarian</div>\\n</div>\\n\\n<div class=\\\"card\\\">\\n  <div style=\\\"width: 100px; font-style: bold;\\\">Markus</div>\\n  <div style=\\\"width: 100px; font-style: bold;\\\">Sköldpaddor</div>\\n  <div style=\\\"width: 100px; font-style: bold;\\\">Cykla</div>\\n</div>\\n\\n<style>\\n  input {\\n    height: 40px;\\n    display: block;\\n\\n    max-width: 100%;\\n    width: 100%;\\n    border: 0 none;\\n    padding: 0 10px;\\n    background: #fff;\\n    color: #666;\\n    border: 1px solid #e5e5e5;\\n    transition: 0.2s ease-in-out;\\n    transition-property: color, background-color, border;\\n  }\\n\\n  input:focus {\\n    outline: 0;\\n    border-color: #0f7ae5;\\n  }\\n\\n  .card {\\n    margin-bottom: 10px;\\n    padding-top: 10px;\\n    padding-bottom: 10px;\\n    display: flex;\\n    padding-left: 10px;\\n    padding-right: 10px;\\n    border: 1px solid #eaeaea;\\n    box-shadow: 0 5px 15px rgba(12, 7, 7, 0.08);\\n    background-color: #ffffff;\\n  }\\n\\n  .card:hover {\\n    box-shadow: 0 5px 15px rgba(12, 7, 7, 0.16);\\n  }\\n</style>\\n\"],\"names\":[],\"mappings\":\"AA+BE,KAAK,cAAC,CAAC,AACL,MAAM,CAAE,IAAI,CACZ,OAAO,CAAE,KAAK,CAEd,SAAS,CAAE,IAAI,CACf,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,CAAC,CAAC,IAAI,CACd,OAAO,CAAE,CAAC,CAAC,IAAI,CACf,UAAU,CAAE,IAAI,CAChB,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,GAAG,CAAC,KAAK,CAAC,OAAO,CACzB,UAAU,CAAE,IAAI,CAAC,WAAW,CAC5B,mBAAmB,CAAE,KAAK,CAAC,CAAC,gBAAgB,CAAC,CAAC,MAAM,AACtD,CAAC,AAED,mBAAK,MAAM,AAAC,CAAC,AACX,OAAO,CAAE,CAAC,CACV,YAAY,CAAE,OAAO,AACvB,CAAC,AAED,KAAK,cAAC,CAAC,AACL,aAAa,CAAE,IAAI,CACnB,WAAW,CAAE,IAAI,CACjB,cAAc,CAAE,IAAI,CACpB,OAAO,CAAE,IAAI,CACb,YAAY,CAAE,IAAI,CAClB,aAAa,CAAE,IAAI,CACnB,MAAM,CAAE,GAAG,CAAC,KAAK,CAAC,OAAO,CACzB,UAAU,CAAE,CAAC,CAAC,GAAG,CAAC,IAAI,CAAC,KAAK,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,IAAI,CAAC,CAC3C,gBAAgB,CAAE,OAAO,AAC3B,CAAC,AAED,mBAAK,MAAM,AAAC,CAAC,AACX,UAAU,CAAE,CAAC,CAAC,GAAG,CAAC,IAAI,CAAC,KAAK,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,IAAI,CAAC,AAC7C,CAAC\"}"
 };
 
 function data$2() {
@@ -995,66 +911,28 @@ Intro._render = function(__result, ctx, options) {
 
 	ctx = Object.assign(options.store._init(["introStep"]), data$2(), ctx);
 
-	return `<div class="intro-container svelte-1gs94rr">
-    ${ ctx.$introStep === 6 || ctx.$introStep === 6 || ctx.$introStep === 6 ? `<img alt="Planet" src="img/planet.png" class="svelte-1gs94rr">` : `` }
-
-    ${ ctx.$introStep === 6 ? `<div class="step svelte-1gs94rr">
-      <h2>Välkommen!</h2>
-      <p>Du är på god väg att rädda världen!</p>
-      ${validateSsrComponent(Button, 'Button')._render(__result, { default: true, text: "Nästa" }, { store: options.store })}
-    </div>` : `` }
-
-    ${ ctx.$introStep === 6 ? `<div class="step svelte-1gs94rr">
-      <p>Tillsammans kan vi hjälpa till för att uppnå FN:s globala mål.</p>
-      <p>Varje individ räknas! Under 500 veckor hjälps vi åt.</p>
-      ${validateSsrComponent(Button, 'Button')._render(__result, { default: true, text: "Nästa" }, { store: options.store })}
-    </div>` : `` }
-
-    ${ ctx.$introStep === 6 ? `<div class="step svelte-1gs94rr">
-      <p>Anta nya utmaningar varje vecka.</p>
-      <p>Utmana vänner och familj. Följ dina och allas framsteg.</p>
-      ${validateSsrComponent(Button, 'Button')._render(__result, { default: true, text: "Nästa" }, { store: options.store })}
-    </div>` : `` }
-
-    ${ ctx.$introStep === 6 || ctx.$introStep === 6 || ctx.$introStep === 6 ? `<div class="dots svelte-1gs94rr">
-      <div class="dot ${escape(ctx.$introStep === 1 ? 'current' : '')} svelte-1gs94rr"></div>
-      <div class="dot ${escape(ctx.$introStep === 2 ? 'current' : '')} svelte-1gs94rr"></div>
-      <div class="dot ${escape(ctx.$introStep === 3 ? 'current' : '')} svelte-1gs94rr"></div>
-    </div>` : `` }
-
-    ${ ctx.$introStep === 6 ? `<div class="categories svelte-1gs94rr">
-      ${ each(ctx.categories, item => Object.assign({}, ctx, { category: item }), ctx => `<div class="category svelte-1gs94rr" style="background-color: ${escape(ctx.category.color)};">
-          ${escape(ctx.category.label)}
-        </div>`)}
-    </div>` : `` }
-
-    ${ ctx.$introStep === 6 ? `<div style="text-align: center;">
-        <h1>Utmaning</h1>
-        <div style="height: 100px;">Beskrivning av utmaning, mål o.s.v.</div>
-        ${validateSsrComponent(LinkButton, 'LinkButton')._render(__result, { type: "default", text: "Registrera och anta utmaning", href: "registrera" }, { store: options.store })}
-      </div>` : `` }
-
+	return `<div class="intro-container svelte-inpuuv">
     ${ ctx.$introStep === 1 ? `<div>
       <div>
-        <img class="image svelte-1gs94rr" style="width:100%; height: auto;" src="img/1onboarding1.png">
+        <img alt="1" class="image svelte-inpuuv" style="width:100%; height: auto;" src="img/1onboarding1.png">
       </div>
       </div>` : `` }
 
     ${ ctx.$introStep === 2 ? `<div>
       <div>
-        <img class="image svelte-1gs94rr" style="width:100%; height: auto;" src="img/2onboarding2.png">
+        <img alt="2" class="image svelte-inpuuv" style="width:100%; height: auto;" src="img/2onboarding2.png">
       </div>
     </div>` : `` }
 
     ${ ctx.$introStep === 3 ? `<div>
       <div>
-        <img class="image svelte-1gs94rr" style="width:100%; height: auto;" src="img/3onboarding3.png">
+        <img alt="3" class="image svelte-inpuuv" style="width:100%; height: auto;" src="img/3onboarding3.png">
       </div>
     </div>` : `` }
 
     ${ ctx.$introStep === 4 ? `<div>
         <a href="registrera">
-        <img class="image svelte-1gs94rr" style="width:100%; height: auto;" src="img/coop.png">
+        <img alt="coop" class="image svelte-inpuuv" style="width:100%; height: auto;" src="img/coop.png">
       </a>
       </div>` : `` }
 
@@ -1062,8 +940,8 @@ Intro._render = function(__result, ctx, options) {
 };
 
 Intro.css = {
-	code: ".image.svelte-1gs94rr{width:100%;height:100%}.intro-container.svelte-1gs94rr{display:flex;justify-content:center;align-items:center;position:fixed;top:0;left:0;width:100%;height:100%;background-color:rgb(240, 240, 240)}.intro-card.svelte-1gs94rr{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;width:300px;height:300px;padding:10px 20px;background-color:#ffffff;box-shadow:0 5px 15px rgba(12, 7, 7, 0.08)}.intro-card.svelte-1gs94rr:hover{box-shadow:0 14px 25px rgba(0,0,0,0.16)}.step.svelte-1gs94rr{display:flex;flex-direction:column;justify-content:center;align-items:center;width:200px;height:220px;padding-left:20px}img.svelte-1gs94rr{width:128px;height:128px}.dots.svelte-1gs94rr{display:flex;justify-content:center;flex-basis:100%}.dot.svelte-1gs94rr{width:10px;height:10px;border-radius:50%;border:1px solid #666;margin-left:10px;margin-right:10px}.dot.current.svelte-1gs94rr{background-color:#666}.categories.svelte-1gs94rr{display:flex;flex-wrap:wrap;justify-content:center;align-items:center}.category.svelte-1gs94rr{display:flex;justify-content:center;align-items:center;color:#fff;width:100px;height:100px;margin:5px;background-color:#666;font-size:16px;cursor:pointer;text-align:center}",
-	map: "{\"version\":3,\"file\":\"intro.html\",\"sources\":[\"intro.html\"],\"sourcesContent\":[\"<div class=\\\"intro-container\\\">\\n    {#if $introStep === 6 || $introStep === 6 || $introStep === 6}\\n      <img alt='Planet' src='img/planet.png'>\\n    {/if}\\n\\n    {#if $introStep === 6}\\n    <div class=\\\"step\\\">\\n      <h2>Välkommen!</h2>\\n      <p>Du är på god väg att rädda världen!</p>\\n      <Button default text=\\\"Nästa\\\" on:click=\\\"$set({ introStep: 2 })\\\" />\\n    </div>\\n    {/if}\\n\\n    {#if $introStep === 6}\\n    <div class=\\\"step\\\">\\n      <p>Tillsammans kan vi hjälpa till för att uppnå FN:s globala mål.</p>\\n      <p>Varje individ räknas! Under 500 veckor hjälps vi åt.</p>\\n      <Button default text=\\\"Nästa\\\" on:click=\\\"$set({ introStep: 3 })\\\" />\\n    </div>\\n    {/if}\\n\\n    {#if $introStep === 6}\\n    <div class=\\\"step\\\">\\n      <p>Anta nya utmaningar varje vecka.</p>\\n      <p>Utmana vänner och familj. Följ dina och allas framsteg.</p>\\n      <Button default text=\\\"Nästa\\\" on:click=\\\"$set({ introStep: 4 })\\\" />\\n    </div>\\n    {/if}\\n\\n    {#if $introStep === 6 || $introStep === 6 || $introStep === 6}\\n    <div class=\\\"dots\\\">\\n      <div class=\\\"dot {$introStep === 1 ? 'current' : ''}\\\" />\\n      <div class=\\\"dot {$introStep === 2 ? 'current' : ''}\\\" />\\n      <div class=\\\"dot {$introStep === 3 ? 'current' : ''}\\\" />\\n    </div>\\n    {/if}\\n\\n    {#if $introStep === 6}\\n    <div class=\\\"categories\\\">\\n      {#each categories as category}\\n        <div class=\\\"category\\\" style=\\\"background-color: {category.color};\\\" on:click=\\\"$set({ introStep: 5 })\\\" >\\n          {category.label}\\n        </div>\\n      {/each}\\n    </div>\\n    {/if}\\n\\n    {#if $introStep === 6}\\n      <div style=\\\"text-align: center;\\\">\\n        <h1>Utmaning</h1>\\n        <div style=\\\"height: 100px;\\\">Beskrivning av utmaning, mål o.s.v.</div>\\n        <LinkButton type=\\\"default\\\" text=\\\"Registrera och anta utmaning\\\" href=\\\"registrera\\\" />\\n      </div>\\n    {/if}\\n\\n    {#if $introStep === 1}\\n    <div>\\n      <div on:click=\\\"$set({ introStep: 2 })\\\">\\n        <img class=\\\"image\\\" style=\\\"width:100%; height: auto;\\\" src=\\\"img/1onboarding1.png\\\"/>\\n      </div>\\n      </div>\\n    {/if}\\n\\n    {#if $introStep === 2}\\n    <div>\\n      <div on:click=\\\"$set({ introStep: 3 })\\\">\\n        <img class=\\\"image\\\" style=\\\"width:100%; height: auto;\\\" src=\\\"img/2onboarding2.png\\\"/>\\n      </div>\\n    </div>\\n    {/if}\\n\\n    {#if $introStep === 3}\\n    <div>\\n      <div on:click=\\\"$set({ introStep: 4 })\\\">\\n        <img class=\\\"image\\\" style=\\\"width:100%; height: auto;\\\" src=\\\"img/3onboarding3.png\\\"/>\\n      </div>\\n    </div>\\n    {/if}\\n\\n    {#if $introStep === 4}\\n      <div>\\n        <a href=\\\"registrera\\\">\\n        <img class=\\\"image\\\" style=\\\"width:100%; height: auto;\\\" src=\\\"img/coop.png\\\"/>\\n      </a>\\n      </div>\\n    {/if}\\n\\n</div>\\n\\n<style>\\n  .image {\\n    width: 100%;\\n    height: 100%;\\n  }\\n\\n  .intro-container {\\n    display: flex;\\n    justify-content: center;\\n    align-items: center;\\n    position: fixed;\\n    top: 0;\\n    left: 0;\\n    width: 100%;\\n    height: 100%;\\n    background-color: rgb(240, 240, 240);\\n  }\\n\\n  .intro-card {\\n    display: flex;\\n    justify-content: center;\\n    align-items: center;\\n    flex-wrap: wrap;\\n    width: 300px;\\n    height: 300px;\\n    padding: 10px 20px;\\n    background-color: #ffffff;\\n    box-shadow: 0 5px 15px rgba(12, 7, 7, 0.08);\\n  }\\n\\n  .intro-card:hover {\\n    box-shadow: 0 14px 25px rgba(0,0,0,0.16);\\n  }\\n\\n  .step {\\n    display: flex;\\n    flex-direction: column;\\n    justify-content: center;\\n    align-items: center;\\n    width: 200px;\\n    height: 220px;\\n    padding-left: 20px;\\n  }\\n\\n  img {\\n    width: 128px;\\n    height: 128px;\\n  }\\n\\n  .dots {\\n    display:flex;\\n    justify-content: center;\\n    flex-basis: 100%;\\n  }\\n\\n  .dot {\\n    width: 10px;\\n    height: 10px;\\n    border-radius: 50%;\\n    border: 1px solid #666;\\n    margin-left: 10px;\\n    margin-right: 10px;\\n  }\\n\\n  .dot.current {\\n    background-color: #666;\\n  }\\n\\n  .categories {\\n    display: flex;\\n    flex-wrap: wrap;\\n    justify-content: center;\\n    align-items: center;\\n  }\\n\\n  .category {\\n    display: flex;\\n    justify-content: center;\\n    align-items: center;\\n    color: #fff;\\n    width: 100px;\\n    height: 100px;\\n    margin: 5px;\\n    background-color: #666;\\n    font-size: 16px;\\n    cursor: pointer;\\n    text-align: center;\\n  }\\n</style>\\n\\n<script>\\n  export default {\\n    components: {\\n      Button: \\\"../components/Button.html\\\",\\n      LinkButton: \\\"../components/LinkButton.html\\\",\\n    },\\n\\n    data() {\\n      return {\\n        categories: [\\n          {label: \\\"Fattigdom\\\", color: \\\"#e5233d\\\"},\\n          {label: \\\"Hunger\\\", color: \\\"#dda73a\\\"},\\n          {label: \\\"Hälsa\\\", color: \\\"#4ca146\\\"},\\n          {label: \\\"Sanitet\\\", color: \\\"#27bfe6\\\"},\\n          {label: \\\"Energi\\\", color: \\\"#fbc412\\\"},\\n          {label: \\\"Infrastruktur\\\", color: \\\"#f26a2e\\\"},\\n          {label: \\\"Konsumtion\\\", color: \\\"#bf8d2c\\\"},\\n          {label: \\\"Klimat\\\", color: \\\"#407f46\\\"},\\n          {label: \\\"Fred\\\", color: \\\"#136a9f\\\"}\\n        ]\\n      }\\n    }\\n  }\\n</script>\"],\"names\":[],\"mappings\":\"AA0FE,MAAM,eAAC,CAAC,AACN,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,IAAI,AACd,CAAC,AAED,gBAAgB,eAAC,CAAC,AAChB,OAAO,CAAE,IAAI,CACb,eAAe,CAAE,MAAM,CACvB,WAAW,CAAE,MAAM,CACnB,QAAQ,CAAE,KAAK,CACf,GAAG,CAAE,CAAC,CACN,IAAI,CAAE,CAAC,CACP,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,IAAI,CACZ,gBAAgB,CAAE,IAAI,GAAG,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,AACtC,CAAC,AAED,WAAW,eAAC,CAAC,AACX,OAAO,CAAE,IAAI,CACb,eAAe,CAAE,MAAM,CACvB,WAAW,CAAE,MAAM,CACnB,SAAS,CAAE,IAAI,CACf,KAAK,CAAE,KAAK,CACZ,MAAM,CAAE,KAAK,CACb,OAAO,CAAE,IAAI,CAAC,IAAI,CAClB,gBAAgB,CAAE,OAAO,CACzB,UAAU,CAAE,CAAC,CAAC,GAAG,CAAC,IAAI,CAAC,KAAK,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,IAAI,CAAC,AAC7C,CAAC,AAED,0BAAW,MAAM,AAAC,CAAC,AACjB,UAAU,CAAE,CAAC,CAAC,IAAI,CAAC,IAAI,CAAC,KAAK,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,IAAI,CAAC,AAC1C,CAAC,AAED,KAAK,eAAC,CAAC,AACL,OAAO,CAAE,IAAI,CACb,cAAc,CAAE,MAAM,CACtB,eAAe,CAAE,MAAM,CACvB,WAAW,CAAE,MAAM,CACnB,KAAK,CAAE,KAAK,CACZ,MAAM,CAAE,KAAK,CACb,YAAY,CAAE,IAAI,AACpB,CAAC,AAED,GAAG,eAAC,CAAC,AACH,KAAK,CAAE,KAAK,CACZ,MAAM,CAAE,KAAK,AACf,CAAC,AAED,KAAK,eAAC,CAAC,AACL,QAAQ,IAAI,CACZ,eAAe,CAAE,MAAM,CACvB,UAAU,CAAE,IAAI,AAClB,CAAC,AAED,IAAI,eAAC,CAAC,AACJ,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,IAAI,CACZ,aAAa,CAAE,GAAG,CAClB,MAAM,CAAE,GAAG,CAAC,KAAK,CAAC,IAAI,CACtB,WAAW,CAAE,IAAI,CACjB,YAAY,CAAE,IAAI,AACpB,CAAC,AAED,IAAI,QAAQ,eAAC,CAAC,AACZ,gBAAgB,CAAE,IAAI,AACxB,CAAC,AAED,WAAW,eAAC,CAAC,AACX,OAAO,CAAE,IAAI,CACb,SAAS,CAAE,IAAI,CACf,eAAe,CAAE,MAAM,CACvB,WAAW,CAAE,MAAM,AACrB,CAAC,AAED,SAAS,eAAC,CAAC,AACT,OAAO,CAAE,IAAI,CACb,eAAe,CAAE,MAAM,CACvB,WAAW,CAAE,MAAM,CACnB,KAAK,CAAE,IAAI,CACX,KAAK,CAAE,KAAK,CACZ,MAAM,CAAE,KAAK,CACb,MAAM,CAAE,GAAG,CACX,gBAAgB,CAAE,IAAI,CACtB,SAAS,CAAE,IAAI,CACf,MAAM,CAAE,OAAO,CACf,UAAU,CAAE,MAAM,AACpB,CAAC\"}"
+	code: ".image.svelte-inpuuv{width:100%;height:100%}.intro-container.svelte-inpuuv{display:flex;justify-content:center;align-items:center;position:fixed;top:0;left:0;width:100%;height:100%;background-color:rgb(240, 240, 240)}img.svelte-inpuuv{width:128px;height:128px}",
+	map: "{\"version\":3,\"file\":\"intro.html\",\"sources\":[\"intro.html\"],\"sourcesContent\":[\"<div class=\\\"intro-container\\\">\\n    {#if $introStep === 1}\\n    <div>\\n      <div on:click=\\\"$set({ introStep: 2 })\\\">\\n        <img alt=\\\"1\\\" class=\\\"image\\\" style=\\\"width:100%; height: auto;\\\" src=\\\"img/1onboarding1.png\\\"/>\\n      </div>\\n      </div>\\n    {/if}\\n\\n    {#if $introStep === 2}\\n    <div>\\n      <div on:click=\\\"$set({ introStep: 3 })\\\">\\n        <img alt=\\\"2\\\" class=\\\"image\\\" style=\\\"width:100%; height: auto;\\\" src=\\\"img/2onboarding2.png\\\"/>\\n      </div>\\n    </div>\\n    {/if}\\n\\n    {#if $introStep === 3}\\n    <div>\\n      <div on:click=\\\"$set({ introStep: 4 })\\\">\\n        <img alt=\\\"3\\\" class=\\\"image\\\" style=\\\"width:100%; height: auto;\\\" src=\\\"img/3onboarding3.png\\\"/>\\n      </div>\\n    </div>\\n    {/if}\\n\\n    {#if $introStep === 4}\\n      <div>\\n        <a href=\\\"registrera\\\">\\n        <img alt=\\\"coop\\\" class=\\\"image\\\" style=\\\"width:100%; height: auto;\\\" src=\\\"img/coop.png\\\"/>\\n      </a>\\n      </div>\\n    {/if}\\n\\n</div>\\n\\n<style>\\n  .image {\\n    width: 100%;\\n    height: 100%;\\n  }\\n\\n  .intro-container {\\n    display: flex;\\n    justify-content: center;\\n    align-items: center;\\n    position: fixed;\\n    top: 0;\\n    left: 0;\\n    width: 100%;\\n    height: 100%;\\n    background-color: rgb(240, 240, 240);\\n  }\\n\\n  .intro-card {\\n    display: flex;\\n    justify-content: center;\\n    align-items: center;\\n    flex-wrap: wrap;\\n    width: 300px;\\n    height: 300px;\\n    padding: 10px 20px;\\n    background-color: #ffffff;\\n    box-shadow: 0 5px 15px rgba(12, 7, 7, 0.08);\\n  }\\n\\n  .intro-card:hover {\\n    box-shadow: 0 14px 25px rgba(0,0,0,0.16);\\n  }\\n\\n  img {\\n    width: 128px;\\n    height: 128px;\\n  }\\n</style>\\n\\n<script>\\n  export default {\\n    data() {\\n      return {\\n        categories: [\\n          {label: \\\"Fattigdom\\\", color: \\\"#e5233d\\\"},\\n          {label: \\\"Hunger\\\", color: \\\"#dda73a\\\"},\\n          {label: \\\"Hälsa\\\", color: \\\"#4ca146\\\"},\\n          {label: \\\"Sanitet\\\", color: \\\"#27bfe6\\\"},\\n          {label: \\\"Energi\\\", color: \\\"#fbc412\\\"},\\n          {label: \\\"Infrastruktur\\\", color: \\\"#f26a2e\\\"},\\n          {label: \\\"Konsumtion\\\", color: \\\"#bf8d2c\\\"},\\n          {label: \\\"Klimat\\\", color: \\\"#407f46\\\"},\\n          {label: \\\"Fred\\\", color: \\\"#136a9f\\\"}\\n        ]\\n      }\\n    }\\n  }\\n</script>\"],\"names\":[],\"mappings\":\"AAoCE,MAAM,cAAC,CAAC,AACN,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,IAAI,AACd,CAAC,AAED,gBAAgB,cAAC,CAAC,AAChB,OAAO,CAAE,IAAI,CACb,eAAe,CAAE,MAAM,CACvB,WAAW,CAAE,MAAM,CACnB,QAAQ,CAAE,KAAK,CACf,GAAG,CAAE,CAAC,CACN,IAAI,CAAE,CAAC,CACP,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,IAAI,CACZ,gBAAgB,CAAE,IAAI,GAAG,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,AACtC,CAAC,AAkBD,GAAG,cAAC,CAAC,AACH,KAAK,CAAE,KAAK,CACZ,MAAM,CAAE,KAAK,AACf,CAAC\"}"
 };
 
 var HeartIcon = {};
