@@ -2,13 +2,13 @@
   "bundler": "rollup",
   "shimport": "0.0.11",
   "assets": {
-    "main": "client.7ae6bb5b.js"
+    "main": "client.aec3181c.js"
   },
   "css": {
-    "main": "main.90172081.css",
+    "main": "main.2670457649.css",
     "chunks": {
       "index.html": [
-        "index.6cf524e4.css"
+        "index.e71303b0.css"
       ],
       "tillsammans.html": [],
       "registrera.html": [

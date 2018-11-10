@@ -15,134 +15,6 @@ var sirv = _interopDefault(require('sirv'));
 var polka = _interopDefault(require('polka'));
 var compression = _interopDefault(require('compression'));
 
-var Index = {};
-
-Index.filename = "/Users/jam/projects/nykhack2018/500weeks/client/src/routes/index.html";
-
-Index.data = function() {
-	return {};
-};
-
-Index.render = function(state, options = {}) {
-	var components = new Set();
-
-	function addComponent(component) {
-		components.add(component);
-	}
-
-	var result = { head: '', addComponent };
-	var html = Index._render(result, state, options);
-
-	var cssCode = Array.from(components).map(c => c.css && c.css.code).filter(Boolean).join('\n');
-
-	return {
-		html,
-		head: result.head,
-		css: { code: cssCode, map: null },
-		toString() {
-			return html;
-		}
-	};
-};
-
-Index._render = function(__result, ctx, options) {
-	__result.addComponent(Index);
-
-	ctx = Object.assign({}, ctx);
-
-	return `${(__result.head += `<title>500veckor</title>`, "")}
-
-<h1 class="svelte-1wv06a5">Vänner</h1>
-
-<div class="card svelte-1wv06a5">
-  <div>
-    <img src="img/tova_strid.png" style="max-height: 50px; max-width: 50px;">
-  </div>
-  <div style="padding-left: 20px; margin-top: -2px; font-size: 16px;">
-    Tova Strid
-  </div>
-</div>
-
-<div class="card svelte-1wv06a5">
-  <div>
-    <img src="img/lillamy.png" style="max-height: 50px; max-width: 50px;">
-  </div>
-  <div style="padding-left: 20px; margin-top: -2px; font-size: 16px;">
-    Lillamy
-  </div>
-</div>
-
-<div class="card svelte-1wv06a5">
-  <div>
-    <img src="img/simonfredrikk.png" style="max-height: 50px; max-width: 50px;">
-  </div>
-  <div style="padding-left: 20px; margin-top: -2px; font-size: 16px;">
-    Simonfredrikk
-  </div>
-</div>
-
-<div class="card svelte-1wv06a5">
-  <div>
-    <img src="img/kottataren22.png" style="max-height: 50px; max-width: 50px;">
-  </div>
-  <div style="padding-left: 20px; margin-top: -2px; font-size: 16px;">
-    Köttätaren22
-  </div>
-</div>`;
-};
-
-Index.css = {
-	code: "h1.svelte-1wv06a5{text-align:center}.card.svelte-1wv06a5{margin-bottom:10px;padding-top:10px;padding-bottom:10px;display:flex;align-items:center;padding-left:10px;padding-right:10px;border:1px solid #eaeaea;box-shadow:0 5px 15px rgba(12, 7, 7, 0.08);background-color:#ffffff}.card.svelte-1wv06a5:hover{box-shadow:0 5px 15px rgba(12, 7, 7, 0.16)}",
-	map: "{\"version\":3,\"file\":\"index.html\",\"sources\":[\"index.html\"],\"sourcesContent\":[\"<svelte:head>\\n  <title>500veckor</title>\\n</svelte:head>\\n\\n<h1>Vänner</h1>\\n\\n<div class=\\\"card\\\">\\n  <div>\\n    <img src=\\\"img/tova_strid.png\\\" style=\\\"max-height: 50px; max-width: 50px;\\\" />\\n  </div>\\n  <div style=\\\"padding-left: 20px; margin-top: -2px; font-size: 16px;\\\">\\n    Tova Strid\\n  </div>\\n</div>\\n\\n<div class=\\\"card\\\">\\n  <div>\\n    <img src=\\\"img/lillamy.png\\\" style=\\\"max-height: 50px; max-width: 50px;\\\" />\\n  </div>\\n  <div style=\\\"padding-left: 20px; margin-top: -2px; font-size: 16px;\\\">\\n    Lillamy\\n  </div>\\n</div>\\n\\n<div class=\\\"card\\\">\\n  <div>\\n    <img src=\\\"img/simonfredrikk.png\\\" style=\\\"max-height: 50px; max-width: 50px;\\\" />\\n  </div>\\n  <div style=\\\"padding-left: 20px; margin-top: -2px; font-size: 16px;\\\">\\n    Simonfredrikk\\n  </div>\\n</div>\\n\\n<div class=\\\"card\\\">\\n  <div>\\n    <img src=\\\"img/kottataren22.png\\\" style=\\\"max-height: 50px; max-width: 50px;\\\" />\\n  </div>\\n  <div style=\\\"padding-left: 20px; margin-top: -2px; font-size: 16px;\\\">\\n    Köttätaren22\\n  </div>\\n</div>\\n\\n<style>\\n  h1 {\\n    text-align: center;\\n  }\\n\\n  .card {\\n    margin-bottom: 10px;\\n    padding-top: 10px;\\n    padding-bottom: 10px;\\n    display: flex;\\n    align-items: center;\\n    padding-left: 10px;\\n    padding-right: 10px;\\n    border: 1px solid #eaeaea;\\n    box-shadow: 0 5px 15px rgba(12, 7, 7, 0.08);\\n    background-color: #ffffff;\\n  }\\n\\n  .card:hover {\\n    box-shadow: 0 5px 15px rgba(12, 7, 7, 0.16);\\n  }\\n</style>\\n\"],\"names\":[],\"mappings\":\"AA2CE,EAAE,eAAC,CAAC,AACF,UAAU,CAAE,MAAM,AACpB,CAAC,AAED,KAAK,eAAC,CAAC,AACL,aAAa,CAAE,IAAI,CACnB,WAAW,CAAE,IAAI,CACjB,cAAc,CAAE,IAAI,CACpB,OAAO,CAAE,IAAI,CACb,WAAW,CAAE,MAAM,CACnB,YAAY,CAAE,IAAI,CAClB,aAAa,CAAE,IAAI,CACnB,MAAM,CAAE,GAAG,CAAC,KAAK,CAAC,OAAO,CACzB,UAAU,CAAE,CAAC,CAAC,GAAG,CAAC,IAAI,CAAC,KAAK,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,IAAI,CAAC,CAC3C,gBAAgB,CAAE,OAAO,AAC3B,CAAC,AAED,oBAAK,MAAM,AAAC,CAAC,AACX,UAAU,CAAE,CAAC,CAAC,GAAG,CAAC,IAAI,CAAC,KAAK,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,IAAI,CAAC,AAC7C,CAAC\"}"
-};
-
-var Tillsammans = {};
-
-Tillsammans.filename = "/Users/jam/projects/nykhack2018/500weeks/client/src/routes/tillsammans.html";
-
-Tillsammans.data = function() {
-	return {};
-};
-
-Tillsammans.render = function(state, options = {}) {
-	var components = new Set();
-
-	function addComponent(component) {
-		components.add(component);
-	}
-
-	var result = { head: '', addComponent };
-	var html = Tillsammans._render(result, state, options);
-
-	var cssCode = Array.from(components).map(c => c.css && c.css.code).filter(Boolean).join('\n');
-
-	return {
-		html,
-		head: result.head,
-		css: { code: cssCode, map: null },
-		toString() {
-			return html;
-		}
-	};
-};
-
-Tillsammans._render = function(__result, ctx, options) {
-	__result.addComponent(Tillsammans);
-
-	ctx = Object.assign({}, ctx);
-
-	return `<h1 style="text-align: center;">Tillsammans</h1>
-
-<div style="display: flex; align-items: center; height: 400px">
-  <img style="width: 100%; height: auto;" alt="karta" src="img/map.png">
-</div>`;
-};
-
-Tillsammans.css = {
-	code: '',
-	map: null
-};
-
 function assign(tar, src) {
 	for (var k in src) tar[k] = src[k];
 	return tar;
@@ -227,6 +99,177 @@ function on(eventName, handler) {
 		}
 	};
 }
+
+function data() {
+  return {
+    view: "friends"
+  };
+}
+var Index = {};
+
+Index.filename = "/Users/jam/projects/nykhack2018/500weeks/client/src/routes/index.html";
+
+Index.data = function() {
+	return data();
+};
+
+Index.render = function(state, options = {}) {
+	var components = new Set();
+
+	function addComponent(component) {
+		components.add(component);
+	}
+
+	var result = { head: '', addComponent };
+	var html = Index._render(result, state, options);
+
+	var cssCode = Array.from(components).map(c => c.css && c.css.code).filter(Boolean).join('\n');
+
+	return {
+		html,
+		head: result.head,
+		css: { code: cssCode, map: null },
+		toString() {
+			return html;
+		}
+	};
+};
+
+Index._render = function(__result, ctx, options) {
+	__result.addComponent(Index);
+
+	ctx = Object.assign(data(), ctx);
+
+	return `${(__result.head += `<title>500veckor</title>`, "")}
+
+<div style="display: flex;">
+  <h1 style="flex-basis: 50%; color: ${escape(ctx.view === 'friends' ? 'inherit' : '#999999')};" class="svelte-1wv06a5">
+    Vänner
+  </h1>
+  <h1 style="flex-basis: 50%; color: ${escape(ctx.view === 'groups' ? 'inherit' : '#aaaaaa')};" class="svelte-1wv06a5">
+    Grupper
+  </h1>
+</div>
+
+${ ctx.view === 'friends' ? `<div>
+  <div class="card svelte-1wv06a5">
+    <div>
+      <img src="img/tova_strid.png" style="max-height: 50px; max-width: 50px;">
+    </div>
+    <div style="padding-left: 20px; margin-top: -2px; font-size: 16px;">
+      Tova Strid
+    </div>
+  </div>
+
+  <div class="card svelte-1wv06a5">
+    <div>
+      <img src="img/lillamy.png" style="max-height: 50px; max-width: 50px;">
+    </div>
+    <div style="padding-left: 20px; margin-top: -2px; font-size: 16px;">
+      Lillamy
+    </div>
+  </div>
+
+  <div class="card svelte-1wv06a5">
+    <div>
+      <img src="img/simonfredrikk.png" style="max-height: 50px; max-width: 50px;">
+    </div>
+    <div style="padding-left: 20px; margin-top: -2px; font-size: 16px;">
+      Simonfredrikk
+    </div>
+  </div>
+
+  <div class="card svelte-1wv06a5">
+    <div>
+      <img src="img/kottataren22.png" style="max-height: 50px; max-width: 50px;">
+    </div>
+    <div style="padding-left: 20px; margin-top: -2px; font-size: 16px;">
+      Köttätaren22
+    </div>
+  </div>
+</div>` : `` }
+
+${ ctx.view === 'groups' ? `<div>
+  <div class="card svelte-1wv06a5">
+    <div>
+      <img src="img/gnesta-turtles.png" style="max-height: 50px; max-width: 50px;">
+    </div>
+    <div style="padding-left: 20px; margin-top: -2px; font-size: 16px;">
+      Gnesta Turtles
+    </div>
+  </div>
+
+  <div class="card svelte-1wv06a5">
+    <div>
+      <img src="img/gubbar-som-cyklar.png" style="max-height: 50px; max-width: 50px;">
+    </div>
+    <div style="padding-left: 20px; margin-top: -2px; font-size: 16px;">
+      Gubbar som cyklar
+    </div>
+  </div>
+
+  <div class="card svelte-1wv06a5">
+    <div>
+      <img src="img/na17a.png" style="max-height: 50px; max-width: 50px;">
+    </div>
+    <div style="padding-left: 20px; margin-top: -2px; font-size: 16px;">
+      NA17A ät veganskt
+    </div>
+  </div>
+</div>` : `` }`;
+};
+
+Index.css = {
+	code: "h1.svelte-1wv06a5{text-align:center}.card.svelte-1wv06a5{margin-bottom:10px;padding-top:10px;padding-bottom:10px;display:flex;align-items:center;padding-left:10px;padding-right:10px;border:1px solid #eaeaea;box-shadow:0 5px 15px rgba(12, 7, 7, 0.08);background-color:#ffffff}.card.svelte-1wv06a5:hover{box-shadow:0 5px 15px rgba(12, 7, 7, 0.16)}",
+	map: "{\"version\":3,\"file\":\"index.html\",\"sources\":[\"index.html\"],\"sourcesContent\":[\"<svelte:head>\\n  <title>500veckor</title>\\n</svelte:head>\\n\\n<div style=\\\"display: flex;\\\">\\n  <h1\\n    style=\\\"flex-basis: 50%; color: {view === 'friends' ? 'inherit' : '#999999'};\\\"\\n    on:click=\\\"set({view: 'friends'})\\\"\\n  >\\n    Vänner\\n  </h1>\\n  <h1\\n    style=\\\"flex-basis: 50%; color: {view === 'groups' ? 'inherit' : '#aaaaaa'};\\\"\\n    on:click=\\\"set({view: 'groups'})\\\"\\n  >\\n    Grupper\\n  </h1>\\n</div>\\n\\n{#if view === 'friends'}\\n<div in:fade=\\\"{duration: 200, delay: 200}\\\">\\n  <div class=\\\"card\\\">\\n    <div>\\n      <img\\n        src=\\\"img/tova_strid.png\\\"\\n        style=\\\"max-height: 50px; max-width: 50px;\\\"\\n      />\\n    </div>\\n    <div style=\\\"padding-left: 20px; margin-top: -2px; font-size: 16px;\\\">\\n      Tova Strid\\n    </div>\\n  </div>\\n\\n  <div class=\\\"card\\\">\\n    <div>\\n      <img src=\\\"img/lillamy.png\\\" style=\\\"max-height: 50px; max-width: 50px;\\\" />\\n    </div>\\n    <div style=\\\"padding-left: 20px; margin-top: -2px; font-size: 16px;\\\">\\n      Lillamy\\n    </div>\\n  </div>\\n\\n  <div class=\\\"card\\\">\\n    <div>\\n      <img\\n        src=\\\"img/simonfredrikk.png\\\"\\n        style=\\\"max-height: 50px; max-width: 50px;\\\"\\n      />\\n    </div>\\n    <div style=\\\"padding-left: 20px; margin-top: -2px; font-size: 16px;\\\">\\n      Simonfredrikk\\n    </div>\\n  </div>\\n\\n  <div class=\\\"card\\\">\\n    <div>\\n      <img\\n        src=\\\"img/kottataren22.png\\\"\\n        style=\\\"max-height: 50px; max-width: 50px;\\\"\\n      />\\n    </div>\\n    <div style=\\\"padding-left: 20px; margin-top: -2px; font-size: 16px;\\\">\\n      Köttätaren22\\n    </div>\\n  </div>\\n</div>\\n{/if}\\n\\n{#if view === 'groups'}\\n<div in:fade=\\\"{duration: 200, delay: 200}\\\">\\n  <div class=\\\"card\\\">\\n    <div>\\n      <img\\n        src=\\\"img/gnesta-turtles.png\\\"\\n        style=\\\"max-height: 50px; max-width: 50px;\\\"\\n      />\\n    </div>\\n    <div style=\\\"padding-left: 20px; margin-top: -2px; font-size: 16px;\\\">\\n      Gnesta Turtles\\n    </div>\\n  </div>\\n\\n  <div class=\\\"card\\\">\\n    <div>\\n      <img src=\\\"img/gubbar-som-cyklar.png\\\" style=\\\"max-height: 50px; max-width: 50px;\\\" />\\n    </div>\\n    <div style=\\\"padding-left: 20px; margin-top: -2px; font-size: 16px;\\\">\\n      Gubbar som cyklar\\n    </div>\\n  </div>\\n\\n  <div class=\\\"card\\\">\\n    <div>\\n      <img\\n        src=\\\"img/na17a.png\\\"\\n        style=\\\"max-height: 50px; max-width: 50px;\\\"\\n      />\\n    </div>\\n    <div style=\\\"padding-left: 20px; margin-top: -2px; font-size: 16px;\\\">\\n      NA17A ät veganskt\\n    </div>\\n  </div>\\n</div>\\n{/if}\\n\\n<style>\\n  h1 {\\n    text-align: center;\\n  }\\n\\n  .card {\\n    margin-bottom: 10px;\\n    padding-top: 10px;\\n    padding-bottom: 10px;\\n    display: flex;\\n    align-items: center;\\n    padding-left: 10px;\\n    padding-right: 10px;\\n    border: 1px solid #eaeaea;\\n    box-shadow: 0 5px 15px rgba(12, 7, 7, 0.08);\\n    background-color: #ffffff;\\n  }\\n\\n  .card:hover {\\n    box-shadow: 0 5px 15px rgba(12, 7, 7, 0.16);\\n  }\\n</style>\\n\\n<script>\\n  import { fade } from \\\"svelte-transitions\\\";\\n\\n  export default {\\n    transitions: { fade },\\n\\n    data() {\\n      return {\\n        view: \\\"friends\\\"\\n      };\\n    }\\n  };\\n</script>\\n\"],\"names\":[],\"mappings\":\"AA0GE,EAAE,eAAC,CAAC,AACF,UAAU,CAAE,MAAM,AACpB,CAAC,AAED,KAAK,eAAC,CAAC,AACL,aAAa,CAAE,IAAI,CACnB,WAAW,CAAE,IAAI,CACjB,cAAc,CAAE,IAAI,CACpB,OAAO,CAAE,IAAI,CACb,WAAW,CAAE,MAAM,CACnB,YAAY,CAAE,IAAI,CAClB,aAAa,CAAE,IAAI,CACnB,MAAM,CAAE,GAAG,CAAC,KAAK,CAAC,OAAO,CACzB,UAAU,CAAE,CAAC,CAAC,GAAG,CAAC,IAAI,CAAC,KAAK,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,IAAI,CAAC,CAC3C,gBAAgB,CAAE,OAAO,AAC3B,CAAC,AAED,oBAAK,MAAM,AAAC,CAAC,AACX,UAAU,CAAE,CAAC,CAAC,GAAG,CAAC,IAAI,CAAC,KAAK,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,IAAI,CAAC,AAC7C,CAAC\"}"
+};
+
+var Tillsammans = {};
+
+Tillsammans.filename = "/Users/jam/projects/nykhack2018/500weeks/client/src/routes/tillsammans.html";
+
+Tillsammans.data = function() {
+	return {};
+};
+
+Tillsammans.render = function(state, options = {}) {
+	var components = new Set();
+
+	function addComponent(component) {
+		components.add(component);
+	}
+
+	var result = { head: '', addComponent };
+	var html = Tillsammans._render(result, state, options);
+
+	var cssCode = Array.from(components).map(c => c.css && c.css.code).filter(Boolean).join('\n');
+
+	return {
+		html,
+		head: result.head,
+		css: { code: cssCode, map: null },
+		toString() {
+			return html;
+		}
+	};
+};
+
+Tillsammans._render = function(__result, ctx, options) {
+	__result.addComponent(Tillsammans);
+
+	ctx = Object.assign({}, ctx);
+
+	return `<h1 style="text-align: center;">Tillsammans</h1>
+
+<div style="display: flex; align-items: center; height: 400px">
+  <img style="width: 100%; height: auto;" alt="karta" src="img/map2.png">
+</div>`;
+};
+
+Tillsammans.css = {
+	code: '',
+	map: null
+};
 
 var Link = {};
 
@@ -549,7 +592,7 @@ InstagramIcon.css = {
 	map: null
 };
 
-function data() {
+function data$1() {
   return {
     difficulty: "lätt",
     right: true,
@@ -561,7 +604,7 @@ var Anvandare = {};
 Anvandare.filename = "/Users/jam/projects/nykhack2018/500weeks/client/src/routes/anvandare.html";
 
 Anvandare.data = function() {
-	return data();
+	return data$1();
 };
 
 Anvandare.render = function(state, options = {}) {
@@ -593,7 +636,7 @@ Anvandare._render = function(__result, ctx, options) {
 		throw new Error("<Anvandare> references store properties, but no store was provided");
 	}
 
-	ctx = Object.assign(options.store._init(["user"]), data(), ctx);
+	ctx = Object.assign(options.store._init(["user"]), data$1(), ctx);
 
 	return `${ ctx.right === true ? `<div>
   <div style="text-align: center;">
@@ -898,7 +941,7 @@ LinkButton.css = {
 	map: "{\"version\":3,\"file\":\"LinkButton.html\",\"sources\":[\"LinkButton.html\"],\"sourcesContent\":[\"<a class:block class=\\\"button\\\" href={href} on:click>{text}</a>\\n\\n<style>\\n  a.button {\\n    color: #fff;\\n    text-decoration: none;\\n    cursor: pointer;\\n    margin: 0;\\n    overflow: visible;\\n    font: inherit;\\n    display: inline-block;\\n    box-sizing: border-box;\\n    padding: 0 30px;\\n    vertical-align: middle;\\n    font-size: 14px;\\n    line-height: 38px;\\n    text-align: center;\\n    text-transform: uppercase;\\n    transition: 0.1s ease-in-out;\\n    transition-property: color, background-color, border-color;\\n    background-color: transparent;\\n    color: #222;\\n    border: 1px solid #e5e5e5;\\n  }\\n\\n  a.button:focus {\\n    outline: 0;\\n  }\\n\\n  a.button:hover {\\n    border-color: #b2b2b2;\\n  }\\n\\n  .block {\\n    width: 100%;\\n  }\\n</style>\\n\"],\"names\":[],\"mappings\":\"AAGE,CAAC,OAAO,cAAC,CAAC,AACR,KAAK,CAAE,IAAI,CACX,eAAe,CAAE,IAAI,CACrB,MAAM,CAAE,OAAO,CACf,MAAM,CAAE,CAAC,CACT,QAAQ,CAAE,OAAO,CACjB,IAAI,CAAE,OAAO,CACb,OAAO,CAAE,YAAY,CACrB,UAAU,CAAE,UAAU,CACtB,OAAO,CAAE,CAAC,CAAC,IAAI,CACf,cAAc,CAAE,MAAM,CACtB,SAAS,CAAE,IAAI,CACf,WAAW,CAAE,IAAI,CACjB,UAAU,CAAE,MAAM,CAClB,cAAc,CAAE,SAAS,CACzB,UAAU,CAAE,IAAI,CAAC,WAAW,CAC5B,mBAAmB,CAAE,KAAK,CAAC,CAAC,gBAAgB,CAAC,CAAC,YAAY,CAC1D,gBAAgB,CAAE,WAAW,CAC7B,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,GAAG,CAAC,KAAK,CAAC,OAAO,AAC3B,CAAC,AAED,CAAC,qBAAO,MAAM,AAAC,CAAC,AACd,OAAO,CAAE,CAAC,AACZ,CAAC,AAED,CAAC,qBAAO,MAAM,AAAC,CAAC,AACd,YAAY,CAAE,OAAO,AACvB,CAAC,AAED,MAAM,cAAC,CAAC,AACN,KAAK,CAAE,IAAI,AACb,CAAC\"}"
 };
 
-function data$1() {
+function data$2() {
   return {
     categories: [
       {label: "Fattigdom", color: "#e5233d"},
@@ -918,7 +961,7 @@ var Intro = {};
 Intro.filename = "/Users/jam/projects/nykhack2018/500weeks/client/src/routes/intro.html";
 
 Intro.data = function() {
-	return data$1();
+	return data$2();
 };
 
 Intro.render = function(state, options = {}) {
@@ -950,7 +993,7 @@ Intro._render = function(__result, ctx, options) {
 		throw new Error("<Intro> references store properties, but no store was provided");
 	}
 
-	ctx = Object.assign(options.store._init(["introStep"]), data$1(), ctx);
+	ctx = Object.assign(options.store._init(["introStep"]), data$2(), ctx);
 
 	return `<div class="intro-container svelte-1gs94rr">
     ${ ctx.$introStep === 6 || ctx.$introStep === 6 || ctx.$introStep === 6 ? `<img alt="Planet" src="img/planet.png" class="svelte-1gs94rr">` : `` }
@@ -1415,20 +1458,22 @@ Layout._render = function(__result, ctx, options) {
 
 	ctx = Object.assign({}, ctx);
 
-	return `${validateSsrComponent(Nav, 'Nav')._render(__result, { segment: ctx.child.segment }, { store: options.store })}
+	return `${(__result.head += `<title>500veckor</title>`, "")}
+
+${validateSsrComponent(Nav, 'Nav')._render(__result, { segment: ctx.child.segment }, { store: options.store })}
 
 ${validateSsrComponent(Login, 'Login')._render(__result, {  }, { store: options.store })}
 
-<div class="container svelte-krl5ij">
-	<div class="main svelte-krl5ij">
+<div class="container svelte-z829ju">
+	<div class="main svelte-z829ju">
 		${validateSsrComponent(((ctx.child.component) || missingComponent), 'svelte:component')._render(__result, Object.assign(ctx.child.props), { store: options.store })}
 	</div>
 </div>`;
 };
 
 Layout.css = {
-	code: "html{overflow-y:scroll;font-family:ProximaNova,-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;font-size:15px;font-weight:normal;line-height:1.5;-webkit-text-size-adjust:100%;background:#fff;color:#666;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility;background-color:rgb(240, 240, 240)}body{overflow:hidden;margin:0}.container.svelte-krl5ij{display:flex;justify-content:center}.main.svelte-krl5ij{width:750px;padding:20px}",
-	map: "{\"version\":3,\"file\":\"_layout.html\",\"sources\":[\"_layout.html\"],\"sourcesContent\":[\"<Nav segment={child.segment}/>\\n\\n<Login />\\n\\n<div class=\\\"container\\\">\\n\\t<div class=\\\"main\\\">\\n\\t\\t<svelte:component this={child.component} {...child.props}/>\\n\\t</div>\\n</div>\\n\\n<style>\\n\\t:global(html) {\\n\\t\\toverflow-y: scroll;\\n\\n\\t\\tfont-family: ProximaNova,-apple-system,BlinkMacSystemFont,\\\"Segoe UI\\\",Roboto,\\\"Helvetica Neue\\\",Arial,sans-serif;\\n    font-size: 15px;\\n    font-weight: normal;\\n    line-height: 1.5;\\n    -webkit-text-size-adjust: 100%;\\n    background: #fff;\\n    color: #666;\\n    -webkit-font-smoothing: antialiased;\\n    -moz-osx-font-smoothing: grayscale;\\n    text-rendering: optimizeLegibility;\\n\\n    background-color: rgb(240, 240, 240);\\n\\t}\\n\\n\\t:global(body) {\\n\\t\\toverflow: hidden;\\n\\t\\tmargin: 0;\\n\\t}\\n\\t\\n\\t.container {\\n\\t\\tdisplay: flex;\\n\\t\\tjustify-content: center;\\n\\t}\\n\\n\\t.main {\\n\\t\\twidth: 750px;\\n\\t\\tpadding: 20px;\\n\\t}\\n</style>\\n\\n<script>\\n\\texport default {\\n\\t\\tcomponents: {\\n\\t\\t\\tNav: '../components/Nav.html',\\n\\t\\t\\tLogin: '../components/Login.html',\\n\\t\\t}\\n\\t};\\n</script>\\n\"],\"names\":[],\"mappings\":\"AAWS,IAAI,AAAE,CAAC,AACd,UAAU,CAAE,MAAM,CAElB,WAAW,CAAE,WAAW,CAAC,aAAa,CAAC,kBAAkB,CAAC,UAAU,CAAC,MAAM,CAAC,gBAAgB,CAAC,KAAK,CAAC,UAAU,CAC3G,SAAS,CAAE,IAAI,CACf,WAAW,CAAE,MAAM,CACnB,WAAW,CAAE,GAAG,CAChB,wBAAwB,CAAE,IAAI,CAC9B,UAAU,CAAE,IAAI,CAChB,KAAK,CAAE,IAAI,CACX,sBAAsB,CAAE,WAAW,CACnC,uBAAuB,CAAE,SAAS,CAClC,cAAc,CAAE,kBAAkB,CAElC,gBAAgB,CAAE,IAAI,GAAG,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,AACvC,CAAC,AAEO,IAAI,AAAE,CAAC,AACd,QAAQ,CAAE,MAAM,CAChB,MAAM,CAAE,CAAC,AACV,CAAC,AAED,UAAU,cAAC,CAAC,AACX,OAAO,CAAE,IAAI,CACb,eAAe,CAAE,MAAM,AACxB,CAAC,AAED,KAAK,cAAC,CAAC,AACN,KAAK,CAAE,KAAK,CACZ,OAAO,CAAE,IAAI,AACd,CAAC\"}"
+	code: "html{overflow-y:scroll;font-family:ProximaNova,-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;font-size:15px;font-weight:normal;line-height:1.5;-webkit-text-size-adjust:100%;background:#fff;color:#666;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility;background-color:rgb(240, 240, 240)}body{overflow:hidden;margin:0}.container.svelte-z829ju{display:flex;justify-content:center}.main.svelte-z829ju{width:750px;padding:20px}",
+	map: "{\"version\":3,\"file\":\"_layout.html\",\"sources\":[\"_layout.html\"],\"sourcesContent\":[\"\\n<svelte:head>\\n\\t\\t<title>500veckor</title>\\n\\t</svelte:head>\\n\\t\\n<Nav segment={child.segment}/>\\n\\n<Login />\\n\\n<div class=\\\"container\\\">\\n\\t<div class=\\\"main\\\">\\n\\t\\t<svelte:component this={child.component} {...child.props}/>\\n\\t</div>\\n</div>\\n\\n<style>\\n\\t:global(html) {\\n\\t\\toverflow-y: scroll;\\n\\n\\t\\tfont-family: ProximaNova,-apple-system,BlinkMacSystemFont,\\\"Segoe UI\\\",Roboto,\\\"Helvetica Neue\\\",Arial,sans-serif;\\n    font-size: 15px;\\n    font-weight: normal;\\n    line-height: 1.5;\\n    -webkit-text-size-adjust: 100%;\\n    background: #fff;\\n    color: #666;\\n    -webkit-font-smoothing: antialiased;\\n    -moz-osx-font-smoothing: grayscale;\\n    text-rendering: optimizeLegibility;\\n\\n    background-color: rgb(240, 240, 240);\\n\\t}\\n\\n\\t:global(body) {\\n\\t\\toverflow: hidden;\\n\\t\\tmargin: 0;\\n\\t}\\n\\n\\t.container {\\n\\t\\tdisplay: flex;\\n\\t\\tjustify-content: center;\\n\\t}\\n\\n\\t.main {\\n\\t\\twidth: 750px;\\n\\t\\tpadding: 20px;\\n\\t}\\n</style>\\n\\n<script>\\n\\texport default {\\n\\t\\tcomponents: {\\n\\t\\t\\tNav: '../components/Nav.html',\\n\\t\\t\\tLogin: '../components/Login.html',\\n\\t\\t}\\n\\t};\\n</script>\\n\"],\"names\":[],\"mappings\":\"AAgBS,IAAI,AAAE,CAAC,AACd,UAAU,CAAE,MAAM,CAElB,WAAW,CAAE,WAAW,CAAC,aAAa,CAAC,kBAAkB,CAAC,UAAU,CAAC,MAAM,CAAC,gBAAgB,CAAC,KAAK,CAAC,UAAU,CAC3G,SAAS,CAAE,IAAI,CACf,WAAW,CAAE,MAAM,CACnB,WAAW,CAAE,GAAG,CAChB,wBAAwB,CAAE,IAAI,CAC9B,UAAU,CAAE,IAAI,CAChB,KAAK,CAAE,IAAI,CACX,sBAAsB,CAAE,WAAW,CACnC,uBAAuB,CAAE,SAAS,CAClC,cAAc,CAAE,kBAAkB,CAElC,gBAAgB,CAAE,IAAI,GAAG,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,AACvC,CAAC,AAEO,IAAI,AAAE,CAAC,AACd,QAAQ,CAAE,MAAM,CAChB,MAAM,CAAE,CAAC,AACV,CAAC,AAED,UAAU,cAAC,CAAC,AACX,OAAO,CAAE,IAAI,CACb,eAAe,CAAE,MAAM,AACxB,CAAC,AAED,KAAK,cAAC,CAAC,AACN,KAAK,CAAE,KAAK,CACZ,OAAO,CAAE,IAAI,AACd,CAAC\"}"
 };
 
 var Error$1 = {};

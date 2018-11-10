@@ -2,43 +2,106 @@
   <title>500veckor</title>
 </svelte:head>
 
-<h1>Vänner</h1>
-
-<div class="card">
-  <div>
-    <img src="img/tova_strid.png" style="max-height: 50px; max-width: 50px;" />
-  </div>
-  <div style="padding-left: 20px; margin-top: -2px; font-size: 16px;">
-    Tova Strid
-  </div>
+<div style="display: flex;">
+  <h1
+    style="flex-basis: 50%; color: {view === 'friends' ? 'inherit' : '#999999'};"
+    on:click="set({view: 'friends'})"
+  >
+    Vänner
+  </h1>
+  <h1
+    style="flex-basis: 50%; color: {view === 'groups' ? 'inherit' : '#aaaaaa'};"
+    on:click="set({view: 'groups'})"
+  >
+    Grupper
+  </h1>
 </div>
 
-<div class="card">
-  <div>
-    <img src="img/lillamy.png" style="max-height: 50px; max-width: 50px;" />
+{#if view === 'friends'}
+<div in:fade="{duration: 200, delay: 200}">
+  <div class="card">
+    <div>
+      <img
+        src="img/tova_strid.png"
+        style="max-height: 50px; max-width: 50px;"
+      />
+    </div>
+    <div style="padding-left: 20px; margin-top: -2px; font-size: 16px;">
+      Tova Strid
+    </div>
   </div>
-  <div style="padding-left: 20px; margin-top: -2px; font-size: 16px;">
-    Lillamy
-  </div>
-</div>
 
-<div class="card">
-  <div>
-    <img src="img/simonfredrikk.png" style="max-height: 50px; max-width: 50px;" />
+  <div class="card">
+    <div>
+      <img src="img/lillamy.png" style="max-height: 50px; max-width: 50px;" />
+    </div>
+    <div style="padding-left: 20px; margin-top: -2px; font-size: 16px;">
+      Lillamy
+    </div>
   </div>
-  <div style="padding-left: 20px; margin-top: -2px; font-size: 16px;">
-    Simonfredrikk
-  </div>
-</div>
 
-<div class="card">
-  <div>
-    <img src="img/kottataren22.png" style="max-height: 50px; max-width: 50px;" />
+  <div class="card">
+    <div>
+      <img
+        src="img/simonfredrikk.png"
+        style="max-height: 50px; max-width: 50px;"
+      />
+    </div>
+    <div style="padding-left: 20px; margin-top: -2px; font-size: 16px;">
+      Simonfredrikk
+    </div>
   </div>
-  <div style="padding-left: 20px; margin-top: -2px; font-size: 16px;">
-    Köttätaren22
+
+  <div class="card">
+    <div>
+      <img
+        src="img/kottataren22.png"
+        style="max-height: 50px; max-width: 50px;"
+      />
+    </div>
+    <div style="padding-left: 20px; margin-top: -2px; font-size: 16px;">
+      Köttätaren22
+    </div>
   </div>
 </div>
+{/if}
+
+{#if view === 'groups'}
+<div in:fade="{duration: 200, delay: 200}">
+  <div class="card">
+    <div>
+      <img
+        src="img/gnesta-turtles.png"
+        style="max-height: 50px; max-width: 50px;"
+      />
+    </div>
+    <div style="padding-left: 20px; margin-top: -2px; font-size: 16px;">
+      Gnesta Turtles
+    </div>
+  </div>
+
+  <div class="card">
+    <div>
+      <img src="img/gubbar-som-cyklar.png" style="max-height: 50px; max-width: 50px;" />
+    </div>
+    <div style="padding-left: 20px; margin-top: -2px; font-size: 16px;">
+      Gubbar som cyklar
+    </div>
+  </div>
+
+  <div class="card">
+    <div>
+      <img
+        src="img/na17a.png"
+        style="max-height: 50px; max-width: 50px;"
+      />
+    </div>
+    <div style="padding-left: 20px; margin-top: -2px; font-size: 16px;">
+      NA17A ät veganskt
+    </div>
+  </div>
+</div>
+{/if}
 
 <style>
   h1 {
@@ -62,3 +125,17 @@
     box-shadow: 0 5px 15px rgba(12, 7, 7, 0.16);
   }
 </style>
+
+<script>
+  import { fade } from "svelte-transitions";
+
+  export default {
+    transitions: { fade },
+
+    data() {
+      return {
+        view: "friends"
+      };
+    }
+  };
+</script>
