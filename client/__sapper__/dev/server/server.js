@@ -52,12 +52,95 @@ Index._render = function(__result, ctx, options) {
 
 	return `${(__result.head += `<title>500veckor</title>`, "")}
 
-<h1 class="svelte-1hjo3yk">Main</h1>`;
+<h1 class="svelte-1wv06a5">Vänner</h1>
+
+<div class="card svelte-1wv06a5">
+  <div>
+    <img src="img/tova_strid.png" style="max-height: 50px; max-width: 50px;">
+  </div>
+  <div style="padding-left: 20px; margin-top: -2px; font-size: 16px;">
+    Tova Strid
+  </div>
+</div>
+
+<div class="card svelte-1wv06a5">
+  <div>
+    <img src="img/lillamy.png" style="max-height: 50px; max-width: 50px;">
+  </div>
+  <div style="padding-left: 20px; margin-top: -2px; font-size: 16px;">
+    Lillamy
+  </div>
+</div>
+
+<div class="card svelte-1wv06a5">
+  <div>
+    <img src="img/simonfredrikk.png" style="max-height: 50px; max-width: 50px;">
+  </div>
+  <div style="padding-left: 20px; margin-top: -2px; font-size: 16px;">
+    Simonfredrikk
+  </div>
+</div>
+
+<div class="card svelte-1wv06a5">
+  <div>
+    <img src="img/kottataren22.png" style="max-height: 50px; max-width: 50px;">
+  </div>
+  <div style="padding-left: 20px; margin-top: -2px; font-size: 16px;">
+    Köttätaren22
+  </div>
+</div>`;
 };
 
 Index.css = {
-	code: "html{overflow-y:scroll;font-family:ProximaNova,-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;font-size:15px;font-weight:normal;line-height:1.5;-webkit-text-size-adjust:100%;background:#fff;color:#666;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility}body{overflow:hidden;margin:0}h1.svelte-1hjo3yk{text-align:center}",
-	map: "{\"version\":3,\"file\":\"index.html\",\"sources\":[\"index.html\"],\"sourcesContent\":[\"<svelte:head>\\n\\t<title>500veckor</title>\\n</svelte:head>\\n\\n<h1>Main</h1>\\n\\n<style>\\n\\t:global(html) {\\n\\t\\toverflow-y: scroll;\\n\\n\\t\\tfont-family: ProximaNova,-apple-system,BlinkMacSystemFont,\\\"Segoe UI\\\",Roboto,\\\"Helvetica Neue\\\",Arial,sans-serif;\\n    font-size: 15px;\\n    font-weight: normal;\\n    line-height: 1.5;\\n    -webkit-text-size-adjust: 100%;\\n    background: #fff;\\n    color: #666;\\n    -webkit-font-smoothing: antialiased;\\n    -moz-osx-font-smoothing: grayscale;\\n    text-rendering: optimizeLegibility;\\n\\t}\\n\\n\\t:global(body) {\\n\\t\\toverflow: hidden;\\n\\t\\tmargin: 0;\\n\\t}\\n\\n  h1 {\\n    text-align: center;\\n  }\\n</style>\"],\"names\":[],\"mappings\":\"AAOS,IAAI,AAAE,CAAC,AACd,UAAU,CAAE,MAAM,CAElB,WAAW,CAAE,WAAW,CAAC,aAAa,CAAC,kBAAkB,CAAC,UAAU,CAAC,MAAM,CAAC,gBAAgB,CAAC,KAAK,CAAC,UAAU,CAC3G,SAAS,CAAE,IAAI,CACf,WAAW,CAAE,MAAM,CACnB,WAAW,CAAE,GAAG,CAChB,wBAAwB,CAAE,IAAI,CAC9B,UAAU,CAAE,IAAI,CAChB,KAAK,CAAE,IAAI,CACX,sBAAsB,CAAE,WAAW,CACnC,uBAAuB,CAAE,SAAS,CAClC,cAAc,CAAE,kBAAkB,AACrC,CAAC,AAEO,IAAI,AAAE,CAAC,AACd,QAAQ,CAAE,MAAM,CAChB,MAAM,CAAE,CAAC,AACV,CAAC,AAEA,EAAE,eAAC,CAAC,AACF,UAAU,CAAE,MAAM,AACpB,CAAC\"}"
+	code: "h1.svelte-1wv06a5{text-align:center}.card.svelte-1wv06a5{margin-bottom:10px;padding-top:10px;padding-bottom:10px;display:flex;align-items:center;padding-left:10px;padding-right:10px;border:1px solid #eaeaea;box-shadow:0 5px 15px rgba(12, 7, 7, 0.08);background-color:#ffffff}.card.svelte-1wv06a5:hover{box-shadow:0 5px 15px rgba(12, 7, 7, 0.16)}",
+	map: "{\"version\":3,\"file\":\"index.html\",\"sources\":[\"index.html\"],\"sourcesContent\":[\"<svelte:head>\\n  <title>500veckor</title>\\n</svelte:head>\\n\\n<h1>Vänner</h1>\\n\\n<div class=\\\"card\\\">\\n  <div>\\n    <img src=\\\"img/tova_strid.png\\\" style=\\\"max-height: 50px; max-width: 50px;\\\" />\\n  </div>\\n  <div style=\\\"padding-left: 20px; margin-top: -2px; font-size: 16px;\\\">\\n    Tova Strid\\n  </div>\\n</div>\\n\\n<div class=\\\"card\\\">\\n  <div>\\n    <img src=\\\"img/lillamy.png\\\" style=\\\"max-height: 50px; max-width: 50px;\\\" />\\n  </div>\\n  <div style=\\\"padding-left: 20px; margin-top: -2px; font-size: 16px;\\\">\\n    Lillamy\\n  </div>\\n</div>\\n\\n<div class=\\\"card\\\">\\n  <div>\\n    <img src=\\\"img/simonfredrikk.png\\\" style=\\\"max-height: 50px; max-width: 50px;\\\" />\\n  </div>\\n  <div style=\\\"padding-left: 20px; margin-top: -2px; font-size: 16px;\\\">\\n    Simonfredrikk\\n  </div>\\n</div>\\n\\n<div class=\\\"card\\\">\\n  <div>\\n    <img src=\\\"img/kottataren22.png\\\" style=\\\"max-height: 50px; max-width: 50px;\\\" />\\n  </div>\\n  <div style=\\\"padding-left: 20px; margin-top: -2px; font-size: 16px;\\\">\\n    Köttätaren22\\n  </div>\\n</div>\\n\\n<style>\\n  h1 {\\n    text-align: center;\\n  }\\n\\n  .card {\\n    margin-bottom: 10px;\\n    padding-top: 10px;\\n    padding-bottom: 10px;\\n    display: flex;\\n    align-items: center;\\n    padding-left: 10px;\\n    padding-right: 10px;\\n    border: 1px solid #eaeaea;\\n    box-shadow: 0 5px 15px rgba(12, 7, 7, 0.08);\\n    background-color: #ffffff;\\n  }\\n\\n  .card:hover {\\n    box-shadow: 0 5px 15px rgba(12, 7, 7, 0.16);\\n  }\\n</style>\\n\"],\"names\":[],\"mappings\":\"AA2CE,EAAE,eAAC,CAAC,AACF,UAAU,CAAE,MAAM,AACpB,CAAC,AAED,KAAK,eAAC,CAAC,AACL,aAAa,CAAE,IAAI,CACnB,WAAW,CAAE,IAAI,CACjB,cAAc,CAAE,IAAI,CACpB,OAAO,CAAE,IAAI,CACb,WAAW,CAAE,MAAM,CACnB,YAAY,CAAE,IAAI,CAClB,aAAa,CAAE,IAAI,CACnB,MAAM,CAAE,GAAG,CAAC,KAAK,CAAC,OAAO,CACzB,UAAU,CAAE,CAAC,CAAC,GAAG,CAAC,IAAI,CAAC,KAAK,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,IAAI,CAAC,CAC3C,gBAAgB,CAAE,OAAO,AAC3B,CAAC,AAED,oBAAK,MAAM,AAAC,CAAC,AACX,UAAU,CAAE,CAAC,CAAC,GAAG,CAAC,IAAI,CAAC,KAAK,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,IAAI,CAAC,AAC7C,CAAC\"}"
+};
+
+var Tillsammans = {};
+
+Tillsammans.filename = "/Users/jam/projects/nykhack2018/500weeks/client/src/routes/tillsammans.html";
+
+Tillsammans.data = function() {
+	return {};
+};
+
+Tillsammans.render = function(state, options = {}) {
+	var components = new Set();
+
+	function addComponent(component) {
+		components.add(component);
+	}
+
+	var result = { head: '', addComponent };
+	var html = Tillsammans._render(result, state, options);
+
+	var cssCode = Array.from(components).map(c => c.css && c.css.code).filter(Boolean).join('\n');
+
+	return {
+		html,
+		head: result.head,
+		css: { code: cssCode, map: null },
+		toString() {
+			return html;
+		}
+	};
+};
+
+Tillsammans._render = function(__result, ctx, options) {
+	__result.addComponent(Tillsammans);
+
+	ctx = Object.assign({}, ctx);
+
+	return `<h1 style="text-align: center;">Tillsammans</h1>
+
+<div style="display: flex; align-items: center; height: 400px">
+  <img style="width: 100%; height: auto;" alt="karta" src="img/map.png">
+</div>`;
+};
+
+Tillsammans.css = {
+	code: '',
+	map: null
 };
 
 function assign(tar, src) {
@@ -641,21 +724,23 @@ Framsteg._render = function(__result, ctx, options) {
 <br>
 <br>
 
-<img class="line-chart svelte-1umf3bz" alt="linechart" src="img/line2.png">
+<img style="opacity: 0.8;" class="line-chart svelte-1umf3bz" alt="linechart" src="img/line3.png">
 
 <br>
 <br>
 
-<div><strong>5740</strong> Ät vegetariskt.</div>
-<div><strong>2090</strong> Köp inte produkter som är testade på djur.</div>
-<div><strong>3301</strong> Plantera ett träd.</div>
+<div style="color: #161616;">Så här långt under 2018…</div>
+
+<div>Träffade <strong style="color: #4ca146;">3201</strong> personer en ny språkvän</div>
+<div>Lagades det <strong style="color: #dda73a;">13074</strong> vegetariska måltider,</div>
+<div>Tog <strong style="color: #e5233d;">5022</strong> bilister cykeln till jobbet <span style="color: #e5233d;">♥</span></div>
 
 <div style="margin-bottom: 200px;"></div>`;
 };
 
 Framsteg.css = {
 	code: ".bar-chart.svelte-1umf3bz{display:flex;align-items:flex-end;height:200px;border-left:1px solid #333;border-bottom:1px solid #333;padding-left:10px;padding-right:10px}.line-chart.svelte-1umf3bz{border-left:1px solid #333;border-bottom:1px solid #333}",
-	map: "{\"version\":3,\"file\":\"framsteg.html\",\"sources\":[\"framsteg.html\"],\"sourcesContent\":[\"<h1 style=\\\"text-align: center;\\\">Framsteg</h1>\\n\\n<div class=\\\"bar-chart\\\">\\n  <div style=\\\"padding-left: 10px; padding-right: 10px;\\\">\\n    <div style=\\\"width: 20px; height: 120px; background-color: #e5233d;\\\"></div>\\n  </div>\\n  <div style=\\\"padding-left: 10px; padding-right: 10px;\\\">\\n    <div style=\\\"width: 20px; height: 80px; background-color: #dda73a;\\\"></div>\\n  </div>\\n  <div style=\\\"padding-left: 10px; padding-right: 10px;\\\">\\n    <div style=\\\"width: 20px; height: 20px; background-color: #4ca146;\\\"></div>\\n  </div>\\n  <div style=\\\"padding-left: 10px; padding-right: 10px;\\\">\\n    <div style=\\\"width: 20px; height: 100px; background-color: #27bfe6;\\\"></div>\\n  </div>\\n  <div style=\\\"padding-left: 10px; padding-right: 10px;\\\">\\n    <div style=\\\"width: 20px; height: 130px; background-color: #fbc412;\\\"></div>\\n  </div>\\n  <div style=\\\"padding-left: 10px; padding-right: 10px;\\\">\\n    <div style=\\\"width: 20px; height: 90px; background-color: #f26a2e;\\\"></div>\\n  </div>\\n  <div style=\\\"padding-left: 10px; padding-right: 10px;\\\">\\n    <div style=\\\"width: 20px; height: 40px; background-color: #bf8d2c;\\\"></div>\\n  </div>\\n  <div style=\\\"padding-left: 10px; padding-right: 10px;\\\">\\n    <div style=\\\"width: 20px; height: 50px; background-color: #27bfe6;\\\"></div>\\n  </div>\\n</div>\\n\\n<br />\\n<br />\\n\\n<img class=\\\"line-chart\\\" alt=\\\"linechart\\\" src=\\\"img/line2.png\\\">\\n\\n<br />\\n<br />\\n\\n<div><strong>5740</strong> Ät vegetariskt.</div>\\n<div><strong>2090</strong> Köp inte produkter som är testade på djur.</div>\\n<div><strong>3301</strong> Plantera ett träd.</div>\\n\\n<div style=\\\"margin-bottom: 200px;\\\"></div>\\n\\n<style>\\n  .bar-chart {\\n    display: flex;\\n    align-items: flex-end;\\n    height: 200px;\\n    border-left: 1px solid #333;\\n    border-bottom: 1px solid #333;\\n    padding-left: 10px;\\n    padding-right: 10px;\\n  }\\n\\n  .line-chart {\\n    border-left: 1px solid #333;\\n    border-bottom: 1px solid #333;\\n  }\\n</style>\\n\"],\"names\":[],\"mappings\":\"AA4CE,UAAU,eAAC,CAAC,AACV,OAAO,CAAE,IAAI,CACb,WAAW,CAAE,QAAQ,CACrB,MAAM,CAAE,KAAK,CACb,WAAW,CAAE,GAAG,CAAC,KAAK,CAAC,IAAI,CAC3B,aAAa,CAAE,GAAG,CAAC,KAAK,CAAC,IAAI,CAC7B,YAAY,CAAE,IAAI,CAClB,aAAa,CAAE,IAAI,AACrB,CAAC,AAED,WAAW,eAAC,CAAC,AACX,WAAW,CAAE,GAAG,CAAC,KAAK,CAAC,IAAI,CAC3B,aAAa,CAAE,GAAG,CAAC,KAAK,CAAC,IAAI,AAC/B,CAAC\"}"
+	map: "{\"version\":3,\"file\":\"framsteg.html\",\"sources\":[\"framsteg.html\"],\"sourcesContent\":[\"<h1 style=\\\"text-align: center;\\\">Framsteg</h1>\\n\\n<div class=\\\"bar-chart\\\">\\n  <div style=\\\"padding-left: 10px; padding-right: 10px;\\\">\\n    <div style=\\\"width: 20px; height: 120px; background-color: #e5233d;\\\"></div>\\n  </div>\\n  <div style=\\\"padding-left: 10px; padding-right: 10px;\\\">\\n    <div style=\\\"width: 20px; height: 80px; background-color: #dda73a;\\\"></div>\\n  </div>\\n  <div style=\\\"padding-left: 10px; padding-right: 10px;\\\">\\n    <div style=\\\"width: 20px; height: 20px; background-color: #4ca146;\\\"></div>\\n  </div>\\n  <div style=\\\"padding-left: 10px; padding-right: 10px;\\\">\\n    <div style=\\\"width: 20px; height: 100px; background-color: #27bfe6;\\\"></div>\\n  </div>\\n  <div style=\\\"padding-left: 10px; padding-right: 10px;\\\">\\n    <div style=\\\"width: 20px; height: 130px; background-color: #fbc412;\\\"></div>\\n  </div>\\n  <div style=\\\"padding-left: 10px; padding-right: 10px;\\\">\\n    <div style=\\\"width: 20px; height: 90px; background-color: #f26a2e;\\\"></div>\\n  </div>\\n  <div style=\\\"padding-left: 10px; padding-right: 10px;\\\">\\n    <div style=\\\"width: 20px; height: 40px; background-color: #bf8d2c;\\\"></div>\\n  </div>\\n  <div style=\\\"padding-left: 10px; padding-right: 10px;\\\">\\n    <div style=\\\"width: 20px; height: 50px; background-color: #27bfe6;\\\"></div>\\n  </div>\\n</div>\\n\\n<br />\\n<br />\\n\\n<img style=\\\"opacity: 0.8;\\\" class=\\\"line-chart\\\" alt=\\\"linechart\\\" src=\\\"img/line3.png\\\">\\n\\n<br />\\n<br />\\n\\n<div style=\\\"color: #161616;\\\">Så här långt under 2018…</div>\\n\\n<div>Träffade <strong style=\\\"color: #4ca146;\\\">3201</strong> personer en ny språkvän</div>\\n<div>Lagades det <strong style=\\\"color: #dda73a;\\\">13074</strong> vegetariska måltider,</div>\\n<div>Tog <strong style=\\\"color: #e5233d;\\\">5022</strong> bilister cykeln till jobbet <span style=\\\"color: #e5233d;\\\">♥</span></div>\\n\\n<div style=\\\"margin-bottom: 200px;\\\"></div>\\n\\n<style>\\n  .bar-chart {\\n    display: flex;\\n    align-items: flex-end;\\n    height: 200px;\\n    border-left: 1px solid #333;\\n    border-bottom: 1px solid #333;\\n    padding-left: 10px;\\n    padding-right: 10px;\\n  }\\n\\n  .line-chart {\\n    border-left: 1px solid #333;\\n    border-bottom: 1px solid #333;\\n  }\\n</style>\\n\"],\"names\":[],\"mappings\":\"AA8CE,UAAU,eAAC,CAAC,AACV,OAAO,CAAE,IAAI,CACb,WAAW,CAAE,QAAQ,CACrB,MAAM,CAAE,KAAK,CACb,WAAW,CAAE,GAAG,CAAC,KAAK,CAAC,IAAI,CAC3B,aAAa,CAAE,GAAG,CAAC,KAAK,CAAC,IAAI,CAC7B,YAAY,CAAE,IAAI,CAClB,aAAa,CAAE,IAAI,AACrB,CAAC,AAED,WAAW,eAAC,CAAC,AACX,WAAW,CAAE,GAAG,CAAC,KAAK,CAAC,IAAI,CAC3B,aAAa,CAAE,GAAG,CAAC,KAAK,CAAC,IAAI,AAC/B,CAAC\"}"
 };
 
 var Search = {};
@@ -693,12 +778,38 @@ Search._render = function(__result, ctx, options) {
 
 	ctx = Object.assign({}, ctx);
 
-	return `<h1>Search</h1>`;
+	return `<h1>Search</h1>
+
+<input type="text" placeholder="Search..." class="svelte-mbgyoc">
+
+<div style="display: flex; padding: 10px;">
+  <div style="width: 100px; font-style: bold;"><strong>Användare</strong></div>
+  <div style="width: 100px; font-style: bold;"><strong>Grupper</strong></div>
+  <div style="width: 100px; font-style: bold;"><strong>Utmaning</strong></div>
+</div>
+
+<div class="card svelte-mbgyoc">
+    <div style="width: 100px; font-style: bold;">Bengt</div>
+    <div style="width: 100px; font-style: bold;">Sköldpaddor</div>
+    <div style="width: 100px; font-style: bold;">Cykla</div>
+</div>
+
+<div class="card svelte-mbgyoc">
+    <div style="width: 100px; font-style: bold;">Gunhild</div>
+    <div style="width: 100px; font-style: bold;"></div>
+    <div style="width: 100px; font-style: bold;">Vegetarian</div>
+</div>
+
+<div class="card svelte-mbgyoc">
+    <div style="width: 100px; font-style: bold;">Markus</div>
+    <div style="width: 100px; font-style: bold;">Sköldpaddor</div>
+    <div style="width: 100px; font-style: bold;">Cykla</div>
+</div>`;
 };
 
 Search.css = {
-	code: '',
-	map: null
+	code: "input.svelte-mbgyoc{height:40px;display:block;max-width:100%;width:100%;border:0 none;padding:0 10px;background:#fff;color:#666;border:1px solid #e5e5e5;transition:.2s ease-in-out;transition-property:color,background-color,border;width:310px}input.svelte-mbgyoc:focus{outline:0;border-color:#0f7ae5}.card.svelte-mbgyoc{margin-bottom:10px;padding-top:10px;padding-bottom:10px;display:flex;padding-left:10px;padding-right:10px;border:1px solid #eaeaea;box-shadow:0 5px 15px rgba(12, 7, 7, 0.08);background-color:#ffffff}.card.svelte-mbgyoc:hover{box-shadow:0 5px 15px rgba(12, 7, 7, 0.16)}",
+	map: "{\"version\":3,\"file\":\"search.html\",\"sources\":[\"search.html\"],\"sourcesContent\":[\"<h1>Search</h1>\\n\\n<input type=\\\"text\\\" placeholder=\\\"Search...\\\" />\\n\\n<div style=\\\"display: flex; padding: 10px;\\\">\\n  <div style=\\\"width: 100px; font-style: bold;\\\"><strong>Användare</strong></div>\\n  <div style=\\\"width: 100px; font-style: bold;\\\"><strong>Grupper</strong></div>\\n  <div style=\\\"width: 100px; font-style: bold;\\\"><strong>Utmaning</strong></div>\\n</div>\\n\\n<div class=\\\"card\\\">\\n    <div style=\\\"width: 100px; font-style: bold;\\\">Bengt</div>\\n    <div style=\\\"width: 100px; font-style: bold;\\\">Sköldpaddor</div>\\n    <div style=\\\"width: 100px; font-style: bold;\\\">Cykla</div>\\n</div>\\n\\n<div class=\\\"card\\\">\\n    <div style=\\\"width: 100px; font-style: bold;\\\">Gunhild</div>\\n    <div style=\\\"width: 100px; font-style: bold;\\\"></div>\\n    <div style=\\\"width: 100px; font-style: bold;\\\">Vegetarian</div>\\n</div>\\n\\n<div class=\\\"card\\\">\\n    <div style=\\\"width: 100px; font-style: bold;\\\">Markus</div>\\n    <div style=\\\"width: 100px; font-style: bold;\\\">Sköldpaddor</div>\\n    <div style=\\\"width: 100px; font-style: bold;\\\">Cykla</div>\\n</div>\\n\\n<style>\\n  input {\\n    height: 40px;\\n    display: block;\\n\\n    max-width: 100%;\\n    width: 100%;\\n    border: 0 none;\\n    padding: 0 10px;\\n    background: #fff;\\n    color: #666;\\n    border: 1px solid #e5e5e5;\\n    transition: .2s ease-in-out;\\n    transition-property: color,background-color,border;\\n    width: 310px;\\n  }\\n\\n  input:focus {\\n    outline: 0;\\n    border-color: #0f7ae5;\\n  }\\n\\n  .card {\\n    margin-bottom: 10px;\\n    padding-top: 10px;\\n    padding-bottom: 10px;\\n    display: flex;\\n  padding-left: 10px;\\n  padding-right: 10px;\\n    border: 1px solid #eaeaea;\\n    box-shadow: 0 5px 15px rgba(12, 7, 7, 0.08);\\n    background-color: #ffffff;\\n  }\\n\\n  .card:hover {\\n    box-shadow: 0 5px 15px rgba(12, 7, 7, 0.16);\\n  }\\n</style>\"],\"names\":[],\"mappings\":\"AA6BE,KAAK,cAAC,CAAC,AACL,MAAM,CAAE,IAAI,CACZ,OAAO,CAAE,KAAK,CAEd,SAAS,CAAE,IAAI,CACf,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,CAAC,CAAC,IAAI,CACd,OAAO,CAAE,CAAC,CAAC,IAAI,CACf,UAAU,CAAE,IAAI,CAChB,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,GAAG,CAAC,KAAK,CAAC,OAAO,CACzB,UAAU,CAAE,GAAG,CAAC,WAAW,CAC3B,mBAAmB,CAAE,KAAK,CAAC,gBAAgB,CAAC,MAAM,CAClD,KAAK,CAAE,KAAK,AACd,CAAC,AAED,mBAAK,MAAM,AAAC,CAAC,AACX,OAAO,CAAE,CAAC,CACV,YAAY,CAAE,OAAO,AACvB,CAAC,AAED,KAAK,cAAC,CAAC,AACL,aAAa,CAAE,IAAI,CACnB,WAAW,CAAE,IAAI,CACjB,cAAc,CAAE,IAAI,CACpB,OAAO,CAAE,IAAI,CACf,YAAY,CAAE,IAAI,CAClB,aAAa,CAAE,IAAI,CACjB,MAAM,CAAE,GAAG,CAAC,KAAK,CAAC,OAAO,CACzB,UAAU,CAAE,CAAC,CAAC,GAAG,CAAC,IAAI,CAAC,KAAK,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,IAAI,CAAC,CAC3C,gBAAgB,CAAE,OAAO,AAC3B,CAAC,AAED,mBAAK,MAAM,AAAC,CAAC,AACX,UAAU,CAAE,CAAC,CAAC,GAAG,CAAC,IAAI,CAAC,KAAK,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,IAAI,CAAC,AAC7C,CAAC\"}"
 };
 
 var Button = {};
@@ -841,96 +952,75 @@ Intro._render = function(__result, ctx, options) {
 
 	ctx = Object.assign(options.store._init(["introStep"]), data$1(), ctx);
 
-	return `<div class="intro-container svelte-192wy06">
-  <div class="intro-card svelte-192wy06">
-    ${ ctx.$introStep === 1 || ctx.$introStep === 2 || ctx.$introStep === 3 ? `<img alt="Planet" src="img/planet.png" class="svelte-192wy06">` : `` }
+	return `<div class="intro-container svelte-1gs94rr">
+    ${ ctx.$introStep === 6 || ctx.$introStep === 6 || ctx.$introStep === 6 ? `<img alt="Planet" src="img/planet.png" class="svelte-1gs94rr">` : `` }
 
-    ${ ctx.$introStep === 1 ? `<div class="step svelte-192wy06">
+    ${ ctx.$introStep === 6 ? `<div class="step svelte-1gs94rr">
       <h2>Välkommen!</h2>
       <p>Du är på god väg att rädda världen!</p>
       ${validateSsrComponent(Button, 'Button')._render(__result, { default: true, text: "Nästa" }, { store: options.store })}
     </div>` : `` }
 
-    ${ ctx.$introStep === 2 ? `<div class="step svelte-192wy06">
+    ${ ctx.$introStep === 6 ? `<div class="step svelte-1gs94rr">
       <p>Tillsammans kan vi hjälpa till för att uppnå FN:s globala mål.</p>
       <p>Varje individ räknas! Under 500 veckor hjälps vi åt.</p>
       ${validateSsrComponent(Button, 'Button')._render(__result, { default: true, text: "Nästa" }, { store: options.store })}
     </div>` : `` }
 
-    ${ ctx.$introStep === 3 ? `<div class="step svelte-192wy06">
+    ${ ctx.$introStep === 6 ? `<div class="step svelte-1gs94rr">
       <p>Anta nya utmaningar varje vecka.</p>
       <p>Utmana vänner och familj. Följ dina och allas framsteg.</p>
       ${validateSsrComponent(Button, 'Button')._render(__result, { default: true, text: "Nästa" }, { store: options.store })}
     </div>` : `` }
 
-    ${ ctx.$introStep === 1 || ctx.$introStep === 2 || ctx.$introStep === 3 ? `<div class="dots svelte-192wy06">
-      <div class="dot ${escape(ctx.$introStep === 1 ? 'current' : '')} svelte-192wy06"></div>
-      <div class="dot ${escape(ctx.$introStep === 2 ? 'current' : '')} svelte-192wy06"></div>
-      <div class="dot ${escape(ctx.$introStep === 3 ? 'current' : '')} svelte-192wy06"></div>
+    ${ ctx.$introStep === 6 || ctx.$introStep === 6 || ctx.$introStep === 6 ? `<div class="dots svelte-1gs94rr">
+      <div class="dot ${escape(ctx.$introStep === 1 ? 'current' : '')} svelte-1gs94rr"></div>
+      <div class="dot ${escape(ctx.$introStep === 2 ? 'current' : '')} svelte-1gs94rr"></div>
+      <div class="dot ${escape(ctx.$introStep === 3 ? 'current' : '')} svelte-1gs94rr"></div>
     </div>` : `` }
 
-    ${ ctx.$introStep === 4 ? `<div class="categories svelte-192wy06">
-      ${ each(ctx.categories, item => Object.assign({}, ctx, { category: item }), ctx => `<div class="category svelte-192wy06" style="background-color: ${escape(ctx.category.color)};">
+    ${ ctx.$introStep === 6 ? `<div class="categories svelte-1gs94rr">
+      ${ each(ctx.categories, item => Object.assign({}, ctx, { category: item }), ctx => `<div class="category svelte-1gs94rr" style="background-color: ${escape(ctx.category.color)};">
           ${escape(ctx.category.label)}
         </div>`)}
     </div>` : `` }
 
-    ${ ctx.$introStep === 5 ? `<div style="text-align: center;">
+    ${ ctx.$introStep === 6 ? `<div style="text-align: center;">
         <h1>Utmaning</h1>
         <div style="height: 100px;">Beskrivning av utmaning, mål o.s.v.</div>
         ${validateSsrComponent(LinkButton, 'LinkButton')._render(__result, { type: "default", text: "Registrera och anta utmaning", href: "registrera" }, { store: options.store })}
       </div>` : `` }
 
-  </div>
+    ${ ctx.$introStep === 1 ? `<div>
+      <div>
+        <img class="image svelte-1gs94rr" style="width:100%; height: auto;" src="img/1onboarding1.png">
+      </div>
+      </div>` : `` }
+
+    ${ ctx.$introStep === 2 ? `<div>
+      <div>
+        <img class="image svelte-1gs94rr" style="width:100%; height: auto;" src="img/2onboarding2.png">
+      </div>
+    </div>` : `` }
+
+    ${ ctx.$introStep === 3 ? `<div>
+      <div>
+        <img class="image svelte-1gs94rr" style="width:100%; height: auto;" src="img/3onboarding3.png">
+      </div>
+    </div>` : `` }
+
+    ${ ctx.$introStep === 4 ? `<div>
+        <a href="registrera">
+        <img class="image svelte-1gs94rr" style="width:100%; height: auto;" src="img/coop.png">
+      </a>
+      </div>` : `` }
+
 </div>`;
 };
 
 Intro.css = {
-	code: ".intro-container.svelte-192wy06{display:flex;justify-content:center;align-items:center;position:fixed;top:0;left:0;width:100%;height:100%;background-color:#222}.intro-card.svelte-192wy06{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;width:500px;height:500px;padding:10px 20px;background-color:#ffffff;box-shadow:0 5px 15px rgba(12, 7, 7, 0.08)}.intro-card.svelte-192wy06:hover{box-shadow:0 14px 25px rgba(0,0,0,0.16)}.step.svelte-192wy06{display:flex;flex-direction:column;justify-content:center;align-items:center;width:200px;height:220px;padding-left:20px}img.svelte-192wy06{width:128px;height:128px}.dots.svelte-192wy06{display:flex;justify-content:center;flex-basis:100%}.dot.svelte-192wy06{width:10px;height:10px;border-radius:50%;border:1px solid #666;margin-left:10px;margin-right:10px}.dot.current.svelte-192wy06{background-color:#666}.categories.svelte-192wy06{display:flex;flex-wrap:wrap;justify-content:center;align-items:center}.category.svelte-192wy06{display:flex;justify-content:center;align-items:center;color:#fff;width:100px;height:100px;margin:5px;background-color:#666;font-size:16px;cursor:pointer;text-align:center}",
-	map: "{\"version\":3,\"file\":\"intro.html\",\"sources\":[\"intro.html\"],\"sourcesContent\":[\"<div class=\\\"intro-container\\\">\\n  <div class=\\\"intro-card\\\">\\n    {#if $introStep === 1 || $introStep === 2 || $introStep === 3}\\n      <img alt='Planet' src='img/planet.png'>\\n    {/if}\\n\\n    {#if $introStep === 1}\\n    <div class=\\\"step\\\">\\n      <h2>Välkommen!</h2>\\n      <p>Du är på god väg att rädda världen!</p>\\n      <Button default text=\\\"Nästa\\\" on:click=\\\"$set({ introStep: 2 })\\\" />\\n    </div>\\n    {/if}\\n\\n    {#if $introStep === 2}\\n    <div class=\\\"step\\\">\\n      <p>Tillsammans kan vi hjälpa till för att uppnå FN:s globala mål.</p>\\n      <p>Varje individ räknas! Under 500 veckor hjälps vi åt.</p>\\n      <Button default text=\\\"Nästa\\\" on:click=\\\"$set({ introStep: 3 })\\\" />\\n    </div>\\n    {/if}\\n\\n    {#if $introStep === 3}\\n    <div class=\\\"step\\\">\\n      <p>Anta nya utmaningar varje vecka.</p>\\n      <p>Utmana vänner och familj. Följ dina och allas framsteg.</p>\\n      <Button default text=\\\"Nästa\\\" on:click=\\\"$set({ introStep: 4 })\\\" />\\n    </div>\\n    {/if}\\n\\n    {#if $introStep === 1 || $introStep === 2 || $introStep === 3}\\n    <div class=\\\"dots\\\">\\n      <div class=\\\"dot {$introStep === 1 ? 'current' : ''}\\\" />\\n      <div class=\\\"dot {$introStep === 2 ? 'current' : ''}\\\" />\\n      <div class=\\\"dot {$introStep === 3 ? 'current' : ''}\\\" />\\n    </div>\\n    {/if}\\n\\n    {#if $introStep === 4}\\n    <div class=\\\"categories\\\">\\n      {#each categories as category}\\n        <div class=\\\"category\\\" style=\\\"background-color: {category.color};\\\" on:click=\\\"$set({ introStep: 5 })\\\" >\\n          {category.label}\\n        </div>\\n      {/each}\\n    </div>\\n    {/if}\\n\\n    {#if $introStep === 5}\\n      <div style=\\\"text-align: center;\\\">\\n        <h1>Utmaning</h1>\\n        <div style=\\\"height: 100px;\\\">Beskrivning av utmaning, mål o.s.v.</div>\\n        <LinkButton type=\\\"default\\\" text=\\\"Registrera och anta utmaning\\\" href=\\\"registrera\\\" />\\n      </div>\\n    {/if}\\n\\n  </div>\\n</div>\\n\\n<style>\\n  .intro-container {\\n    display: flex;\\n    justify-content: center;\\n    align-items: center;\\n    position: fixed;\\n    top: 0;\\n    left: 0;\\n    width: 100%;\\n    height: 100%;\\n    background-color: #222;\\n  }\\n\\n  .intro-card {\\n    display: flex;\\n    justify-content: center;\\n    align-items: center;\\n    flex-wrap: wrap;\\n    width: 500px;\\n    height: 500px;\\n    padding: 10px 20px;\\n    background-color: #ffffff;\\n    box-shadow: 0 5px 15px rgba(12, 7, 7, 0.08);\\n  }\\n\\n  .intro-card:hover {\\n    box-shadow: 0 14px 25px rgba(0,0,0,0.16);\\n  }\\n\\n  .step {\\n    display: flex;\\n    flex-direction: column;\\n    justify-content: center;\\n    align-items: center;\\n    width: 200px;\\n    height: 220px;\\n    padding-left: 20px;\\n  }\\n\\n  img {\\n    width: 128px;\\n    height: 128px;\\n  }\\n\\n  .dots {\\n    display:flex;\\n    justify-content: center;\\n    flex-basis: 100%;\\n  }\\n\\n  .dot {\\n    width: 10px;\\n    height: 10px;\\n    border-radius: 50%;\\n    border: 1px solid #666;\\n    margin-left: 10px;\\n    margin-right: 10px;\\n  }\\n\\n  .dot.current {\\n    background-color: #666;\\n  }\\n\\n  .categories {\\n    display: flex;\\n    flex-wrap: wrap;\\n    justify-content: center;\\n    align-items: center;\\n  }\\n\\n  .category {\\n    display: flex;\\n    justify-content: center;\\n    align-items: center;\\n    color: #fff;\\n    width: 100px;\\n    height: 100px;\\n    margin: 5px;\\n    background-color: #666;\\n    font-size: 16px;\\n    cursor: pointer;\\n    text-align: center;\\n  }\\n</style>\\n\\n<script>\\n  export default {\\n    components: {\\n      Button: \\\"../components/Button.html\\\",\\n      LinkButton: \\\"../components/LinkButton.html\\\",\\n    },\\n\\n    data() {\\n      return {\\n        categories: [\\n          {label: \\\"Fattigdom\\\", color: \\\"#e5233d\\\"},\\n          {label: \\\"Hunger\\\", color: \\\"#dda73a\\\"},\\n          {label: \\\"Hälsa\\\", color: \\\"#4ca146\\\"},\\n          {label: \\\"Sanitet\\\", color: \\\"#27bfe6\\\"},\\n          {label: \\\"Energi\\\", color: \\\"#fbc412\\\"},\\n          {label: \\\"Infrastruktur\\\", color: \\\"#f26a2e\\\"},\\n          {label: \\\"Konsumtion\\\", color: \\\"#bf8d2c\\\"},\\n          {label: \\\"Klimat\\\", color: \\\"#407f46\\\"},\\n          {label: \\\"Fred\\\", color: \\\"#136a9f\\\"}\\n        ]\\n      }\\n    }\\n  }\\n</script>\"],\"names\":[],\"mappings\":\"AA4DE,gBAAgB,eAAC,CAAC,AAChB,OAAO,CAAE,IAAI,CACb,eAAe,CAAE,MAAM,CACvB,WAAW,CAAE,MAAM,CACnB,QAAQ,CAAE,KAAK,CACf,GAAG,CAAE,CAAC,CACN,IAAI,CAAE,CAAC,CACP,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,IAAI,CACZ,gBAAgB,CAAE,IAAI,AACxB,CAAC,AAED,WAAW,eAAC,CAAC,AACX,OAAO,CAAE,IAAI,CACb,eAAe,CAAE,MAAM,CACvB,WAAW,CAAE,MAAM,CACnB,SAAS,CAAE,IAAI,CACf,KAAK,CAAE,KAAK,CACZ,MAAM,CAAE,KAAK,CACb,OAAO,CAAE,IAAI,CAAC,IAAI,CAClB,gBAAgB,CAAE,OAAO,CACzB,UAAU,CAAE,CAAC,CAAC,GAAG,CAAC,IAAI,CAAC,KAAK,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,IAAI,CAAC,AAC7C,CAAC,AAED,0BAAW,MAAM,AAAC,CAAC,AACjB,UAAU,CAAE,CAAC,CAAC,IAAI,CAAC,IAAI,CAAC,KAAK,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,IAAI,CAAC,AAC1C,CAAC,AAED,KAAK,eAAC,CAAC,AACL,OAAO,CAAE,IAAI,CACb,cAAc,CAAE,MAAM,CACtB,eAAe,CAAE,MAAM,CACvB,WAAW,CAAE,MAAM,CACnB,KAAK,CAAE,KAAK,CACZ,MAAM,CAAE,KAAK,CACb,YAAY,CAAE,IAAI,AACpB,CAAC,AAED,GAAG,eAAC,CAAC,AACH,KAAK,CAAE,KAAK,CACZ,MAAM,CAAE,KAAK,AACf,CAAC,AAED,KAAK,eAAC,CAAC,AACL,QAAQ,IAAI,CACZ,eAAe,CAAE,MAAM,CACvB,UAAU,CAAE,IAAI,AAClB,CAAC,AAED,IAAI,eAAC,CAAC,AACJ,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,IAAI,CACZ,aAAa,CAAE,GAAG,CAClB,MAAM,CAAE,GAAG,CAAC,KAAK,CAAC,IAAI,CACtB,WAAW,CAAE,IAAI,CACjB,YAAY,CAAE,IAAI,AACpB,CAAC,AAED,IAAI,QAAQ,eAAC,CAAC,AACZ,gBAAgB,CAAE,IAAI,AACxB,CAAC,AAED,WAAW,eAAC,CAAC,AACX,OAAO,CAAE,IAAI,CACb,SAAS,CAAE,IAAI,CACf,eAAe,CAAE,MAAM,CACvB,WAAW,CAAE,MAAM,AACrB,CAAC,AAED,SAAS,eAAC,CAAC,AACT,OAAO,CAAE,IAAI,CACb,eAAe,CAAE,MAAM,CACvB,WAAW,CAAE,MAAM,CACnB,KAAK,CAAE,IAAI,CACX,KAAK,CAAE,KAAK,CACZ,MAAM,CAAE,KAAK,CACb,MAAM,CAAE,GAAG,CACX,gBAAgB,CAAE,IAAI,CACtB,SAAS,CAAE,IAAI,CACf,MAAM,CAAE,OAAO,CACf,UAAU,CAAE,MAAM,AACpB,CAAC\"}"
-};
-
-var Bar = {};
-
-Bar.filename = "/Users/jam/projects/nykhack2018/500weeks/client/src/routes/bar.html";
-
-Bar.data = function() {
-	return {};
-};
-
-Bar.render = function(state, options = {}) {
-	var components = new Set();
-
-	function addComponent(component) {
-		components.add(component);
-	}
-
-	var result = { head: '', addComponent };
-	var html = Bar._render(result, state, options);
-
-	var cssCode = Array.from(components).map(c => c.css && c.css.code).filter(Boolean).join('\n');
-
-	return {
-		html,
-		head: result.head,
-		css: { code: cssCode, map: null },
-		toString() {
-			return html;
-		}
-	};
-};
-
-Bar._render = function(__result, ctx, options) {
-	__result.addComponent(Bar);
-
-	ctx = Object.assign({}, ctx);
-
-	return `<h1>Bar</h1>`;
-};
-
-Bar.css = {
-	code: '',
-	map: null
+	code: ".image.svelte-1gs94rr{width:100%;height:100%}.intro-container.svelte-1gs94rr{display:flex;justify-content:center;align-items:center;position:fixed;top:0;left:0;width:100%;height:100%;background-color:rgb(240, 240, 240)}.intro-card.svelte-1gs94rr{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;width:300px;height:300px;padding:10px 20px;background-color:#ffffff;box-shadow:0 5px 15px rgba(12, 7, 7, 0.08)}.intro-card.svelte-1gs94rr:hover{box-shadow:0 14px 25px rgba(0,0,0,0.16)}.step.svelte-1gs94rr{display:flex;flex-direction:column;justify-content:center;align-items:center;width:200px;height:220px;padding-left:20px}img.svelte-1gs94rr{width:128px;height:128px}.dots.svelte-1gs94rr{display:flex;justify-content:center;flex-basis:100%}.dot.svelte-1gs94rr{width:10px;height:10px;border-radius:50%;border:1px solid #666;margin-left:10px;margin-right:10px}.dot.current.svelte-1gs94rr{background-color:#666}.categories.svelte-1gs94rr{display:flex;flex-wrap:wrap;justify-content:center;align-items:center}.category.svelte-1gs94rr{display:flex;justify-content:center;align-items:center;color:#fff;width:100px;height:100px;margin:5px;background-color:#666;font-size:16px;cursor:pointer;text-align:center}",
+	map: "{\"version\":3,\"file\":\"intro.html\",\"sources\":[\"intro.html\"],\"sourcesContent\":[\"<div class=\\\"intro-container\\\">\\n    {#if $introStep === 6 || $introStep === 6 || $introStep === 6}\\n      <img alt='Planet' src='img/planet.png'>\\n    {/if}\\n\\n    {#if $introStep === 6}\\n    <div class=\\\"step\\\">\\n      <h2>Välkommen!</h2>\\n      <p>Du är på god väg att rädda världen!</p>\\n      <Button default text=\\\"Nästa\\\" on:click=\\\"$set({ introStep: 2 })\\\" />\\n    </div>\\n    {/if}\\n\\n    {#if $introStep === 6}\\n    <div class=\\\"step\\\">\\n      <p>Tillsammans kan vi hjälpa till för att uppnå FN:s globala mål.</p>\\n      <p>Varje individ räknas! Under 500 veckor hjälps vi åt.</p>\\n      <Button default text=\\\"Nästa\\\" on:click=\\\"$set({ introStep: 3 })\\\" />\\n    </div>\\n    {/if}\\n\\n    {#if $introStep === 6}\\n    <div class=\\\"step\\\">\\n      <p>Anta nya utmaningar varje vecka.</p>\\n      <p>Utmana vänner och familj. Följ dina och allas framsteg.</p>\\n      <Button default text=\\\"Nästa\\\" on:click=\\\"$set({ introStep: 4 })\\\" />\\n    </div>\\n    {/if}\\n\\n    {#if $introStep === 6 || $introStep === 6 || $introStep === 6}\\n    <div class=\\\"dots\\\">\\n      <div class=\\\"dot {$introStep === 1 ? 'current' : ''}\\\" />\\n      <div class=\\\"dot {$introStep === 2 ? 'current' : ''}\\\" />\\n      <div class=\\\"dot {$introStep === 3 ? 'current' : ''}\\\" />\\n    </div>\\n    {/if}\\n\\n    {#if $introStep === 6}\\n    <div class=\\\"categories\\\">\\n      {#each categories as category}\\n        <div class=\\\"category\\\" style=\\\"background-color: {category.color};\\\" on:click=\\\"$set({ introStep: 5 })\\\" >\\n          {category.label}\\n        </div>\\n      {/each}\\n    </div>\\n    {/if}\\n\\n    {#if $introStep === 6}\\n      <div style=\\\"text-align: center;\\\">\\n        <h1>Utmaning</h1>\\n        <div style=\\\"height: 100px;\\\">Beskrivning av utmaning, mål o.s.v.</div>\\n        <LinkButton type=\\\"default\\\" text=\\\"Registrera och anta utmaning\\\" href=\\\"registrera\\\" />\\n      </div>\\n    {/if}\\n\\n    {#if $introStep === 1}\\n    <div>\\n      <div on:click=\\\"$set({ introStep: 2 })\\\">\\n        <img class=\\\"image\\\" style=\\\"width:100%; height: auto;\\\" src=\\\"img/1onboarding1.png\\\"/>\\n      </div>\\n      </div>\\n    {/if}\\n\\n    {#if $introStep === 2}\\n    <div>\\n      <div on:click=\\\"$set({ introStep: 3 })\\\">\\n        <img class=\\\"image\\\" style=\\\"width:100%; height: auto;\\\" src=\\\"img/2onboarding2.png\\\"/>\\n      </div>\\n    </div>\\n    {/if}\\n\\n    {#if $introStep === 3}\\n    <div>\\n      <div on:click=\\\"$set({ introStep: 4 })\\\">\\n        <img class=\\\"image\\\" style=\\\"width:100%; height: auto;\\\" src=\\\"img/3onboarding3.png\\\"/>\\n      </div>\\n    </div>\\n    {/if}\\n\\n    {#if $introStep === 4}\\n      <div>\\n        <a href=\\\"registrera\\\">\\n        <img class=\\\"image\\\" style=\\\"width:100%; height: auto;\\\" src=\\\"img/coop.png\\\"/>\\n      </a>\\n      </div>\\n    {/if}\\n\\n</div>\\n\\n<style>\\n  .image {\\n    width: 100%;\\n    height: 100%;\\n  }\\n\\n  .intro-container {\\n    display: flex;\\n    justify-content: center;\\n    align-items: center;\\n    position: fixed;\\n    top: 0;\\n    left: 0;\\n    width: 100%;\\n    height: 100%;\\n    background-color: rgb(240, 240, 240);\\n  }\\n\\n  .intro-card {\\n    display: flex;\\n    justify-content: center;\\n    align-items: center;\\n    flex-wrap: wrap;\\n    width: 300px;\\n    height: 300px;\\n    padding: 10px 20px;\\n    background-color: #ffffff;\\n    box-shadow: 0 5px 15px rgba(12, 7, 7, 0.08);\\n  }\\n\\n  .intro-card:hover {\\n    box-shadow: 0 14px 25px rgba(0,0,0,0.16);\\n  }\\n\\n  .step {\\n    display: flex;\\n    flex-direction: column;\\n    justify-content: center;\\n    align-items: center;\\n    width: 200px;\\n    height: 220px;\\n    padding-left: 20px;\\n  }\\n\\n  img {\\n    width: 128px;\\n    height: 128px;\\n  }\\n\\n  .dots {\\n    display:flex;\\n    justify-content: center;\\n    flex-basis: 100%;\\n  }\\n\\n  .dot {\\n    width: 10px;\\n    height: 10px;\\n    border-radius: 50%;\\n    border: 1px solid #666;\\n    margin-left: 10px;\\n    margin-right: 10px;\\n  }\\n\\n  .dot.current {\\n    background-color: #666;\\n  }\\n\\n  .categories {\\n    display: flex;\\n    flex-wrap: wrap;\\n    justify-content: center;\\n    align-items: center;\\n  }\\n\\n  .category {\\n    display: flex;\\n    justify-content: center;\\n    align-items: center;\\n    color: #fff;\\n    width: 100px;\\n    height: 100px;\\n    margin: 5px;\\n    background-color: #666;\\n    font-size: 16px;\\n    cursor: pointer;\\n    text-align: center;\\n  }\\n</style>\\n\\n<script>\\n  export default {\\n    components: {\\n      Button: \\\"../components/Button.html\\\",\\n      LinkButton: \\\"../components/LinkButton.html\\\",\\n    },\\n\\n    data() {\\n      return {\\n        categories: [\\n          {label: \\\"Fattigdom\\\", color: \\\"#e5233d\\\"},\\n          {label: \\\"Hunger\\\", color: \\\"#dda73a\\\"},\\n          {label: \\\"Hälsa\\\", color: \\\"#4ca146\\\"},\\n          {label: \\\"Sanitet\\\", color: \\\"#27bfe6\\\"},\\n          {label: \\\"Energi\\\", color: \\\"#fbc412\\\"},\\n          {label: \\\"Infrastruktur\\\", color: \\\"#f26a2e\\\"},\\n          {label: \\\"Konsumtion\\\", color: \\\"#bf8d2c\\\"},\\n          {label: \\\"Klimat\\\", color: \\\"#407f46\\\"},\\n          {label: \\\"Fred\\\", color: \\\"#136a9f\\\"}\\n        ]\\n      }\\n    }\\n  }\\n</script>\"],\"names\":[],\"mappings\":\"AA0FE,MAAM,eAAC,CAAC,AACN,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,IAAI,AACd,CAAC,AAED,gBAAgB,eAAC,CAAC,AAChB,OAAO,CAAE,IAAI,CACb,eAAe,CAAE,MAAM,CACvB,WAAW,CAAE,MAAM,CACnB,QAAQ,CAAE,KAAK,CACf,GAAG,CAAE,CAAC,CACN,IAAI,CAAE,CAAC,CACP,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,IAAI,CACZ,gBAAgB,CAAE,IAAI,GAAG,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,AACtC,CAAC,AAED,WAAW,eAAC,CAAC,AACX,OAAO,CAAE,IAAI,CACb,eAAe,CAAE,MAAM,CACvB,WAAW,CAAE,MAAM,CACnB,SAAS,CAAE,IAAI,CACf,KAAK,CAAE,KAAK,CACZ,MAAM,CAAE,KAAK,CACb,OAAO,CAAE,IAAI,CAAC,IAAI,CAClB,gBAAgB,CAAE,OAAO,CACzB,UAAU,CAAE,CAAC,CAAC,GAAG,CAAC,IAAI,CAAC,KAAK,EAAE,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,IAAI,CAAC,AAC7C,CAAC,AAED,0BAAW,MAAM,AAAC,CAAC,AACjB,UAAU,CAAE,CAAC,CAAC,IAAI,CAAC,IAAI,CAAC,KAAK,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,IAAI,CAAC,AAC1C,CAAC,AAED,KAAK,eAAC,CAAC,AACL,OAAO,CAAE,IAAI,CACb,cAAc,CAAE,MAAM,CACtB,eAAe,CAAE,MAAM,CACvB,WAAW,CAAE,MAAM,CACnB,KAAK,CAAE,KAAK,CACZ,MAAM,CAAE,KAAK,CACb,YAAY,CAAE,IAAI,AACpB,CAAC,AAED,GAAG,eAAC,CAAC,AACH,KAAK,CAAE,KAAK,CACZ,MAAM,CAAE,KAAK,AACf,CAAC,AAED,KAAK,eAAC,CAAC,AACL,QAAQ,IAAI,CACZ,eAAe,CAAE,MAAM,CACvB,UAAU,CAAE,IAAI,AAClB,CAAC,AAED,IAAI,eAAC,CAAC,AACJ,KAAK,CAAE,IAAI,CACX,MAAM,CAAE,IAAI,CACZ,aAAa,CAAE,GAAG,CAClB,MAAM,CAAE,GAAG,CAAC,KAAK,CAAC,IAAI,CACtB,WAAW,CAAE,IAAI,CACjB,YAAY,CAAE,IAAI,AACpB,CAAC,AAED,IAAI,QAAQ,eAAC,CAAC,AACZ,gBAAgB,CAAE,IAAI,AACxB,CAAC,AAED,WAAW,eAAC,CAAC,AACX,OAAO,CAAE,IAAI,CACb,SAAS,CAAE,IAAI,CACf,eAAe,CAAE,MAAM,CACvB,WAAW,CAAE,MAAM,AACrB,CAAC,AAED,SAAS,eAAC,CAAC,AACT,OAAO,CAAE,IAAI,CACb,eAAe,CAAE,MAAM,CACvB,WAAW,CAAE,MAAM,CACnB,KAAK,CAAE,IAAI,CACX,KAAK,CAAE,KAAK,CACZ,MAAM,CAAE,KAAK,CACb,MAAM,CAAE,GAAG,CACX,gBAAgB,CAAE,IAAI,CACtB,SAAS,CAAE,IAAI,CACf,MAAM,CAAE,OAAO,CACf,UAAU,CAAE,MAAM,AACpB,CAAC\"}"
 };
 
 var HeartIcon = {};
@@ -1162,30 +1252,30 @@ Nav._render = function(__result, ctx, options) {
 
 	ctx = Object.assign({ undefined : undefined }, options.store._init(["newUser"]), ctx);
 
-	return `${ !ctx.$newUser ? `<div class="nav svelte-c36990">
-  <div class="links svelte-c36990">
-		<div class="link-wrapper svelte-c36990">
-			<a href="." class="svelte-c36990">${validateSsrComponent(HeartIcon, 'HeartIcon')._render(__result, { size: "32", stroke: ctx.segment === ctx.undefined ? '#39B54A' : '#EAEAEA' }, { store: options.store })}</a>
+	return `${ !ctx.$newUser ? `<div class="nav svelte-xgewn5">
+  <div class="links svelte-xgewn5">
+		<div class="link-wrapper svelte-xgewn5">
+			<a href="." class="svelte-xgewn5">${validateSsrComponent(HeartIcon, 'HeartIcon')._render(__result, { size: "32", stroke: ctx.segment === ctx.undefined ? '#39B54A' : '#EAEAEA' }, { store: options.store })}</a>
 		</div>
-		<div class="link-wrapper svelte-c36990">
-			<a href="bar" class="svelte-c36990">${validateSsrComponent(WorldIcon, 'WorldIcon')._render(__result, { size: "32", stroke: ctx.segment === 'bar' ? '#39B54A' : '#EAEAEA' }, { store: options.store })}</a>
+		<div class="link-wrapper svelte-xgewn5">
+			<a href="tillsammans" class="svelte-xgewn5">${validateSsrComponent(WorldIcon, 'WorldIcon')._render(__result, { size: "32", stroke: ctx.segment === 'tillsammans' ? '#39B54A' : '#EAEAEA' }, { store: options.store })}</a>
 		</div>
-		<div class="link-wrapper svelte-c36990">
-			<a href="framsteg" class="svelte-c36990">${validateSsrComponent(ListIcon, 'ListIcon')._render(__result, { size: "32", stroke: ctx.segment === 'framsteg' ? '#39B54A' : '#EAEAEA' }, { store: options.store })}</a>
+		<div class="link-wrapper svelte-xgewn5">
+			<a href="framsteg" class="svelte-xgewn5">${validateSsrComponent(ListIcon, 'ListIcon')._render(__result, { size: "32", stroke: ctx.segment === 'framsteg' ? '#39B54A' : '#EAEAEA' }, { store: options.store })}</a>
 		</div>
-		<div class="link-wrapper svelte-c36990">
-			<a href="anvandare" class="svelte-c36990">${validateSsrComponent(UserIcon, 'UserIcon')._render(__result, { size: "32", stroke: ctx.segment === 'anvandare' ? '#39B54A' : '#EAEAEA' }, { store: options.store })}</a>
+		<div class="link-wrapper svelte-xgewn5">
+			<a href="anvandare" class="svelte-xgewn5">${validateSsrComponent(UserIcon, 'UserIcon')._render(__result, { size: "32", stroke: ctx.segment === 'anvandare' ? '#39B54A' : '#EAEAEA' }, { store: options.store })}</a>
 		</div>
-		<div class="link-wrapper svelte-c36990">
-				<a href="search" class="svelte-c36990">${validateSsrComponent(SearchIcon, 'SearchIcon')._render(__result, { size: "32", stroke: ctx.segment === 'search' ? '#39B54A' : '#EAEAEA' }, { store: options.store })}</a>
+		<div class="link-wrapper svelte-xgewn5">
+				<a href="search" class="svelte-xgewn5">${validateSsrComponent(SearchIcon, 'SearchIcon')._render(__result, { size: "32", stroke: ctx.segment === 'search' ? '#39B54A' : '#EAEAEA' }, { store: options.store })}</a>
 			</div>
   </div>
 </div>` : `` }`;
 };
 
 Nav.css = {
-	code: ".nav.svelte-c36990{display:flex;justify-content:center;align-items:center;position:fixed;bottom:0px;width:calc( 100% - 40px );padding:20px;background:linear-gradient(to bottom, #333333, #111111);box-shadow:0 5px 15px rgba(0, 0, 0, 0.1)}.links.svelte-c36990{display:flex;justify-content:center;align-items:center;width:750px}.link-wrapper.svelte-c36990{padding-left:10px;padding-right:10px}a.svelte-c36990{display:flex;align-items:center;height:100%;color:#ffffff;text-decoration:none;font-size:13px;text-transform:uppercase;padding-left:5px;padding-right:5px}",
-	map: "{\"version\":3,\"file\":\"Nav.html\",\"sources\":[\"Nav.html\"],\"sourcesContent\":[\"{#if !$newUser}\\n<div class=\\\"nav\\\">\\n  <div class=\\\"links\\\">\\n\\t\\t<div class=\\\"link-wrapper\\\">\\n\\t\\t\\t<a href=\\\".\\\"><HeartIcon size=\\\"32\\\" stroke=\\\"{segment === undefined ? '#39B54A' : '#EAEAEA'}\\\" /></a>\\n\\t\\t</div>\\n\\t\\t<div class=\\\"link-wrapper\\\">\\n\\t\\t\\t<a href=\\\"bar\\\"><WorldIcon size=\\\"32\\\" stroke=\\\"{segment === 'bar' ? '#39B54A' : '#EAEAEA'}\\\" /></a>\\n\\t\\t</div>\\n\\t\\t<div class=\\\"link-wrapper\\\">\\n\\t\\t\\t<a href=\\\"framsteg\\\"><ListIcon size=\\\"32\\\" stroke=\\\"{segment === 'framsteg' ? '#39B54A' : '#EAEAEA'}\\\" /></a>\\n\\t\\t</div>\\n\\t\\t<div class=\\\"link-wrapper\\\">\\n\\t\\t\\t<a href=\\\"anvandare\\\"><UserIcon size=\\\"32\\\" stroke=\\\"{segment === 'anvandare' ? '#39B54A' : '#EAEAEA'}\\\" /></a>\\n\\t\\t</div>\\n\\t\\t<div class=\\\"link-wrapper\\\">\\n\\t\\t\\t\\t<a href=\\\"search\\\"><SearchIcon size=\\\"32\\\" stroke=\\\"{segment === 'search' ? '#39B54A' : '#EAEAEA'}\\\" /></a>\\n\\t\\t\\t</div>\\n  </div>\\n</div>\\n{/if}\\n\\n<style>\\n  .nav {\\n    display: flex;\\n    justify-content: center;\\n    align-items: center;\\n    position: fixed;\\n    bottom: 0px;\\n    width: calc( 100% - 40px );\\n    padding: 20px;\\n    /*background: linear-gradient(to bottom, #28a5f5, #1e87f0);*/\\n\\t\\tbackground: linear-gradient(to bottom, #333333, #111111);\\n    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);\\n  }\\n\\n  .links {\\n    display: flex;\\n\\t\\tjustify-content: center;\\n    align-items: center;\\n    width: 750px;\\n  }\\n\\n\\t.link-wrapper {\\n\\t\\tpadding-left: 10px;\\n\\t\\tpadding-right: 10px;\\n\\t}\\n\\n  a {\\n    display: flex;\\n    align-items: center;\\n    height: 100%;\\n    color: #ffffff;\\n    text-decoration: none;\\n    font-size: 13px;\\n    text-transform: uppercase;\\n    padding-left: 5px;\\n    padding-right: 5px;\\n  }\\n</style>\\n\\n<script>\\n\\texport default {\\n\\t\\tcomponents: {\\n\\t\\t\\tHeartIcon: \\\"./icons/HeartIcon.html\\\",\\n\\t\\t\\tWorldIcon: \\\"./icons/WorldIcon.html\\\",\\n\\t\\t\\tListIcon: \\\"./icons/ListIcon.html\\\",\\n\\t\\t\\tUserIcon: \\\"./icons/UserIcon.html\\\",\\n\\t\\t\\tSearchIcon: \\\"./icons/SearchIcon.html\\\",\\n\\t\\t}\\n\\t}\\n</script>\\n\"],\"names\":[],\"mappings\":\"AAuBE,IAAI,cAAC,CAAC,AACJ,OAAO,CAAE,IAAI,CACb,eAAe,CAAE,MAAM,CACvB,WAAW,CAAE,MAAM,CACnB,QAAQ,CAAE,KAAK,CACf,MAAM,CAAE,GAAG,CACX,KAAK,CAAE,MAAM,IAAI,CAAC,CAAC,CAAC,IAAI,EAAE,CAC1B,OAAO,CAAE,IAAI,CAEf,UAAU,CAAE,gBAAgB,EAAE,CAAC,MAAM,CAAC,CAAC,OAAO,CAAC,CAAC,OAAO,CAAC,CACtD,UAAU,CAAE,CAAC,CAAC,GAAG,CAAC,IAAI,CAAC,KAAK,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,AAC3C,CAAC,AAED,MAAM,cAAC,CAAC,AACN,OAAO,CAAE,IAAI,CACf,eAAe,CAAE,MAAM,CACrB,WAAW,CAAE,MAAM,CACnB,KAAK,CAAE,KAAK,AACd,CAAC,AAEF,aAAa,cAAC,CAAC,AACd,YAAY,CAAE,IAAI,CAClB,aAAa,CAAE,IAAI,AACpB,CAAC,AAEA,CAAC,cAAC,CAAC,AACD,OAAO,CAAE,IAAI,CACb,WAAW,CAAE,MAAM,CACnB,MAAM,CAAE,IAAI,CACZ,KAAK,CAAE,OAAO,CACd,eAAe,CAAE,IAAI,CACrB,SAAS,CAAE,IAAI,CACf,cAAc,CAAE,SAAS,CACzB,YAAY,CAAE,GAAG,CACjB,aAAa,CAAE,GAAG,AACpB,CAAC\"}"
+	code: ".nav.svelte-xgewn5{display:flex;justify-content:center;align-items:center;position:fixed;bottom:0px;width:calc( 100% - 40px );padding:20px;background:linear-gradient(to bottom, #333333, #111111);box-shadow:0 5px 15px rgba(0, 0, 0, 0.1);z-index:900}.links.svelte-xgewn5{display:flex;justify-content:center;align-items:center;width:750px}.link-wrapper.svelte-xgewn5{padding-left:10px;padding-right:10px}a.svelte-xgewn5{display:flex;align-items:center;height:100%;color:#ffffff;text-decoration:none;font-size:13px;text-transform:uppercase;padding-left:5px;padding-right:5px}",
+	map: "{\"version\":3,\"file\":\"Nav.html\",\"sources\":[\"Nav.html\"],\"sourcesContent\":[\"{#if !$newUser}\\n<div class=\\\"nav\\\">\\n  <div class=\\\"links\\\">\\n\\t\\t<div class=\\\"link-wrapper\\\">\\n\\t\\t\\t<a href=\\\".\\\"><HeartIcon size=\\\"32\\\" stroke=\\\"{segment === undefined ? '#39B54A' : '#EAEAEA'}\\\" /></a>\\n\\t\\t</div>\\n\\t\\t<div class=\\\"link-wrapper\\\">\\n\\t\\t\\t<a href=\\\"tillsammans\\\"><WorldIcon size=\\\"32\\\" stroke=\\\"{segment === 'tillsammans' ? '#39B54A' : '#EAEAEA'}\\\" /></a>\\n\\t\\t</div>\\n\\t\\t<div class=\\\"link-wrapper\\\">\\n\\t\\t\\t<a href=\\\"framsteg\\\"><ListIcon size=\\\"32\\\" stroke=\\\"{segment === 'framsteg' ? '#39B54A' : '#EAEAEA'}\\\" /></a>\\n\\t\\t</div>\\n\\t\\t<div class=\\\"link-wrapper\\\">\\n\\t\\t\\t<a href=\\\"anvandare\\\"><UserIcon size=\\\"32\\\" stroke=\\\"{segment === 'anvandare' ? '#39B54A' : '#EAEAEA'}\\\" /></a>\\n\\t\\t</div>\\n\\t\\t<div class=\\\"link-wrapper\\\">\\n\\t\\t\\t\\t<a href=\\\"search\\\"><SearchIcon size=\\\"32\\\" stroke=\\\"{segment === 'search' ? '#39B54A' : '#EAEAEA'}\\\" /></a>\\n\\t\\t\\t</div>\\n  </div>\\n</div>\\n{/if}\\n\\n<style>\\n  .nav {\\n    display: flex;\\n    justify-content: center;\\n    align-items: center;\\n    position: fixed;\\n    bottom: 0px;\\n    width: calc( 100% - 40px );\\n    padding: 20px;\\n    /*background: linear-gradient(to bottom, #28a5f5, #1e87f0);*/\\n\\t\\tbackground: linear-gradient(to bottom, #333333, #111111);\\n    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);\\n\\t\\tz-index: 900;\\n  }\\n\\n  .links {\\n    display: flex;\\n\\t\\tjustify-content: center;\\n    align-items: center;\\n    width: 750px;\\n  }\\n\\n\\t.link-wrapper {\\n\\t\\tpadding-left: 10px;\\n\\t\\tpadding-right: 10px;\\n\\t}\\n\\n  a {\\n    display: flex;\\n    align-items: center;\\n    height: 100%;\\n    color: #ffffff;\\n    text-decoration: none;\\n    font-size: 13px;\\n    text-transform: uppercase;\\n    padding-left: 5px;\\n    padding-right: 5px;\\n  }\\n</style>\\n\\n<script>\\n\\texport default {\\n\\t\\tcomponents: {\\n\\t\\t\\tHeartIcon: \\\"./icons/HeartIcon.html\\\",\\n\\t\\t\\tWorldIcon: \\\"./icons/WorldIcon.html\\\",\\n\\t\\t\\tListIcon: \\\"./icons/ListIcon.html\\\",\\n\\t\\t\\tUserIcon: \\\"./icons/UserIcon.html\\\",\\n\\t\\t\\tSearchIcon: \\\"./icons/SearchIcon.html\\\",\\n\\t\\t}\\n\\t}\\n</script>\\n\"],\"names\":[],\"mappings\":\"AAuBE,IAAI,cAAC,CAAC,AACJ,OAAO,CAAE,IAAI,CACb,eAAe,CAAE,MAAM,CACvB,WAAW,CAAE,MAAM,CACnB,QAAQ,CAAE,KAAK,CACf,MAAM,CAAE,GAAG,CACX,KAAK,CAAE,MAAM,IAAI,CAAC,CAAC,CAAC,IAAI,EAAE,CAC1B,OAAO,CAAE,IAAI,CAEf,UAAU,CAAE,gBAAgB,EAAE,CAAC,MAAM,CAAC,CAAC,OAAO,CAAC,CAAC,OAAO,CAAC,CACtD,UAAU,CAAE,CAAC,CAAC,GAAG,CAAC,IAAI,CAAC,KAAK,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,CAAC,GAAG,CAAC,CAC3C,OAAO,CAAE,GAAG,AACZ,CAAC,AAED,MAAM,cAAC,CAAC,AACN,OAAO,CAAE,IAAI,CACf,eAAe,CAAE,MAAM,CACrB,WAAW,CAAE,MAAM,CACnB,KAAK,CAAE,KAAK,AACd,CAAC,AAEF,aAAa,cAAC,CAAC,AACd,YAAY,CAAE,IAAI,CAClB,aAAa,CAAE,IAAI,AACpB,CAAC,AAEA,CAAC,cAAC,CAAC,AACD,OAAO,CAAE,IAAI,CACb,WAAW,CAAE,MAAM,CACnB,MAAM,CAAE,IAAI,CACZ,KAAK,CAAE,OAAO,CACd,eAAe,CAAE,IAAI,CACrB,SAAS,CAAE,IAAI,CACf,cAAc,CAAE,SAAS,CACzB,YAAY,CAAE,GAAG,CACjB,aAAa,CAAE,GAAG,AACpB,CAAC\"}"
 };
 
 var PrimaryButton = {};
@@ -1329,16 +1419,16 @@ Layout._render = function(__result, ctx, options) {
 
 ${validateSsrComponent(Login, 'Login')._render(__result, {  }, { store: options.store })}
 
-<div class="container svelte-6eu58g">
-	<div class="main svelte-6eu58g">
+<div class="container svelte-krl5ij">
+	<div class="main svelte-krl5ij">
 		${validateSsrComponent(((ctx.child.component) || missingComponent), 'svelte:component')._render(__result, Object.assign(ctx.child.props), { store: options.store })}
 	</div>
 </div>`;
 };
 
 Layout.css = {
-	code: ".container.svelte-6eu58g{display:flex;justify-content:center}.main.svelte-6eu58g{width:750px;padding:20px}",
-	map: "{\"version\":3,\"file\":\"_layout.html\",\"sources\":[\"_layout.html\"],\"sourcesContent\":[\"<Nav segment={child.segment}/>\\n\\n<Login />\\n\\n<div class=\\\"container\\\">\\n\\t<div class=\\\"main\\\">\\n\\t\\t<svelte:component this={child.component} {...child.props}/>\\n\\t</div>\\n</div>\\n\\n<style>\\n\\t.container {\\n\\t\\tdisplay: flex;\\n\\t\\tjustify-content: center;\\n\\t}\\n\\n\\t.main {\\n\\t\\twidth: 750px;\\n\\t\\tpadding: 20px;\\n\\t}\\n</style>\\n\\n<script>\\n\\texport default {\\n\\t\\tcomponents: {\\n\\t\\t\\tNav: '../components/Nav.html',\\n\\t\\t\\tLogin: '../components/Login.html',\\n\\t\\t}\\n\\t};\\n</script>\\n\"],\"names\":[],\"mappings\":\"AAWC,UAAU,cAAC,CAAC,AACX,OAAO,CAAE,IAAI,CACb,eAAe,CAAE,MAAM,AACxB,CAAC,AAED,KAAK,cAAC,CAAC,AACN,KAAK,CAAE,KAAK,CACZ,OAAO,CAAE,IAAI,AACd,CAAC\"}"
+	code: "html{overflow-y:scroll;font-family:ProximaNova,-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;font-size:15px;font-weight:normal;line-height:1.5;-webkit-text-size-adjust:100%;background:#fff;color:#666;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-rendering:optimizeLegibility;background-color:rgb(240, 240, 240)}body{overflow:hidden;margin:0}.container.svelte-krl5ij{display:flex;justify-content:center}.main.svelte-krl5ij{width:750px;padding:20px}",
+	map: "{\"version\":3,\"file\":\"_layout.html\",\"sources\":[\"_layout.html\"],\"sourcesContent\":[\"<Nav segment={child.segment}/>\\n\\n<Login />\\n\\n<div class=\\\"container\\\">\\n\\t<div class=\\\"main\\\">\\n\\t\\t<svelte:component this={child.component} {...child.props}/>\\n\\t</div>\\n</div>\\n\\n<style>\\n\\t:global(html) {\\n\\t\\toverflow-y: scroll;\\n\\n\\t\\tfont-family: ProximaNova,-apple-system,BlinkMacSystemFont,\\\"Segoe UI\\\",Roboto,\\\"Helvetica Neue\\\",Arial,sans-serif;\\n    font-size: 15px;\\n    font-weight: normal;\\n    line-height: 1.5;\\n    -webkit-text-size-adjust: 100%;\\n    background: #fff;\\n    color: #666;\\n    -webkit-font-smoothing: antialiased;\\n    -moz-osx-font-smoothing: grayscale;\\n    text-rendering: optimizeLegibility;\\n\\n    background-color: rgb(240, 240, 240);\\n\\t}\\n\\n\\t:global(body) {\\n\\t\\toverflow: hidden;\\n\\t\\tmargin: 0;\\n\\t}\\n\\t\\n\\t.container {\\n\\t\\tdisplay: flex;\\n\\t\\tjustify-content: center;\\n\\t}\\n\\n\\t.main {\\n\\t\\twidth: 750px;\\n\\t\\tpadding: 20px;\\n\\t}\\n</style>\\n\\n<script>\\n\\texport default {\\n\\t\\tcomponents: {\\n\\t\\t\\tNav: '../components/Nav.html',\\n\\t\\t\\tLogin: '../components/Login.html',\\n\\t\\t}\\n\\t};\\n</script>\\n\"],\"names\":[],\"mappings\":\"AAWS,IAAI,AAAE,CAAC,AACd,UAAU,CAAE,MAAM,CAElB,WAAW,CAAE,WAAW,CAAC,aAAa,CAAC,kBAAkB,CAAC,UAAU,CAAC,MAAM,CAAC,gBAAgB,CAAC,KAAK,CAAC,UAAU,CAC3G,SAAS,CAAE,IAAI,CACf,WAAW,CAAE,MAAM,CACnB,WAAW,CAAE,GAAG,CAChB,wBAAwB,CAAE,IAAI,CAC9B,UAAU,CAAE,IAAI,CAChB,KAAK,CAAE,IAAI,CACX,sBAAsB,CAAE,WAAW,CACnC,uBAAuB,CAAE,SAAS,CAClC,cAAc,CAAE,kBAAkB,CAElC,gBAAgB,CAAE,IAAI,GAAG,CAAC,CAAC,GAAG,CAAC,CAAC,GAAG,CAAC,AACvC,CAAC,AAEO,IAAI,AAAE,CAAC,AACd,QAAQ,CAAE,MAAM,CAChB,MAAM,CAAE,CAAC,AACV,CAAC,AAED,UAAU,cAAC,CAAC,AACX,OAAO,CAAE,IAAI,CACb,eAAe,CAAE,MAAM,AACxB,CAAC,AAED,KAAK,cAAC,CAAC,AACN,KAAK,CAAE,KAAK,CACZ,OAAO,CAAE,IAAI,AACd,CAAC\"}"
 };
 
 var Error$1 = {};
@@ -1407,6 +1497,14 @@ const manifest = {
 		},
 
 		{
+			// tillsammans.html
+			pattern: /^\/tillsammans\/?$/,
+			parts: [
+				{ name: "tillsammans", file: "tillsammans.html", component: Tillsammans }
+			]
+		},
+
+		{
 			// registrera.html
 			pattern: /^\/registrera\/?$/,
 			parts: [
@@ -1443,14 +1541,6 @@ const manifest = {
 			pattern: /^\/intro\/?$/,
 			parts: [
 				{ name: "intro", file: "intro.html", component: Intro }
-			]
-		},
-
-		{
-			// bar.html
-			pattern: /^\/bar\/?$/,
-			parts: [
-				{ name: "bar", file: "bar.html", component: Bar }
 			]
 		}
 	],

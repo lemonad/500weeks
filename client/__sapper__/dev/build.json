@@ -2,7 +2,7 @@
   "bundler": "rollup",
   "shimport": "0.0.11",
   "assets": {
-    "main": "client.0477c5f6.js"
+    "main": "client.7ae6bb5b.js"
   },
   "css": {
     "main": "main.90172081.css",
@@ -10,6 +10,7 @@
       "index.html": [
         "index.6cf524e4.css"
       ],
+      "tillsammans.html": [],
       "registrera.html": [
         "registrera.436e0771.css"
       ],
@@ -23,9 +24,8 @@
         "search.3b2630e9.css"
       ],
       "intro.html": [
-        "intro.b75694e7.css"
-      ],
-      "bar.html": []
+        "intro.af1528a8.css"
+      ]
     }
   }
 }

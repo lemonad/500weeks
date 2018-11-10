@@ -8,13 +8,12 @@ import { existsSync, readFileSync } from 'fs';
 import { join, resolve as resolve$1 } from 'path';
 
 import __index from "../src/routes/index.html";
+import __tillsammans from "../src/routes/tillsammans.html";
 import __registrera from "../src/routes/registrera.html";
 import __anvandare from "../src/routes/anvandare.html";
 import __framsteg from "../src/routes/framsteg.html";
 import __search from "../src/routes/search.html";
-import __vanner from "../src/routes/vanner.html";
 import __intro from "../src/routes/intro.html";
-import __bar from "../src/routes/bar.html";
 import root from "../src/routes/_layout.html";
 import error from "../src/routes/_error.html";
 
@@ -31,6 +30,14 @@ export const manifest = {
 			pattern: /^\/?$/,
 			parts: [
 				{ name: "index", file: "index.html", component: __index }
+			]
+		},
+
+		{
+			// tillsammans.html
+			pattern: /^\/tillsammans\/?$/,
+			parts: [
+				{ name: "tillsammans", file: "tillsammans.html", component: __tillsammans }
 			]
 		},
 
@@ -67,26 +74,10 @@ export const manifest = {
 		},
 
 		{
-			// vanner.html
-			pattern: /^\/vanner\/?$/,
-			parts: [
-				{ name: "vanner", file: "vanner.html", component: __vanner }
-			]
-		},
-
-		{
 			// intro.html
 			pattern: /^\/intro\/?$/,
 			parts: [
 				{ name: "intro", file: "intro.html", component: __intro }
-			]
-		},
-
-		{
-			// bar.html
-			pattern: /^\/bar\/?$/,
-			parts: [
-				{ name: "bar", file: "bar.html", component: __bar }
 			]
 		}
 	],

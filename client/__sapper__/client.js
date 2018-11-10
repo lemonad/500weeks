@@ -19,6 +19,10 @@ const components = [
 		css: "__SAPPER_CSS_PLACEHOLDER:index.html__"
 	},
 	{
+		js: () => import("../src/routes/tillsammans.html"),
+		css: "__SAPPER_CSS_PLACEHOLDER:tillsammans.html__"
+	},
+	{
 		js: () => import("../src/routes/registrera.html"),
 		css: "__SAPPER_CSS_PLACEHOLDER:registrera.html__"
 	},
@@ -35,16 +39,8 @@ const components = [
 		css: "__SAPPER_CSS_PLACEHOLDER:search.html__"
 	},
 	{
-		js: () => import("../src/routes/vanner.html"),
-		css: "__SAPPER_CSS_PLACEHOLDER:vanner.html__"
-	},
-	{
 		js: () => import("../src/routes/intro.html"),
 		css: "__SAPPER_CSS_PLACEHOLDER:intro.html__"
-	},
-	{
-		js: () => import("../src/routes/bar.html"),
-		css: "__SAPPER_CSS_PLACEHOLDER:bar.html__"
 	}
 ];
 const pages = [
@@ -57,10 +53,18 @@ const pages = [
 	},
 
 	{
+		// tillsammans.html
+		pattern: /^\/tillsammans\/?$/,
+		parts: [
+			{ i: 1 }
+		]
+	},
+
+	{
 		// registrera.html
 		pattern: /^\/registrera\/?$/,
 		parts: [
-			{ i: 1 }
+			{ i: 2 }
 		]
 	},
 
@@ -68,7 +72,7 @@ const pages = [
 		// anvandare.html
 		pattern: /^\/anvandare\/?$/,
 		parts: [
-			{ i: 2 }
+			{ i: 3 }
 		]
 	},
 
@@ -76,21 +80,13 @@ const pages = [
 		// framsteg.html
 		pattern: /^\/framsteg\/?$/,
 		parts: [
-			{ i: 3 }
+			{ i: 4 }
 		]
 	},
 
 	{
 		// search.html
 		pattern: /^\/search\/?$/,
-		parts: [
-			{ i: 4 }
-		]
-	},
-
-	{
-		// vanner.html
-		pattern: /^\/vanner\/?$/,
 		parts: [
 			{ i: 5 }
 		]
@@ -101,14 +97,6 @@ const pages = [
 		pattern: /^\/intro\/?$/,
 		parts: [
 			{ i: 6 }
-		]
-	},
-
-	{
-		// bar.html
-		pattern: /^\/bar\/?$/,
-		parts: [
-			{ i: 7 }
 		]
 	}
 ];
