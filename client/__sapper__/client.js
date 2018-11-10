@@ -533,10 +533,3 @@ function prefetchRoutes(pathnames) {
 }
 
 export { start, goto, prefetch, prefetchRoutes };
-
-
-if (typeof window !== 'undefined') {
-	import("/Users/jam/projects/nykhack2018/500weeks/client/node_modules/sapper/sapper-dev-client.js").then(client => {
-		client.connect(10000);
-	});
-}

@@ -1472,8 +1472,7 @@ const manifest = {
 
 	error: Error$1
 };
-const build_dir = "__sapper__/dev";
-const src_dir = "src";
+const build_dir = "__sapper__/build";
 const IGNORE = '__SAPPER__IGNORE__';
 
 function get_server_route_handler(routes) {
@@ -3413,8 +3412,8 @@ fetch.isRedirect = function (code) {
 fetch.Promise = global.Promise;
 
 function get_page_handler(manifest$$1, store_getter) {
-    const get_build_info = () => JSON.parse(fs.readFileSync(path.join(build_dir, 'build.json'), 'utf-8'));
-    const template = () => read_template(src_dir);
+    const get_build_info = (assets => () => assets)(JSON.parse(fs.readFileSync(path.join(build_dir, 'build.json'), 'utf-8')));
+    const template = (str => () => str)(read_template(build_dir));
     const has_service_worker = fs.existsSync(path.join(build_dir, 'service-worker.js'));
     const { server_routes, pages } = manifest$$1;
     const error_route = manifest$$1.error;
@@ -3429,7 +3428,7 @@ function get_page_handler(manifest$$1, store_getter) {
     function handle_page(page, req, res, status = 200, error = null) {
         const build_info = get_build_info();
         res.setHeader('Content-Type', 'text/html');
-        res.setHeader('Cache-Control', 'no-cache');
+        res.setHeader('Cache-Control', 'max-age=600');
         // preload main.js and current route
         // TODO detect other stuff we can preload? images, CSS, fonts?
         let preloaded_chunks = Array.isArray(build_info.assets.main) ? build_info.assets.main : [build_info.assets.main];
@@ -3717,7 +3716,7 @@ function middleware(opts = {}) {
         },
         fs.existsSync(path.join(build_dir, 'index.html')) && serve({
             pathname: '/index.html',
-            cache_control: 'no-cache'
+            cache_control: 'max-age=600'
         }),
         fs.existsSync(path.join(build_dir, 'service-worker.js')) && serve({
             pathname: '/service-worker.js',
@@ -3729,7 +3728,7 @@ function middleware(opts = {}) {
         }),
         serve({
             prefix: '/client/',
-            cache_control: 'no-cache'
+            cache_control: 'max-age=31536000, immutable'
         }),
         get_server_route_handler(manifest.server_routes),
         get_page_handler(manifest, store)
@@ -3766,7 +3765,8 @@ function serve({ prefix, pathname, cache_control }) {
     const filter = pathname
         ? (req) => req.path === pathname
         : (req) => req.path.startsWith(prefix);
-    const read = (file) => fs.readFileSync(path.resolve(build_dir, file));
+    const cache = new Map();
+    const read = (file) => (cache.has(file) ? cache : cache.set(file, fs.readFileSync(path.resolve(build_dir, file)))).get(file);
     return (req, res, next) => {
         if (req[IGNORE])
             return next();
@@ -3959,7 +3959,7 @@ const dev$2 = NODE_ENV === 'development';
 const user = {
 	name: "Johan",
 	email: "jam@learningwell.se",
-	biography: "Biagrafi och sånt",
+	biography: "Biografi och sånt",
 };
 
 polka() // You can also use Express

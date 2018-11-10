@@ -86,9 +86,9 @@ export const manifest = {
 
 	error
 };
-const build_dir = "__sapper__/dev";
+const build_dir = "__sapper__/build";
 const src_dir = "src";
-const dev = true;
+const dev = false;
 const IGNORE = '__SAPPER__IGNORE__';
 
 function get_server_route_handler(routes) {
