@@ -22,6 +22,14 @@ class User(db.Model):
         self.last_name = last_name
         self.email = email
 
+class UserSchema(ma.Schema):
+    id = fields.Integer(dump_only=True)
+    username = fields.String(required=True)
+    first_name = fields.String(required=False)
+    last_name = fields.String(required=False)
+    email = fields.String(required=True)
+    # creation_date = fields.DateTime()
+
 class Goal(db.Model):
     __tablename__ = 'goal'
     id = db.Column(db.Integer, primary_key=True)
@@ -37,6 +45,15 @@ class Goal(db.Model):
         self.description = description
         self.color = color
         self.image_url = image_url
+
+class GoalSchema(ma.Schema):
+    id = fields.Integer(dump_only=True)
+    title = fields.String(required=True)
+    subtitle = fields.String(required=True)
+    description = fields.String(required=False)
+    color = fields.String(required=True)
+    image_url = fields.String(required=True)
+    # creation_date = fields.DateTime()
 
 class Challenge(db.Model):
     __tablename__ = 'challenge'
@@ -54,6 +71,14 @@ class Challenge(db.Model):
         self.subtitle = subtitle
         self.description = description
         self.image_url = image_url
+
+class ChallengeSchema(ma.Schema):
+    id = fields.Integer(dump_only=True)
+    title = fields.String(required=True)
+    subtitle = fields.String(required=True)
+    description = fields.String(required=False)
+    image_url = fields.String(required=True)
+    goal_id = fields.Integer(required=True)
 
 class WeekChallenge(db.Model):
     __tablename__ = "week_challenge"
