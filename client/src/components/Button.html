@@ -1,12 +1,10 @@
-<button class="{block ? 'block' : ''}" on:click>{text}</button>
+<button class:block class:primary class:default on:click>{text}</button>
 
 <style>
   button {
-    background-color: #0f7ae5;
     color: #fff;
     text-decoration: none;
     cursor: pointer;
-    border: 1px solid transparent;
     margin: 0;
     overflow: visible;
     font: inherit;
@@ -28,5 +26,24 @@
 
   .block {
     width: 100%;
+  }
+
+  :global(.primary) {
+    background-color: #1e87f0;
+    border: 1px solid transparent;
+  }
+
+  .primary:hover {
+    background-color: #0f7ae5;
+  }
+
+  .default {
+    background-color: transparent;
+    color: #222;
+    border: 1px solid #e5e5e5;
+  }
+
+  .default:hover {
+    border-color: #b2b2b2;
   }
 </style>

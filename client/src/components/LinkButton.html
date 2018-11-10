@@ -1,0 +1,37 @@
+<a class:block class="button" href={href} on:click>{text}</a>
+
+<style>
+  a.button {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 0;
+    overflow: visible;
+    font: inherit;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0 30px;
+    vertical-align: middle;
+    font-size: 14px;
+    line-height: 38px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.1s ease-in-out;
+    transition-property: color, background-color, border-color;
+    background-color: transparent;
+    color: #222;
+    border: 1px solid #e5e5e5;
+  }
+
+  a.button:focus {
+    outline: 0;
+  }
+
+  a.button:hover {
+    border-color: #b2b2b2;
+  }
+
+  .block {
+    width: 100%;
+  }
+</style>

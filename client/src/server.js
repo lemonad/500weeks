@@ -19,6 +19,8 @@ polka() // You can also use Express
 		sapper.middleware({
       store: () => {
         return new Store({
+					newUser: false,
+					introStep: 1,
 					loggedIn: false,
           user
         });

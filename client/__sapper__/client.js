@@ -19,6 +19,18 @@ const components = [
 		css: "__SAPPER_CSS_PLACEHOLDER:index.html__"
 	},
 	{
+		js: () => import("../src/routes/registrera.html"),
+		css: "__SAPPER_CSS_PLACEHOLDER:registrera.html__"
+	},
+	{
+		js: () => import("../src/routes/anvandare.html"),
+		css: "__SAPPER_CSS_PLACEHOLDER:anvandare.html__"
+	},
+	{
+		js: () => import("../src/routes/intro.html"),
+		css: "__SAPPER_CSS_PLACEHOLDER:intro.html__"
+	},
+	{
 		js: () => import("../src/routes/bar.html"),
 		css: "__SAPPER_CSS_PLACEHOLDER:bar.html__"
 	},
@@ -37,10 +49,34 @@ const pages = [
 	},
 
 	{
+		// registrera.html
+		pattern: /^\/registrera\/?$/,
+		parts: [
+			{ i: 1 }
+		]
+	},
+
+	{
+		// anvandare.html
+		pattern: /^\/anvandare\/?$/,
+		parts: [
+			{ i: 2 }
+		]
+	},
+
+	{
+		// intro.html
+		pattern: /^\/intro\/?$/,
+		parts: [
+			{ i: 3 }
+		]
+	},
+
+	{
 		// bar.html
 		pattern: /^\/bar\/?$/,
 		parts: [
-			{ i: 1 }
+			{ i: 4 }
 		]
 	},
 
@@ -48,7 +84,7 @@ const pages = [
 		// foo.html
 		pattern: /^\/foo\/?$/,
 		parts: [
-			{ i: 2 }
+			{ i: 5 }
 		]
 	}
 ];

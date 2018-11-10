@@ -1,0 +1,87 @@
+{#if !$loggedIn}
+<div out:fade="{duration: 100}" class="register-container">
+  <div class="register-card">
+      <h1>Registrera</h1>
+      <div class="input-wrapper"><input type="text" placeholder="Användarnamn" /></div>
+      <div class="input-wrapper"><input type="password" placeholder="Lösenord" /></div>
+      <div class="button-wrapper">
+          <Link primary text="Registrera" block href="anvandare" on:click="$set({ loggedIn: true, newUser: false })" />
+      </div>
+  </div>
+</div>
+{/if}
+
+<style>
+    .register-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #0f7ae5;
+      z-index: 1000;
+    }
+  
+    .register-card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 280px;
+      height: 280px;
+      padding: 10px 20px;
+      background-color: #ffffff;
+      box-shadow: 0 5px 15px rgba(12, 7, 7, 0.08);
+    }
+  
+    .register-card:hover {
+      box-shadow: 0 14px 25px rgba(0,0,0,0.16);
+    }
+
+    .input-wrapper {
+    align-self: flex-start;
+    width: calc( 100% - 22px);
+    padding-bottom: 10px;
+    margin-left: -22px;
+  }
+
+  .button-wrapper {
+    width: 100%;
+    padding-bottom: 10px;
+  }
+
+  input {
+    height: 40px;
+    display: block;
+
+    max-width: 100%;
+    width: 100%;
+    border: 0 none;
+    padding: 0 10px;
+    background: #fff;
+    color: #666;
+    border: 1px solid #e5e5e5;
+    transition: .2s ease-in-out;
+    transition-property: color,background-color,border;
+  }
+
+  input:focus {
+    outline: 0;
+    border-color: #0f7ae5;
+  }
+</style>
+
+<script>
+    import { fade } from "svelte-transitions";
+  
+    export default {
+      transitions: { fade },
+  
+      components: {
+        Link: "../components/Link.html",
+      }
+    };
+  </script>

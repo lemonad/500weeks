@@ -1,0 +1,36 @@
+<button class:block on:click>{text}</button>
+
+<style>
+  button {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    margin: 0;
+    overflow: visible;
+    font: inherit;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0 30px;
+    vertical-align: middle;
+    font-size: 14px;
+    line-height: 38px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.1s ease-in-out;
+    transition-property: color, background-color, border-color;
+    background-color: #1e87f0;
+    border: 1px solid transparent;
+  }
+
+  button:focus {
+    outline: 0;
+  }
+
+  button:hover {
+    background-color: #0f7ae5;
+  }
+
+  .block {
+    width: 100%;
+  }
+</style>

@@ -1,0 +1,169 @@
+<div class="intro-container">
+  <div class="intro-card">
+    {#if $introStep === 1 || $introStep === 2 || $introStep === 3}
+      <img alt='Planet' src='img/planet.png'>
+    {/if}
+
+    {#if $introStep === 1}
+    <div class="step">
+      <h2>Välkommen!</h2>
+      <p>Du är på god väg att rädda världen!</p>
+      <Button default text="Nästa" on:click="$set({ introStep: 2 })" />
+    </div>
+    {/if}
+
+    {#if $introStep === 2}
+    <div class="step">
+      <p>Tillsammans kan vi hjälpa till för att uppnå FN:s globala mål.</p>
+      <p>Varje individ räknas! Under 500 veckor hjälps vi åt.</p>
+      <Button default text="Nästa" on:click="$set({ introStep: 3 })" />
+    </div>
+    {/if}
+
+    {#if $introStep === 3}
+    <div class="step">
+      <p>Anta nya utmaningar varje vecka.</p>
+      <p>Utmana vänner och familj. Följ dina och allas framsteg.</p>
+      <Button default text="Nästa" on:click="$set({ introStep: 4 })" />
+    </div>
+    {/if}
+
+    {#if $introStep === 1 || $introStep === 2 || $introStep === 3}
+    <div class="dots">
+      <div class="dot {$introStep === 1 ? 'current' : ''}" />
+      <div class="dot {$introStep === 2 ? 'current' : ''}" />
+      <div class="dot {$introStep === 3 ? 'current' : ''}" />
+    </div>
+    {/if}
+
+    {#if $introStep === 4}
+    <div class="categories">
+      {#each categories as category}
+        <div class="category" style="background-color: {category.color};" on:click="$set({ introStep: 5 })" >
+          {category.label}
+        </div>
+      {/each}
+    </div>
+    {/if}
+
+    {#if $introStep === 5}
+      <div>
+        <h1>Utmaning</h1>
+        <div style="height: 100px;">Beskrivning av utmaning, mål o.s.v.</div>
+        <LinkButton type="default" text="Registrera och anta utmaning" href="registrera" />
+      </div>
+    {/if}
+
+  </div>
+</div>
+
+<style>
+  .intro-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0f7ae5;
+  }
+
+  .intro-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 500px;
+    height: 500px;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    box-shadow: 0 5px 15px rgba(12, 7, 7, 0.08);
+  }
+
+  .intro-card:hover {
+    box-shadow: 0 14px 25px rgba(0,0,0,0.16);
+  }
+
+  .step {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 100px;
+    width: 200px;
+    height: 220px;
+    padding-left: 20px;
+  }
+
+  img {
+    margin-top: 100px;
+    width: 128px;
+    height: 128px;
+  }
+
+  .dots {
+    display:flex;
+    justify-content: center;
+    flex-basis: 100%;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid #666;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .dot.current {
+    background-color: #666;
+  }
+
+  .categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .category {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    width: 150px;
+    height: 150px;
+    margin: 5px;
+    background-color: #666;
+    font-size: 16px;
+    cursor: pointer;
+  }
+</style>
+
+<script>
+  export default {
+    components: {
+      Button: "../components/Button.html",
+      LinkButton: "../components/LinkButton.html",
+    },
+
+    data() {
+      return {
+        categories: [
+          {label: "Fattigdom", color: "#e5233d"},
+          {label: "Hunger", color: "#dda73a"},
+          {label: "Hälsa", color: "#4ca146"},
+          {label: "Sanitet", color: "#27bfe6"},
+          {label: "Energi", color: "#fbc412"},
+          {label: "Infrastruktur", color: "#f26a2e"},
+          {label: "Konsumtion", color: "#bf8d2c"},
+          {label: "Klimat", color: "#407f46"},
+          {label: "Fred", color: "#136a9f"}
+        ]
+      }
+    }
+  }
+</script>
