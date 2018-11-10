@@ -1,18 +1,71 @@
-<div style="text-align: center; margin-top: 20px;">
-  <UserIcon size="100" stroke="#666" />
+{#if right === true}
+<div in:fly="{x: 100, duration: 200, delay:300}" out:fly="{x: -100, duration: 200}">
+  <div style="text-align: center;">
+    <button on:click="set({ right: false })">&lt; Min utmaning</button>
+  </div>
+  <div style="text-align: center; margin-top: 20px;">
+    <UserIcon size="64" stroke="#666" />
+  </div>
+  <h2>{$user.name}</h2>
+  <p style="text-align: center;">{$user.biography}</p>
+
+  <h1>Mina utmaningar</h1>
+  <div class="challenges-wrapper">
+  {#each challenges as challengeColor}
+    <div style="width: 13px; height: 13px; background-color: {challengeColor};"></div>
+  {/each}
 </div>
-<h1>{$user.name}</h1>
-<h2>{$user.email}</h2>
-<div style="text-align: center;">
-  <a class="button" href=".">Mina utmaningar</a>
 </div>
+{/if}
+
+{#if right === false}
+<div in:fly="{x: -100, duration: 200, delay:300}" out:fly="{x: 100, duration: 200}">
+  <div style="text-align: center;">
+    <button on:click="set({ right: true })">Min utmaning &gt;</button>
+  </div>
+
+  <h1>Min utmaning</h1>
+
+  <h2>Ät mer vegetariskt</h2>
+
+  <div style="display: flex; justify-content: center;">
+  <div style="width: 250px">
+  <ul>
+    <li>Tips från andra användare</li>
+    <li>Recept</li>
+    <li>Rabatt från sponsor</li>
+  </ul>
+</div>
+</div>
+
+  <h2>Hur känns det?</h2>
+
+  <div style="display: flex; justify-content: center;">
+    <div style="width: 300px; display: flex; justify-content: center;">
+      <div style="display: flex; align-items: center; margin-right: 10px;" on:click="set({ difficulty: 'lätt'})">
+        <div class="option {difficulty === 'lätt' ? 'checked' : ''}" />&nbsp;Lätt
+      </div>
+      <div style="display: flex;  align-items: center; margin-right: 10px;" on:click="set({ difficulty: 'svårt'})">
+        <div class="option {difficulty === 'svårt' ? 'checked' : ''}" />&nbsp;Svårt
+      </div>
+    </div>
+  </div>
+
+  <h2>Dela utmaning</h2>
+  <div style="display: flex; justify-content: center;">
+    <div style="padding-left: 10px; padding-right: 10px"><FacebookIcon size="32" stroke="#39B54A" /></div>
+    <div style="padding-left: 10px; padding-right: 10px"><TwitterIcon size="32" stroke="#39B54A" /></div>
+    <div style="padding-left: 10px; padding-right: 10px"><InstagramIcon size="32" stroke="#39B54A" /></div>
+  </div>
+</div>
+{/if}
 
 <style>
   h1, h2 {
     text-align: center;
   }
 
-  a.button {
+  button {
     color: #fff;
     text-decoration: none;
     cursor: pointer;
@@ -34,19 +87,53 @@
     border: 1px solid #e5e5e5;
   }
 
-  a.button:focus {
+  button:focus {
     outline: 0;
   }
 
-  a.button:hover {
+  button:hover {
     border-color: #b2b2b2;
   }
+
+  .challenges-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+  }
+
+  .option {
+    width: 10px;
+    height: 10px;
+    border: 2px solid #333;
+    border-radius: 50%;
+  }
+
+.option.checked {
+  background-color: #39B54A;
+}
+
 </style>
 
 <script>
+  import { generateDummyChallenges } from "../helpers/generateDummyChallenges.js";
+  import { fly } from "svelte-transitions";
+
   export default {
+    transitions: { fly },
+
     components: {
       UserIcon: "../components/icons/UserIcon.html",
-    }
+      FacebookIcon: "../components/icons/FacebookIcon.html",
+      TwitterIcon: "../components/icons/TwitterIcon.html",
+      InstagramIcon: "../components/icons/InstagramIcon.html",
+    },
+
+     data() {
+       return {
+         difficulty: "lätt",
+         right: true,
+         challenges: generateDummyChallenges(),
+       }
+     }
   }
 </script>

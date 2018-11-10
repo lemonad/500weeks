@@ -2,23 +2,23 @@
   "bundler": "rollup",
   "shimport": "0.0.11",
   "assets": {
-    "main": "client.29cf8279.js"
+    "main": "client.392b45b3.js"
   },
   "css": {
-    "main": "main.168661134.css",
+    "main": "main.3589704678.css",
     "chunks": {
       "index.html": [
-        "index.aba372f7.css"
+        "index.c26e8ba7.css"
       ],
       "registrera.html": [
-        "registrera.703c68ab.css"
+        "registrera.436e0771.css"
       ],
       "anvandare.html": [
-        "anvandare.c9ec1387.css"
+        "anvandare.a936de87.css"
       ],
       "search.html": [],
       "intro.html": [
-        "intro.58f01bb1.css"
+        "intro.b75694e7.css"
       ],
       "bar.html": [],
       "foo.html": []

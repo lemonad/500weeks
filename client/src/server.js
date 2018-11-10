@@ -9,7 +9,8 @@ const dev = NODE_ENV === 'development';
 
 const user = {
 	name: "Johan",
-	email: "jam@learningwell.se"
+	email: "jam@learningwell.se",
+	biography: "Biagrafi och sånt",
 };
 
 polka() // You can also use Express
